@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on &gt;_ majix.site</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on &gt;_ majix.site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>max.randhahn@yahoo.de (Max)</managingEditor>
+    <webMaster>max.randhahn@yahoo.de (Max)</webMaster>
+    <copyright>© 2025 Max</copyright>
+    <lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Introduction to BLE hacking</title>
+      <link>http://localhost:1313/posts/ble/</link>
+      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/posts/ble/</guid>
+      <description>Bluetooth Low Energy (BLE) #Address the needs of IoT devices Low power consumption ISM Band (2.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ble/feature.png" />
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>http://localhost:1313/posts/template/</link>
+      <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/posts/template/</guid>
+      <description>H1 Test #asdsa code</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/template/featured.png" />
+    </item>
+    
+  </channel>
+</rss>

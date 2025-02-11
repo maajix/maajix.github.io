@@ -1,0 +1,5 @@
+<svg class="icon{{ with .Get "class" }} {{ . }}{{ end }}" 
+     {{ with .Get "width" }} width="{{ . }}"{{ end }}
+     {{ with .Get "height" }} height="{{ . }}"{{ end }}>
+  <use xlink:href="#{{ .Get "id" }}"></use>
+</svg>

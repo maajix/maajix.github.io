@@ -1,0 +1,3 @@
+<div class="p-4 mb-4 rounded-lg {{ with .Get "type" }}{{- if eq . "info" }} bg-blue-100 text-blue-700 {{- else if eq . "success" }} bg-green-100 text-green-700 {{- else if eq . "warning" }} bg-yellow-100 text-yellow-700 {{- else if eq . "error" }} bg-red-100 text-red-700 {{- else }} bg-gray-100 text-gray-700 {{- end }}{{- end }}">
+    {{ .Inner | markdownify }}
+</div>

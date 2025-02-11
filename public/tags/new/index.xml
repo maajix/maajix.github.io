@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>New on &gt;_ majix.site</title>
+    <link>http://localhost:1313/tags/new/</link>
+    <description>Recent content in New on &gt;_ majix.site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>max.randhahn@yahoo.de (Max)</managingEditor>
+    <webMaster>max.randhahn@yahoo.de (Max)</webMaster>
+    <copyright>© 2025 Max</copyright>
+    <lastBuildDate>Tue, 25 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/new/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My First Blog Post</title>
+      <link>http://localhost:1313/posts/first_post/</link>
+      <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/posts/first_post/</guid>
+      <description>Learn more about me and why I am starting this blog.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

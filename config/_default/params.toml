@@ -1,0 +1,112 @@
+# -- Theme Options --
+# These options control how the theme functions and allow you to
+# customise the display of your website.
+#
+# Refer to the theme docs for more details about each of these parameters.
+
+colorScheme = "avocado"
+defaultAppearance = "dark" # valid options: light or dark
+autoSwitchAppearance = false
+
+enableSearch = true
+enableCodeCopy = true
+
+mainSections = ["posts"]#, "suggestions"]
+# robots = ""
+
+disableImageOptimization = true
+disableTextInHeader = true
+
+# defaultFeaturedImage = "background.jpg"
+defaultBackgroundImage = "background.png"
+
+highlightCurrentMenuArea = true
+smartTOC = true
+smartTOCHideUnfocusedChildren = false
+
+[header]
+  layout = "fixed"
+
+[footer]
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = false
+  showScrollToTop = true
+
+[homepage]
+  layout = "background" # valid options: page, profile, custom
+  homepageImage = "background.png"
+  showRecent = true
+  showRecentItems = 4
+  showMoreLink = true
+  showMoreLinkDest = '/posts'
+  cardView = true
+  cardViewScreenWidth = false
+  layoutBackgroundBlur = true
+
+[article]
+  showDate = true
+  showViews = false
+  showLikes = false
+  showDateOnlyInArticle = true
+  showDateUpdated = false
+  showAuthor = false
+  showHero = true
+  heroStyle = "background"
+  layoutBackgroundBlur = true
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showEdit = false
+  # editURL = "https://github.com/nunocoracao/n9o.xyz/tree/main/content"
+  editAppendPath = false
+  seriesOpened = true
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+  showReadingTime = true
+  showTableOfContents = false
+  showRelatedContent = true
+  relatedContentLimit = 4
+  showTaxonomies = false
+  showAuthorsBadges = false
+  showWordCount = false
+  showSummary = true
+  # sharingLinks = [ "linkedin", "twitter", "whatsapp", "telegram", "pinterest", "reddit", "facebook", "email"]
+
+[list]
+  showHero = true
+  heroStyle = "background"
+  layoutBackgroundBlur = true
+  layoutBackgroundHeaderSpace = false
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showSummary = false
+  showTableOfContents = false
+  showCards = true
+  groupByYear = false
+  cardView = true
+  cardViewScreenWidth = false
+
+[sitemap]
+  excludedKinds = []
+
+[taxonomy]
+  showTermCount = true
+  showHero = true
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  showBreadcrumbs = false
+  showViews = true
+  showLikes = true
+  showTableOfContents = true
+
+[term]
+  showHero = true
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  showBreadcrumbs = false
+  showViews = true
+  showLikes = true
+  showTableOfContents = true
+  groupByYear = false
+  cardViewScreenWidth = false
+  cardView = false
