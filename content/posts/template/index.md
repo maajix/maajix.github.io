@@ -39,7 +39,6 @@ print("test")
 {{< figure
     src="/images/projects/hacktopus.png"
     alt="Description of the image"
-    class="full"
 >}}
 
 {{< chart >}}

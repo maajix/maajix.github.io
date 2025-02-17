@@ -32,6 +32,16 @@
     </item>
     
     <item>
+      <title>Glacier (2024)</title>
+      <link>http://localhost:1313/ctfs/glacier-2024/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/ctfs/glacier-2024/</guid>
+      <description>🏆 123/798 -- 200 points Challange Type Points Finished Fuzzybytes web 50 November 23rd, 6:56:11 PM typstastic misc 50 November 23rd, 5:19:06 AM Rivest–Shamir–Adleman-Germain crypto 50 November 22nd, 9:04:34 PM Welcome welcome 50 November 22nd, 7:02:16 PM Learnings #Embedded PNG files inside PDF stream #peepdf can help to analyze PDF streams</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctfs/glacier-2024/featured.svg" />
+    </item>
+    
+    <item>
       <title>Resume</title>
       <link>http://localhost:1313/resume/</link>
       <pubDate>Mon, 13 Jun 2022 21:28:51 +0100</pubDate>
