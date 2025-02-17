@@ -12,6 +12,16 @@
     <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>1337UP (2024)</title>
+      <link>http://localhost:1313/ctfs/1337up-2024/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/ctfs/1337up-2024/</guid>
+      <description>🏆 318/1061 -- 700 Points Challange Type Points Finished Secure Bank Rev 100 November 16th, 11:55:09 PM BabyFlow Warmup 50 November 16th, 8:29:59 PM Rigged Slot Machine 1 Warmup 50 November 16th, 8:21:55 PM Trackdown 2 OSINT 100 November 15th, 8:09:06 PM Trackdown OSINT 100 November 15th, 7:49:05 PM Cold Storage Mobile 100 November 15th, 5:05:44 PM BioCorp Web 100 November 15th, 3:16:32 PM Pizza Paradise Web 100 November 15th, 2:46:25 PM Writeups #Cold Storage 🐈 #The Initial Roadblock: APK Installation Blues Like any eager hacker starting a mobile challenge, I dove straight in trying to install the APK.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctfs/1337up-2024/feature.webp" />
+    </item>
+    
+    <item>
       <title>Bluetooth Low Energy Hacking 101</title>
       <link>http://localhost:1313/posts/ble/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
@@ -19,16 +29,6 @@
       <guid>http://localhost:1313/posts/ble/</guid>
       <description>Overview #Feel free to skip to the hacking part directly if you don&amp;rsquo;t care about the basics of BLE</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ble/feature.png" />
-    </item>
-    
-    <item>
-      <title>Under construction</title>
-      <link>http://localhost:1313/ctfs/ble/</link>
-      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
-      <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:1313/ctfs/ble/</guid>
-      <description> </description>
-      
     </item>
     
     <item>
