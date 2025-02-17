@@ -3,70 +3,70 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:46615/</loc>
+    <loc>http://localhost:42243/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:46615/posts/ble/</loc>
+    <loc>http://localhost:42243/posts/ble/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:46615/posts/</loc>
+    <loc>http://localhost:42243/posts/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:46615/ctfs/</loc>
+    <loc>http://localhost:42243/ctfs/</loc>
     <lastmod>2025-02-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:46615/ctfs/ble/</loc>
+    <loc>http://localhost:42243/ctfs/ble/</loc>
     <lastmod>2025-02-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:46615/posts/template/</loc>
+    <loc>http://localhost:42243/posts/template/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:46615/resume/</loc>
+    <loc>http://localhost:42243/resume/</loc>
     <lastmod>2022-06-13T21:28:51+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:46615/projects/</loc>
+    <loc>http://localhost:42243/projects/</loc>
     <lastmod>2022-06-13T20:55:37+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:46615/authors/</loc>
+    <loc>http://localhost:42243/authors/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:46615/categories/</loc>
+    <loc>http://localhost:42243/categories/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:46615/series/</loc>
+    <loc>http://localhost:42243/series/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:46615/tags/</loc>
+    <loc>http://localhost:42243/tags/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
