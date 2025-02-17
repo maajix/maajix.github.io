@@ -112,7 +112,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2321"
+    "wordCount": "2315"
   }]
   </script>
 
@@ -1022,31 +1022,13 @@
 </span></span><span class="line"><span class="cl">└──────────────┴──────────────────────────────────────┴─────────────────────┴─────────────────────────┘
 </span></span></code></pre></div><p>Awesome, now let&rsquo;s check the table and what we see.</p>
 <p>The first line looks like a &ldquo;grouping&rdquo; of the UUIDs below it. Remembering the sections before, those seem to be the services.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="hl"><span class="lnt">1
-</span></span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line hl"><span class="cl">│ <span class="m">0005</span> -&gt; <span class="m">0009</span> │ Generic Access <span class="o">(</span>1800<span class="o">)</span>    │      │               │
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line hl"><span class="cl">│ <span class="m">0005</span> -&gt; <span class="m">0009</span> │ Generic Access <span class="o">(</span>1800<span class="o">)</span>    │      │               │
 </span></span><span class="line"><span class="cl">│ <span class="m">0007</span>         │     Device Name <span class="o">(</span>2a00<span class="o">)</span>   │ READ │ LE_WH-1000XM3 │
-</span></span><span class="line"><span class="cl">│ <span class="m">0009</span>         │     Appearance <span class="o">(</span>2a01<span class="o">)</span>    │ READ │ Unknown	     │</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line"><span class="cl">│ <span class="m">0009</span>         │     Appearance <span class="o">(</span>2a01<span class="o">)</span>    │ READ │ Unknown	     │</span></span></code></pre></div>
 <p>Below each of the services, we find the individual characteristics, and their properties (<span class="text-primary-400">READ</span>, <span class="text-primary-400">WRITE</span>, <span class="text-primary-400">NOTIFY</span>), as well as the data which bettercap automatically reads and displays for us. Further, we can see the memory location where the data is stored, referred to as <span class="text-primary-400">handles</span>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="hl"><span class="lnt">2
-</span></span><span class="hl"><span class="lnt">3
-</span></span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">│ <span class="m">0005</span> -&gt; <span class="m">0009</span> │ Generic Access <span class="o">(</span>1800<span class="o">)</span>    │      │               │
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">│ <span class="m">0005</span> -&gt; <span class="m">0009</span> │ Generic Access <span class="o">(</span>1800<span class="o">)</span>    │      │               │
 </span></span><span class="line hl"><span class="cl">│ <span class="m">0007</span>         │     Device Name <span class="o">(</span>2a00<span class="o">)</span>   │ READ │ LE_WH-1000XM3 │
-</span></span><span class="line hl"><span class="cl">│ <span class="m">0009</span>         │     Appearance <span class="o">(</span>2a01<span class="o">)</span>    │ READ │ Unknown	     │</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</span></span><span class="line hl"><span class="cl">│ <span class="m">0009</span>         │     Appearance <span class="o">(</span>2a01<span class="o">)</span>    │ READ │ Unknown	     │</span></span></code></pre></div>
 <p>Here it is always important to check out that the memory locations are <span class="text-primary-400">overlapping</span>, meaning there is no gap between memory addresses, e.g. <code>[0001 -&gt; 0004] -&gt; [0005 -&gt; 0009]..</code> and so on. If there were gaps between the handles, this could mean that there are <span class="text-primary-400">hidden services</span> inside.</p>
 <p>Further, some of those handles do require some sort of pairing or bonding, indicated by the <code>insufficient encryption</code>.</p>
 <p>Now, if you take a look at the table again, you will see that there are a lot of custom-implemented services and characteristics displaying just a UUID. If we are planning to attack this device, we probably should know what the actual functionality behind each UUID is. For this, we will need to reverse engineer each of those characteristics by e.g. inspecting and experimenting with the traffic in Wireshark. However, this is a whole different topic and not in the scope of this blog article.</p>
@@ -1322,6 +1304,182 @@
   </a>
 
   
+  
+
+  <a href="/posts/nosql/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/nosql/feature.webp);"></div>
+        
+      
+      <span class="absolute top-0 right-0 m-2">
+        <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Draft
+  </span>
+</span>
+      </span>
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/nosql/">NoSQL Injection Attacks</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-02-17T00:00:00&#43;00:00">17 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+  
+
+  <a href="/posts/template/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/template/featured.png);"></div>
+        
+      
+      <span class="absolute top-0 right-0 m-2">
+        <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Draft
+  </span>
+</span>
+      </span>
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/template/">Template</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-01-29T00:00:00&#43;00:00">29 January 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
 </section>
 
   
@@ -1347,6 +1505,43 @@
   <footer class="pt-8 max-w-prose print:hidden">
 
     
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/nosql/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >NoSQL Injection Attacks</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-02-17T00:00:00&#43;00:00">17 February 2025</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
   
 
 

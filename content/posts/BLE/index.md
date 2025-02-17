@@ -156,7 +156,7 @@ Awesome, now let's check the table and what we see.
 
 The first line looks like a "grouping" of the UUIDs below it. Remembering the sections before, those seem to be the services.
 
-{{< highlight bash "linenos=true,hl_lines=1" >}}
+{{< highlight bash "linenos=false,hl_lines=1" >}}
 │ 0005 -> 0009 │ Generic Access (1800)    │      │               │
 │ 0007         │     Device Name (2a00)   │ READ │ LE_WH-1000XM3 │
 │ 0009         │     Appearance (2a01)    │ READ │ Unknown	     │
@@ -164,7 +164,7 @@ The first line looks like a "grouping" of the UUIDs below it. Remembering the se
 
 Below each of the services, we find the individual characteristics, and their properties (<span class="text-primary-400">READ</span>, <span class="text-primary-400">WRITE</span>, <span class="text-primary-400">NOTIFY</span>), as well as the data which bettercap automatically reads and displays for us. Further, we can see the memory location where the data is stored, referred to as <span class="text-primary-400">handles</span>.
 
-{{< highlight bash "linenos=true,hl_lines=2-3" >}}
+{{< highlight bash "linenos=false,hl_lines=2-3" >}}
 │ 0005 -> 0009 │ Generic Access (1800)    │      │               │
 │ 0007         │     Device Name (2a00)   │ READ │ LE_WH-1000XM3 │
 │ 0009         │     Appearance (2a01)    │ READ │ Unknown	     │

