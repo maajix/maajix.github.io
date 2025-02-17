@@ -57,7 +57,7 @@ A service is simply a bundle of different characteristics. In the example of our
 Hacking protocols like Bluetooth, WiFi, Zigbee, etc. mostly require external hardware to do so. For BLE my recommendation is to get an [nRF52840 Dongle](https://www.nordicsemi.com/Products/Development-hardware/nRF52840-Dongle) for the beginning. It costs around 10-20$ and features multiple protocols, already compiled programs such as a BLE sniffer, and other super useful stuff.
 
 ### Enumeration
-Let us see if the interface we want to use even shows up on our PC by using `hci` tools. <span class="text-primary-400">HCI</span> stands for Host Controller Interface and is used between the physical and host layer of the BLE stack.
+Let us see if the interface we want to use even shows up on our PC by using `hci` tools. <span class="text-primary-400">HCI</span> stands for Host Controller Interface and is used between the controller and host layer of the BLE stack.
 
 ```prolog
 ❯ hciconfig
