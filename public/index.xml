@@ -12,23 +12,23 @@
     <lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Introduction to BLE hacking</title>
+      <title>Bluetooth Low Energy Hacking 101</title>
       <link>http://localhost:1313/posts/ble/</link>
       <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
       <author>max.randhahn@yahoo.de (Max)</author>
       <guid>http://localhost:1313/posts/ble/</guid>
-      <description>Bluetooth Low Energy (BLE) #Address the needs of IoT devices Low power consumption ISM Band (2.</description>
+      <description>Overview #Feel free to skip to the hacking part directly if you don&amp;rsquo;t care about the basics of BLE</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ble/feature.png" />
     </item>
     
     <item>
-      <title>Template</title>
-      <link>http://localhost:1313/posts/template/</link>
-      <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
+      <title>Under construction</title>
+      <link>http://localhost:1313/ctfs/ble/</link>
+      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
       <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:1313/posts/template/</guid>
-      <description>H1 Test #asdsa code</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/template/featured.png" />
+      <guid>http://localhost:1313/ctfs/ble/</guid>
+      <description> </description>
+      
     </item>
     
     <item>

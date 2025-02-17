@@ -1,7 +1,7 @@
 ---
 title: "Template"
 date: 2025-01-29
-draft: false
+draft: true
 description: "Test XSS description"
 ---
 
@@ -35,6 +35,12 @@ print("test")
 > test
 
 <img class="thumbnailshadow" src="/images/projects/hacktopus.png">
+
+{{< figure
+    src="/images/projects/hacktopus.png"
+    alt="Description of the image"
+    class="full"
+>}}
 
 {{< chart >}}
 type: 'bar',
@@ -94,4 +100,50 @@ With other shortcodes
 {{< /timelineItem >}}
 
 {{< /timeline >}}
+
+{{< highlight html "linenos=true,hl_lines=7 10-11 21-29" >}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sample Page</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .highlight {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Page</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <footer>
+            <p>&copy; 2025 My Website. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+{{< /highlight >}}
 

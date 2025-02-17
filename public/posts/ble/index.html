@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
   data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <script data-goatcounter="https://majix.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="en" />
@@ -8,10 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Introduction to BLE hacking &middot; &gt;_ majix.site</title>
-  <meta name="title" content="Introduction to BLE hacking &middot; &gt;_ majix.site" />
+  <title>Bluetooth Low Energy Hacking 101 &middot; &gt;_ majix.site</title>
+  <meta name="title" content="Bluetooth Low Energy Hacking 101 &middot; &gt;_ majix.site" />
   
-  <meta name="description" content="Test" />
+  <meta name="description" content="TODO" />
   
   
   
@@ -71,8 +72,8 @@
   
   <meta property="og:url" content="http://localhost:1313/posts/ble/">
   <meta property="og:site_name" content="&gt;_ majix.site">
-  <meta property="og:title" content="Introduction to BLE hacking">
-  <meta property="og:description" content="Test">
+  <meta property="og:title" content="Bluetooth Low Energy Hacking 101">
+  <meta property="og:description" content="TODO">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -83,8 +84,8 @@
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/posts/ble/feature.png">
-  <meta name="twitter:title" content="Introduction to BLE hacking">
-  <meta name="twitter:description" content="Test">
+  <meta name="twitter:title" content="Bluetooth Low Energy Hacking 101">
+  <meta name="twitter:description" content="TODO">
 
   
   <script type="application/ld+json">
@@ -92,10 +93,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Introduction to BLE hacking",
-    "headline": "Introduction to BLE hacking",
-    "description": "Test",
-    "abstract": "Bluetooth Low Energy (BLE) #\rAddress the needs of IoT devices Low power consumption ISM Band (2.",
+    "name": "Bluetooth Low Energy Hacking 101",
+    "headline": "Bluetooth Low Energy Hacking 101",
+    "description": "TODO",
+    "abstract": "Overview #\rFeel free to skip to the hacking part directly if you don\u0026rsquo;t care about the basics of BLE",
     "inLanguage": "en",
     "url" : "http:\/\/localhost:1313\/posts\/ble\/",
     "author" : {
@@ -111,7 +112,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "166"
+    "wordCount": "2321"
   }]
   </script>
 
@@ -210,6 +211,17 @@
     
     <p class="text-base font-medium" title="">
         Blog
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/ctfs/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        CTFs
     </p>
 </a>
 
@@ -342,6 +354,21 @@
         
         <p class="text-bg font-bg" title="">
             Blog
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/ctfs/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            CTFs
         </p>
     </a>
 </li>
@@ -489,7 +516,7 @@
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
       href="/posts/ble/"
-      >Introduction to BLE hacking</a
+      >Bluetooth Low Energy Hacking 101</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -498,7 +525,7 @@
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Introduction to BLE hacking
+      Bluetooth Low Energy Hacking 101
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -541,7 +568,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-10T00:00:00&#43;00:00">10 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  <time datetime="2025-02-10T00:00:00&#43;00:00">10 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">11 mins</span>
   
 
   
@@ -579,7 +606,163 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#i-classfa-brands-fa-bluetoothi-overview"><i class="fa-brands fa-bluetooth"></i> Overview</a>
+      <ul>
+        <li><a href="#bluetooth-low-energy-span-classtext-primary-400blespan">Bluetooth Low Energy (<span class="text-primary-400">BLE</span>)</a></li>
+        <li><a href="#central-and-peripherals">Central and Peripherals</a></li>
+        <li><a href="#advertising">Advertising</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-barsi-how-ble-works"><i class="fa-solid fa-bars"></i> How BLE works</a>
+      <ul>
+        <li><a href="#generic-access-profile-span-classtext-primary-400gapspan">Generic Access Profile (<span class="text-primary-400">GAP</span>)</a></li>
+        <li><a href="#generic-attribute-protocol-span-classtext-primary-400gattspan">Generic Attribute Protocol (<span class="text-primary-400">GATT</span>)</a>
+          <ul>
+            <li><a href="#characteristics">Characteristics</a></li>
+            <li><a href="#services">Services</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-user-ninjai-hacking-ble"><i class="fa-solid fa-user-ninja"></i> Hacking BLE</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#enumeration">Enumeration</a></li>
+        <li><a href="#reading-and-writing-data">Reading and writing data</a></li>
+        <li><a href="#notify">Notify</a></li>
+        <li><a href="#nrf-connect">nRF Connect</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-listi-summary"><i class="fa-solid fa-list"></i> Summary</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#i-classfa-brands-fa-bluetoothi-overview"><i class="fa-brands fa-bluetooth"></i> Overview</a>
+      <ul>
+        <li><a href="#bluetooth-low-energy-span-classtext-primary-400blespan">Bluetooth Low Energy (<span class="text-primary-400">BLE</span>)</a></li>
+        <li><a href="#central-and-peripherals">Central and Peripherals</a></li>
+        <li><a href="#advertising">Advertising</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-barsi-how-ble-works"><i class="fa-solid fa-bars"></i> How BLE works</a>
+      <ul>
+        <li><a href="#generic-access-profile-span-classtext-primary-400gapspan">Generic Access Profile (<span class="text-primary-400">GAP</span>)</a></li>
+        <li><a href="#generic-attribute-protocol-span-classtext-primary-400gattspan">Generic Attribute Protocol (<span class="text-primary-400">GATT</span>)</a>
+          <ul>
+            <li><a href="#characteristics">Characteristics</a></li>
+            <li><a href="#services">Services</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-user-ninjai-hacking-ble"><i class="fa-solid fa-user-ninja"></i> Hacking BLE</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#enumeration">Enumeration</a></li>
+        <li><a href="#reading-and-writing-data">Reading and writing data</a></li>
+        <li><a href="#notify">Notify</a></li>
+        <li><a href="#nrf-connect">nRF Connect</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-listi-summary"><i class="fa-solid fa-list"></i> Summary</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+
+
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -590,119 +773,378 @@
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
-<h1 class="relative group"><i class="fa-brands fa-bluetooth"></i> Bluetooth Low Energy (<span class="text-primary-400">BLE</span>) 
-    <div id="i-classfa-brands-fa-bluetoothi-bluetooth-low-energy-span-classtext-primary-400blespan" class="anchor"></div>
+<h2 class="relative group"><i class="fa-brands fa-bluetooth"></i> Overview 
+    <div id="i-classfa-brands-fa-bluetoothi-overview" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#i-classfa-brands-fa-bluetoothi-bluetooth-low-energy-span-classtext-primary-400blespan" aria-label="Anchor">#</a>
-    </span>        
-    
-</h1>
-<ul>
-<li>Address the needs of IoT devices</li>
-<li>Low power consumption</li>
-<li>ISM Band (2.4 Ghz)</li>
-<li>40 Channels (3 advertising)</li>
-<li>Range varies meters to kilometers</li>
-<li>Short bursts of data</li>
-</ul>
-
-
-<h2 class="relative group"><i class="fa-solid fa-question"></i> How does it work 
-    <div id="i-classfa-solid-fa-questioni-how-does-it-work" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-questioni-how-does-it-work" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#i-classfa-brands-fa-bluetoothi-overview" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<p>@TODO</p>
+<blockquote>
+<p>Feel free to skip to the hacking part directly if you don&rsquo;t care about the basics of BLE</p>
+</blockquote>
 
 
-<h2 class="relative group"><i class="fa-solid fa-magnifying-glass"></i> Disovery process 
-    <div id="i-classfa-solid-fa-magnifying-glassi-disovery-process" class="anchor"></div>
+<h3 class="relative group">Bluetooth Low Energy (<span class="text-primary-400">BLE</span>) 
+    <div id="bluetooth-low-energy-span-classtext-primary-400blespan" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-magnifying-glassi-disovery-process" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#bluetooth-low-energy-span-classtext-primary-400blespan" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Bluetooth Low Energy (<span class="text-primary-400">BLE</span>), is a Protocol spoken by many modern devices. The key difference to regular Bluetooth is that BLE is intended to consume less power while maintaining a similar communication range. This is achieved by implementing a <span class="italic">always off</span> technology, meaning solely short amounts of data are transmitted if and only if it is required. BLE uses the IMA (2.4 GHz) band with 40 channels, where 3 of these are used for advertising.</p>
+
+
+<h3 class="relative group">Central and Peripherals 
+    <div id="central-and-peripherals" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#central-and-peripherals" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Assume we just bought a super cool new Fitness tracker, which also provides an IOS or Android application for our phone. When using the tracker, for example, to measure our heart rate, it communicates directly to the app, which then displays the data. This is a typical example of BLE communication, where the data is sent <b>from</b> one device <b>to</b> another. We typicall call these devices <span class="text-primary-400">peripheral</span> (sending) and <span class="text-primary-400">central</span> (receiving). Peripherals (tracker) are mostly small, low-energy devices that can connect to more powerful central devices (phone).</p>
+
+
+<h3 class="relative group">Advertising 
+    <div id="advertising" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#advertising" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>Cool, but how do these devices even know about each other&rsquo;s presence?</p>
+</blockquote>
+<p>Great questions, I&rsquo;m glad you asked! The magic word here is <span class="text-primary-400">advertising</span>.</p>
+<p>Our tracker (peripheral) constantly sends out advertising data every X ms (defined by an advertising interval), which a central device can then look out for. If the central device is ready to listen to these packets, it will respond with a <span class="text-primary-400">scan response</span> request.</p>
+<p>For our example, the application on our phone will scan for the specific MAC address of our tracker, which was probably programmed within the application itself, and sends a response request back to the tracker when found.</p>
+<p>Regarding the advertising data, different things such as the device name, TX Powerlevel, ID, or services are included.</p>
+
+
+<h2 class="relative group"><i class="fa-solid fa-bars"></i> How BLE works 
+    <div id="i-classfa-solid-fa-barsi-how-ble-works" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-barsi-how-ble-works" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<ul>
-<li>Advertising packets on the 3 channels</li>
-<li>Different Advertising packets exists</li>
-<li>Generally we get this type of data
-<ul>
-<li>Device name</li>
-<li>TX Powerlevel</li>
-<li>Services (UUID)</li>
-<li>ID</li>
-</ul>
-</li>
-<li>Advertising interval</li>
-<li>Peripheral &amp; Centrals (heavy lifting)</li>
-<li>Multiple connections possible to different devices</li>
-</ul>
+<p>Let us now investigate how the BLE Protocol operates, by taking a look at the different layers it consists of. As a whole, the protocol can be broken down into the following layers and sub-protocols:</p>
+
+<figure>
+      <img class="my-0 rounded-md" src="/images/posts/ble/layers.webp" alt="BLE Layers" />
+  
+  
+  </figure>
 
 
-<h2 class="relative group"><i class="fa-brands fa-connectdevelop"></i> Connection 
-    <div id="i-classfa-brands-fa-connectdevelopi-connection" class="anchor"></div>
+<h3 class="relative group">Generic Access Profile (<span class="text-primary-400">GAP</span>) 
+    <div id="generic-access-profile-span-classtext-primary-400gapspan" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#i-classfa-brands-fa-connectdevelopi-connection" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#generic-access-profile-span-classtext-primary-400gapspan" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>GAP implements the advertising process we discussed before. It is also responsible for defining devices&rsquo; roles in BLE communication. As for the roles, the following once exists: <span class="text-primary-400">Broadcaster</span>, <span class="text-primary-400">Observer</span>, <span class="text-primary-400">Peripheral</span>, and <span class="text-primary-400">Central</span>. Depending on the connection type: <span class="text-primary-400">Broadcast</span> (one-to-many) or <span class="text-primary-400">Unicast</span> (one-to-one), devices will be assigned one of those. Peripheral and central for unicast, broadcaster, and observer for broadcast.</p>
+
+
+<h3 class="relative group">Generic Attribute Protocol (<span class="text-primary-400">GATT</span>) 
+    <div id="generic-attribute-protocol-span-classtext-primary-400gattspan" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#generic-attribute-protocol-span-classtext-primary-400gattspan" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Now, one of the other very important sub-protocols is GATT. This protocol defines how two BLE devices exchange data with each other. This data exchange is initiated <span class="text-primary-400">after</span> the advertising process (GAP) has been completed. Now, the core concept of data exchange lies in so-called <span class="text-primary-400">characteristics</span> and <span class="text-primary-400">services</span>.</p>
+
+
+<h4 class="relative group">Characteristics 
+    <div id="characteristics" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#characteristics" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>In simple words, a characteristic can be thought of as a basic &ldquo;API endpoint&rdquo; (e.g. <code>GET /tracker/heart_rate</code>). It can be accessed and called by devices to either <span class="text-primary-400">read</span>, <span class="text-primary-400">write</span>, or listen and <span class="text-primary-400">notify</span> for any updated data. However, in terms of BLE we often encounter that those &ldquo;API endpoints&rdquo; are not directly translated into something useful such as <code>GET /tracker/heart_rate</code>, but a <span class="text-primary-400">UUID</span> like <code>AAE28F0071B534ABCF182F...</code></p>
+<p>Mostly, if we see such a UUID we can assume that this is a custom-created characteristic by the manufacturer. At the beginning of a connection, a series of characteristics and the service name are exchanged by the devices. This way the central device can identify the service.</p>
+<p><span class="text-primary-400">The interesting part about BLE is that most devices are configured to accept connections by <span class="font-bold">any device</span> without pairing or bonding first.</span> This allows us to interact with the device and retrieve the services and characteristics. Although, those can be configured to require pairing or bonding as well, but more on that later.</p>
+
+
+<h4 class="relative group">Services 
+    <div id="services" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#services" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>A service is simply a bundle of different characteristics. In the example of our &ldquo;API endpoint&rdquo;, it could be the <code>/tracker/</code> path that bundles different functionality such as <code>/heart_rate</code>. Commonly, bundling characteristics is done in a logical way, such as we did with the tracker and the corresponding heart rate function.</p>
+
+
+<h2 class="relative group"><i class="fa-solid fa-user-ninja"></i> Hacking BLE 
+    <div id="i-classfa-solid-fa-user-ninjai-hacking-ble" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-user-ninjai-hacking-ble" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<ul>
-<li>Peripheral sends advertising packets</li>
-<li>Central scans for advertising packets</li>
-<li>When it sees those advertising packets it send a connection request to the peripheral</li>
-<li>Peripheral respons with a packet</li>
-<li>Both devices connect</li>
-</ul>
 
 
-<h2 class="relative group"><i class="fa-solid fa-user"></i> Services <span class="text-primary-400">&amp;</span> Characteristics 
-    <div id="i-classfa-solid-fa-useri-services-span-classtext-primary-400span-characteristics" class="anchor"></div>
+<h3 class="relative group">Prerequisites 
+    <div id="prerequisites" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-useri-services-span-classtext-primary-400span-characteristics" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#prerequisites" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Hacking protocols like Bluetooth, WiFi, Zigbee, etc. mostly require external hardware to do so. For BLE my recommendation is to get an <a href="https://www.nordicsemi.com/Products/Development-hardware/nRF52840-Dongle" target="_blank">nRF52840 Dongle</a> for the beginning. It costs around 10-20$ and features multiple protocols, already compiled programs such as a BLE sniffer, and other super useful stuff.</p>
+
+
+<h3 class="relative group">Enumeration 
+    <div id="enumeration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#enumeration" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Let us see if the interface we want to use even shows up on our PC by using <code>hci</code> tools. <span class="text-primary-400">HCI</span> stands for Host Controller Interface and is used between the physical and host layer of the BLE stack.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-prolog" data-lang="prolog"><span class="line"><span class="cl"><span class="s">❯</span> <span class="s">hciconfig</span>
+</span></span><span class="line"><span class="cl"><span class="s">hci1:</span>	<span class="nv">Type</span><span class="s">:</span> <span class="nv">Primary</span>  <span class="nv">Bus</span><span class="s">:</span> <span class="nv">USB</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">BD</span> <span class="nv">Address</span><span class="s">:</span> <span class="mi">5</span><span class="nv">C</span><span class="s">:</span><span class="nv">F3</span><span class="s">:</span><span class="mi">70</span><span class="s">:</span><span class="nv">XX</span><span class="s">:</span><span class="nv">XX</span><span class="s">:</span><span class="nv">XX</span>  <span class="nv">ACL</span> <span class="nv">MTU</span><span class="s">:</span> <span class="mi">1021</span><span class="s">:</span><span class="mi">8</span>  <span class="nv">SCO</span> <span class="nv">MTU</span><span class="s">:</span> <span class="mi">64</span><span class="s">:</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">UP</span> <span class="nv">RUNNING</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">RX</span> <span class="nn">bytes</span><span class="p">:</span><span class="mi">1414</span> <span class="nn">acl</span><span class="p">:</span><span class="mi">0</span> <span class="nn">sco</span><span class="p">:</span><span class="mi">0</span> <span class="nn">events</span><span class="p">:</span><span class="mi">84</span> <span class="nn">errors</span><span class="p">:</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">TX</span> <span class="nn">bytes</span><span class="p">:</span><span class="mi">4689</span> <span class="nn">acl</span><span class="p">:</span><span class="mi">0</span> <span class="nn">sco</span><span class="p">:</span><span class="mi">0</span> <span class="nn">commands</span><span class="p">:</span><span class="mi">69</span> <span class="nn">errors</span><span class="p">:</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s">hci0:</span>	<span class="nv">Type</span><span class="s">:</span> <span class="nv">Primary</span>  <span class="nv">Bus</span><span class="s">:</span> <span class="nv">USB</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">BD</span> <span class="nv">Address</span><span class="s">:</span> <span class="nv">D8</span><span class="s">:</span><span class="mi">80</span><span class="s">:</span><span class="mi">83</span><span class="s">:</span><span class="nv">XX</span><span class="s">:</span><span class="nv">XX</span><span class="s">:</span><span class="nv">XX</span>  <span class="nv">ACL</span> <span class="nv">MTU</span><span class="s">:</span> <span class="mi">1021</span><span class="s">:</span><span class="mi">6</span>  <span class="nv">SCO</span> <span class="nv">MTU</span><span class="s">:</span> <span class="mi">240</span><span class="s">:</span><span class="mi">8</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">UP</span> <span class="nv">RUNNING</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">RX</span> <span class="nn">bytes</span><span class="p">:</span><span class="mi">3551738</span> <span class="nn">acl</span><span class="p">:</span><span class="mi">1126</span> <span class="nn">sco</span><span class="p">:</span><span class="mi">636</span> <span class="nn">events</span><span class="p">:</span><span class="mi">436453</span> <span class="nn">errors</span><span class="p">:</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">TX</span> <span class="nn">bytes</span><span class="p">:</span><span class="mi">363080346</span> <span class="nn">acl</span><span class="p">:</span><span class="mi">422502</span> <span class="nn">sco</span><span class="p">:</span><span class="mi">362</span> <span class="nn">commands</span><span class="p">:</span><span class="mi">2761</span> <span class="nn">errors</span><span class="p">:</span><span class="mi">0</span>
+</span></span></code></pre></div><p>Great, let&rsquo;s do our first quick LE scan to see the devices around us:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-prolog" data-lang="prolog"><span class="line"><span class="cl"><span class="s">❯</span> <span class="s">sudo</span> <span class="s">hcitool</span> <span class="s">lescan</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LE</span> <span class="nv">Scan</span> <span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="mi">38</span><span class="s">:</span><span class="mi">18</span><span class="s">:</span><span class="mi">4</span><span class="nv">C</span><span class="s">:</span><span class="mi">24</span><span class="s">:</span><span class="mi">30</span><span class="s">:</span><span class="mi">3</span><span class="nv">E</span> <span class="nv">LE_WH</span><span class="o">-</span><span class="mi">1000</span><span class="nv">XM3</span>
+</span></span><span class="line"><span class="cl"><span class="mi">38</span><span class="s">:</span><span class="mi">18</span><span class="s">:</span><span class="mi">4</span><span class="nv">C</span><span class="s">:</span><span class="nv">XX</span><span class="s">:</span><span class="nv">XX</span><span class="s">:</span><span class="nv">XX</span> <span class="p">(</span><span class="s">unknown</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">...</span>
+</span></span></code></pre></div><p>Now for this, I will use my headphones (LE_WH-1000XM3) as an example. If you find the desired MAC address of the device you are interested in, we can proceed and enumerate the services and characteristics using <a href="https://www.bettercap.org/" target="_blank">bettercap</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ sudo bettercap --eval <span class="s2">&#34;ble.recon on&#34;</span>
+</span></span><span class="line"><span class="cl">bettercap v2.40.0 <span class="o">(</span>built <span class="k">for</span> linux amd64 with go1.23.5<span class="o">)</span> <span class="o">[</span><span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>01:40:20<span class="o">]</span> <span class="o">[</span>sys.log<span class="o">]</span> <span class="o">[</span>inf<span class="o">]</span> gateway monitor started ...
+</span></span><span class="line"><span class="cl">BLE  » <span class="o">[</span>01:40:21<span class="o">]</span> <span class="o">[</span>ble.device.new<span class="o">]</span> new BLE device LE_WH-1000XM3 detected as 38:18:4C:24:30:3E <span class="o">(</span>Sony Home Entertainment<span class="p">&amp;</span>Sound Products Inc<span class="o">)</span> -71 dBm.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">BLE  » ble.show
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">┌─────────┬───────────────────┬───────────────┬────────────────────────────────────────────┬──────────────────────────────────────────────┬─────────┬──────────┐
+</span></span><span class="line"><span class="cl">│ RSSI ▴  │        MAC        │     Name      │                   Vendor                   │                    Flags                     │ Connect │   Seen   │
+</span></span><span class="line"><span class="cl">├─────────┼───────────────────┼───────────────┼────────────────────────────────────────────┼──────────────────────────────────────────────┼─────────┼──────────┤
+</span></span><span class="line"><span class="cl">│ -74 dBm │ 38:18:4c:24:30:3e │ LE_WH-1000XM3 │ Sony Home Entertainment<span class="p">&amp;</span>Sound Products Inc │                                              │ ✔       │ 01:41:39 │
+</span></span></code></pre></div><p>Checking the &ldquo;Connect&rdquo; field of the table, we can see that this device allows us to connect without any prior pairing or bonding.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">BLE  » ble.enum 38:18:4c:24:30:3e
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>01:47:26<span class="o">]</span> <span class="o">[</span>sys.log<span class="o">]</span> <span class="o">[</span>inf<span class="o">]</span> ble.recon connecting to 38:18:4c:24:30:3e ...
+</span></span><span class="line"><span class="cl">BLE  »
+</span></span><span class="line"><span class="cl">┌──────────────┬──────────────────────────────────────┬─────────────────────┬─────────────────────────┐
+</span></span><span class="line"><span class="cl">│   Handles    │      Service &gt; Characteristics       │     Properties      │          Data           │
+</span></span><span class="line"><span class="cl">├──────────────┼──────────────────────────────────────┼─────────────────────┼─────────────────────────┤
+</span></span><span class="line"><span class="cl">│ <span class="m">0001</span> -&gt; <span class="m">0004</span> │ Generic Attribute <span class="o">(</span>1801<span class="o">)</span>             │                     │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0003</span>         │     Service Changed <span class="o">(</span>2a05<span class="o">)</span>           │ INDICATE            │                         │
+</span></span><span class="line"><span class="cl">│              │                                      │                     │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0005</span> -&gt; <span class="m">0009</span> │ Generic Access <span class="o">(</span>1800<span class="o">)</span>                │                     │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0007</span>         │     Device Name <span class="o">(</span>2a00<span class="o">)</span>               │ READ                │ LE_WH-1000XM3           │
+</span></span><span class="line"><span class="cl">│ <span class="m">0009</span>         │     Appearance <span class="o">(</span>2a01<span class="o">)</span>                │ READ                │ Unknown                 │
+</span></span><span class="line"><span class="cl">│              │                                      │                     │                         │
+</span></span><span class="line"><span class="cl">│ 000a -&gt; <span class="m">0011</span> │ 69a7f243e52f4443a7f9cb4d053c74d6     │                     │                         │
+</span></span><span class="line"><span class="cl">│ 000c         │     be8692b13b29410d94d350281940553e │ WRITE               │                         │
+</span></span><span class="line"><span class="cl">│ 000e         │     3f92019dac1d48dc9d9486a0fb507591 │ READ                │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0011</span>         │     5bc06a57f84d4086a65a2a238cb39cdb │ READ, WRITE         │ insufficient encryption │
+</span></span><span class="line"><span class="cl">│              │                                      │                     │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0012</span> -&gt; 001e │ fe59bfa87fe34a059d9499fadc69faff     │                     │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0014</span>         │     104c022e48d64dd28737f8ac5489c5d4 │ WRITE               │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0016</span>         │     69745240ec294899a2a8cf78fd214303 │ NOTIFY              │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0019</span>         │     70efdf0043754a9e912d63522566d947 │ NOTIFY              │                         │
+</span></span><span class="line"><span class="cl">│ 001c         │     eea2e8a089f04985a1e2d91dc4a52632 │ READ                │ <span class="m">02</span>                      │
+</span></span><span class="line"><span class="cl">│ 001e         │     a79e2bd1d6e44d1e8b4f141d69011cbb │ WRITE               │                         │
+</span></span><span class="line"><span class="cl">│              │                                      │                     │                         │
+</span></span><span class="line"><span class="cl">│ 001f -&gt; 002b │ 91c10d9caaef42bdb6d68a648c19213d     │                     │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0021</span>         │     99d1064e451746aa8fb46be64dd1a1f1 │ READ, WRITE, NOTIFY │ insufficient encryption │
+</span></span><span class="line"><span class="cl">│ <span class="m">0024</span>         │     fbe87f6c3f1a44b6b5770bac731f6e85 │ WRITE, NOTIFY       │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0027</span>         │     420791c0bff54bd1b957371614031136 │ WRITE, NOTIFY       │                         │
+</span></span><span class="line"><span class="cl">│ 002a         │     e4ef5a4630f94287a3e7643066acb768 │ WRITE, NOTIFY       │                         │
+</span></span><span class="line"><span class="cl">│              │                                      │                     │                         │
+</span></span><span class="line"><span class="cl">│ 002c -&gt; <span class="m">0031</span> │ fe03                                 │                     │                         │
+</span></span><span class="line"><span class="cl">│ 002e         │     f04eb177300543a7ac61a390ddf83076 │ WRITE               │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0030</span>         │     2beea05b18794bb48a2f72641f82420b │ READ, NOTIFY        │ insufficient encryption │
+</span></span><span class="line"><span class="cl">│              │                                      │                     │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0032</span> -&gt; <span class="m">0039</span> │ 5b833e056bc748028e9a723ceca4bd8f     │                     │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0034</span>         │     5b833c116bc748028e9a723ceca4bd8f │ WRITE               │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0036</span>         │     5b833c136bc748028e9a723ceca4bd8f │ NOTIFY              │                         │
+</span></span><span class="line"><span class="cl">│ <span class="m">0039</span>         │     5b833c146bc748028e9a723ceca4bd8f │ READ                │ WH-1000XM3              │
+</span></span><span class="line"><span class="cl">│              │                                      │                     │                         │
+</span></span><span class="line"><span class="cl">│ 003a -&gt; ffff │ 5b833e066bc748028e9a723ceca4bd8f     │                     │                         │
+</span></span><span class="line"><span class="cl">│ 003c         │     5b833c106bc748028e9a723ceca4bd8f │ WRITE               │                         │
+</span></span><span class="line"><span class="cl">│ 003e         │     5b833c126bc748028e9a723ceca4bd8f │ NOTIFY              │                         │
+</span></span><span class="line"><span class="cl">│              │                                      │                     │                         │
+</span></span><span class="line"><span class="cl">└──────────────┴──────────────────────────────────────┴─────────────────────┴─────────────────────────┘
+</span></span></code></pre></div><p>Awesome, now let&rsquo;s check the table and what we see.</p>
+<p>The first line looks like a &ldquo;grouping&rdquo; of the UUIDs below it. Remembering the sections before, those seem to be the services.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="hl"><span class="lnt">1
+</span></span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line hl"><span class="cl">│ <span class="m">0005</span> -&gt; <span class="m">0009</span> │ Generic Access <span class="o">(</span>1800<span class="o">)</span>    │      │               │
+</span></span><span class="line"><span class="cl">│ <span class="m">0007</span>         │     Device Name <span class="o">(</span>2a00<span class="o">)</span>   │ READ │ LE_WH-1000XM3 │
+</span></span><span class="line"><span class="cl">│ <span class="m">0009</span>         │     Appearance <span class="o">(</span>2a01<span class="o">)</span>    │ READ │ Unknown	     │</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Below each of the services, we find the individual characteristics, and their properties (<span class="text-primary-400">READ</span>, <span class="text-primary-400">WRITE</span>, <span class="text-primary-400">NOTIFY</span>), as well as the data which bettercap automatically reads and displays for us. Further, we can see the memory location where the data is stored, referred to as <span class="text-primary-400">handles</span>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="hl"><span class="lnt">2
+</span></span><span class="hl"><span class="lnt">3
+</span></span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">│ <span class="m">0005</span> -&gt; <span class="m">0009</span> │ Generic Access <span class="o">(</span>1800<span class="o">)</span>    │      │               │
+</span></span><span class="line hl"><span class="cl">│ <span class="m">0007</span>         │     Device Name <span class="o">(</span>2a00<span class="o">)</span>   │ READ │ LE_WH-1000XM3 │
+</span></span><span class="line hl"><span class="cl">│ <span class="m">0009</span>         │     Appearance <span class="o">(</span>2a01<span class="o">)</span>    │ READ │ Unknown	     │</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Here it is always important to check out that the memory locations are <span class="text-primary-400">overlapping</span>, meaning there is no gap between memory addresses, e.g. <code>[0001 -&gt; 0004] -&gt; [0005 -&gt; 0009]..</code> and so on. If there were gaps between the handles, this could mean that there are <span class="text-primary-400">hidden services</span> inside.</p>
+<p>Further, some of those handles do require some sort of pairing or bonding, indicated by the <code>insufficient encryption</code>.</p>
+<p>Now, if you take a look at the table again, you will see that there are a lot of custom-implemented services and characteristics displaying just a UUID. If we are planning to attack this device, we probably should know what the actual functionality behind each UUID is. For this, we will need to reverse engineer each of those characteristics by e.g. inspecting and experimenting with the traffic in Wireshark. However, this is a whole different topic and not in the scope of this blog article.</p>
+
+
+<h3 class="relative group">Reading and writing data 
+    <div id="reading-and-writing-data" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#reading-and-writing-data" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>So for reading data, we already saw that bettercap automatically reads and displays the data out of <span class="text-primary-400">READ</span> properties. However, we can also try to read data manually from a specific handle if we wish to do so.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ sudo gatttool -b 38:18:4c:24:30:3e --char-read -a 0x0039 <span class="p">|</span> awk -F: <span class="s1">&#39;{print $2}&#39;</span> <span class="p">|</span> xxd -r -p<span class="p">;</span><span class="nb">printf</span> <span class="s1">&#39;\n&#39;</span>
+</span></span><span class="line"><span class="cl">WH-1000XM3
+</span></span></code></pre></div><p>For writing data to a handle we can do something very similar. However, since we haven&rsquo;t reversed the characteristics, we have to guess which type of data is expected by the device. We can however use the <code>--listen</code> flag, which may return some information via the <span class="text-primary-400">NOTIFY</span> property within the service.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># We are trying to write a string, which is rejected</span>
+</span></span><span class="line"><span class="cl">❯ sudo gatttool -b 38:18:4c:24:30:3e --char-write-req -a 0x0034 -n <span class="k">$(</span><span class="nb">echo</span> -n <span class="s2">&#34;test&#34;</span> <span class="p">|</span> xxd -ps<span class="k">)</span> --listen
+</span></span><span class="line"><span class="cl">Characteristic Write Request failed: Attribute value length is invalid
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># We are trying to write a simple 0x00 byte, which is allowed</span>
+</span></span><span class="line"><span class="cl">❯ sudo gatttool -b 38:18:4c:24:30:3e --char-write-req -a 0x0034 -n <span class="m">00</span> --listen
+</span></span><span class="line"><span class="cl">Characteristic value was written successfully
+</span></span><span class="line"><span class="cl">Notification <span class="nv">handle</span> <span class="o">=</span> 0x0036 value: <span class="m">01</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">❯ sudo gatttool -b 38:18:4c:24:30:3e --char-write-req -a 0x0034 -n <span class="m">01</span> --listen
+</span></span><span class="line"><span class="cl">Characteristic value was written successfully
+</span></span><span class="line"><span class="cl">Notification <span class="nv">handle</span> <span class="o">=</span> 0x0036 value: <span class="m">00</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">Notify 
+    <div id="notify" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#notify" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>More details on this topic can be found <a href="https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/lessons/lesson-4-bluetooth-le-data-exchange/topic/services-and-characteristics/" target="_blank">here</a></p>
+</blockquote>
+<p>Sometimes, when using <code>--listen</code>, we won’t receive any data from a characteristic &ndash; even though it has the notify property. In these cases, we might need to configure the Client Characteristic Configuration Descriptor (<span class="text-primary-400">CCCD</span>) so that the server knows we want to receive notifications or indications.</p>
+<p>The CCCD is a specific type of descriptor that allows a client to subscribe to updates for a characteristic that supports server-initiated operations (i.e., notifications or indications). In our fitness tracker example, the phone can use the CCCD to subscribe to the heart rate measurement characteristic and receive updates automatically, rather than having to poll for the data.</p>
+<p>For our theoretical example, let’s choose the service with UUID <code>91c10d9c...</code> that spans handles <code>0x001f</code> to <code>0x002b</code>. Assume that the CCCD for the characteristic is located at handle <code>0x002b</code> (which has the required read and write permissions). We would then execute <code>char-write-req 0x002b 0100</code> to enable the notifications.</p>
+
+
+<h3 class="relative group">nRF Connect 
+    <div id="nrf-connect" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#nrf-connect" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>A way easier way compared to the manual one we saw before is to utilize the power of the nRF Dongle I recommended before. The <a class="underline"><a href="https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-Desktop" target="_blank">application</a></a> offers a lot of different programs, also BLE, that we can directly run with just a click.</p>
+
+<figure>
+      <img class="my-0 rounded-md full" src="/images/posts/ble/nrf_ble.png" alt="Description of the image" />
+  
+  
+  </figure>
+<p>We get the same results by just clicking on &ldquo;Start scan&rdquo; and the corresponding &ldquo;Connect&rdquo; button. Further, we can also see that the software automatically reads out the data from <span class="text-primary-400">READ</span> properties if it is able to just like bettercap.</p>
+
+<figure>
+      <img class="my-0 rounded-md full" src="/images/posts/ble/nrf_read.png" alt="Description of the image" />
+  
+  
+  </figure>
+<p>Writing and notifying is also just as easy as clicking a button or inputting the values. Although the sotware does not automatically decoded the bytes of <code>57 48 2D..</code> to <code>WH-1000XM3</code>, which bettercap actually did for us.</p>
+
+<figure>
+      <img class="my-0 rounded-md full" src="/images/posts/ble/nrf_write.png" alt="Description of the image" />
+  
+  
+  </figure>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">│ <span class="m">0039</span> │ 5b833c146bc748028e9a723ceca4bd8f │ READ │ WH-1000XM3 │
+</span></span></code></pre></div>
+
+<h2 class="relative group"><i class="fa-solid fa-list"></i> Summary 
+    <div id="i-classfa-solid-fa-listi-summary" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-listi-summary" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<ul>
-<li>Both define how BLE device organizes and structures data that it exposes</li>
-<li>Characteristics represents a peace of information or data that a BLE dev wants to expose to another dev</li>
-<li>Service is a grouping of 1 or more characteristics (often logical)</li>
-</ul>
-<hr>
-
-
-<h1 class="relative group">nRF528040 
-    <div id="nrf528040" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#nrf528040" aria-label="Anchor">#</a>
-    </span>        
-    
-</h1>
-<ul>
-<li>Multiprotocol capable</li>
-<li>BLE, Zigbee, 802.15.4 and more</li>
-<li>10-20$</li>
-<li><a href="https://www.nordicsemi.com/Products/Development-tools/nRF-Sniffer-for-Bluetooth-LE" target="_blank">https://www.nordicsemi.com/Products/Development-tools/nRF-Sniffer-for-Bluetooth-LE</a></li>
-</ul>
+<p>In this article, we delved into the essentials BLE and its inner workings. We began by exploring the fundamental differences between BLE and classic Bluetooth, emphasizing BLE&rsquo;s low-power communication and its unique advertising mechanism. Key BLE components such as GAP and GATT were discussed, highlighting how they define device roles, advertising, and data exchange through services and characteristics.</p>
+<p>We then transitioned into the practical side of BLE hacking. Using tools like bettercap and gatttool, we demonstrated how to enumerate nearby BLE devices, inspect their available services, and interact with their characteristics &ndash; whether it’s reading, writing, or enabling notifications. The article also covered common challenges such as handling hidden services as well as a brief overview of how modern tools like the nRF Connect suite can simplify these tasks.</p>
+<p>Overall, this guide provides a solid foundation for understanding BLE technology and its vulnerabilities, paving the way for further exploration and security testing in the ever-evolving landscape of IoT and wireless communications.</p>
 
           
           
@@ -722,19 +1164,15 @@
   
   
 
-  <a href="/posts/template/" class="min-w-full">
+  <a href="/ctfs/ble/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
-        
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/template/featured.png);"></div>
-        
-      
 
       <div class="px-6 py-4">
 
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/template/">Template</div>
+          href="/ctfs/ble/">Under construction</div>
         
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -758,8 +1196,6 @@
 
 
 
-  
-
 
 
 
@@ -775,7 +1211,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-29T00:00:00&#43;00:00">29 January 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  <time datetime="2025-02-10T00:00:00&#43;00:00">10 February 2025</time>
   
 
   
@@ -825,43 +1261,6 @@
   <footer class="pt-8 max-w-prose print:hidden">
 
     
-  
-    
-    
-    
-    <div class="pt-8">
-      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
-      <div class="flex justify-between pt-3">
-        <span>
-          
-            <a class="flex group mr-3" href="/posts/template/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Template</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-01-29T00:00:00&#43;00:00">29 January 2025</time>
-                  
-                </span>
-              </span>
-            </a>
-          
-        </span>
-        <span>
-          
-        </span>
-      </div>
-    </div>
   
 
 

@@ -22,6 +22,11 @@ pageRef = "posts"
 weight = 20
 
 [[main]]
+name = "CTFs"
+pageRef = "ctfs"
+weight = 25
+
+[[main]]
 name = "Projects"
 pageRef = "projects"
 weight = 30
