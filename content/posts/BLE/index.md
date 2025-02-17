@@ -1,6 +1,6 @@
 ---
 title: "Bluetooth Low Energy Hacking 101"
-date: 2025-02-10
+date: 2025-02-17
 draft: false
 description: "TODO"
 ---
