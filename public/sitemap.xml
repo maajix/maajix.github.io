@@ -33,6 +33,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/posts/nosql/</loc>
+    <lastmod>2025-02-17T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -53,11 +59,6 @@
   <url>
     <loc>http://localhost:1313/projects/</loc>
     <lastmod>2022-06-13T20:55:37+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/posts/nosql/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
