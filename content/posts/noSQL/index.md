@@ -178,6 +178,6 @@ db.users.findOne({
 });
 ```
 
-Effect: The condition `this.username == 'admin' || true` always evaluates to true, allowing the attacker to bypass authentication.
+<b class="text-primary-400">Effect</b>: The condition `this.username == 'admin' || true` always evaluates to true, allowing the attacker to bypass authentication.
 
 <b class="text-primary-400">Further Exploitation</b>: Attackers can use injections like `" || ""=="` or `" || true || ""=="` to evaluate the entire query to true. They can also enumerate fields using functions like `match($regex)` and the character-by-character approach mentioned earlier.
