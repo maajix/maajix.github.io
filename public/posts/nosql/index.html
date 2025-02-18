@@ -922,7 +922,7 @@ search[$regex]=^SecretProduct$
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="line"><span class="cl"><span class="nx">db</span><span class="p">.</span><span class="nx">users</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">$where</span><span class="o">:</span> <span class="s2">&#34;this.username == &#39;admin&#39; || true // &#39; &amp;&amp; this.password == &#39;anything&#39;&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span></code></pre></div><p>Effect: The condition <code>this.username == 'admin' || true</code> always evaluates to true, allowing the attacker to bypass authentication.</p>
+</span></span></code></pre></div><p><b class="text-primary-400">Effect</b>: The condition <code>this.username == 'admin' || true</code> always evaluates to true, allowing the attacker to bypass authentication.</p>
 <p><b class="text-primary-400">Further Exploitation</b>: Attackers can use injections like <code>&quot; || &quot;&quot;==&quot;</code> or <code>&quot; || true || &quot;&quot;==&quot;</code> to evaluate the entire query to true. They can also enumerate fields using functions like <code>match($regex)</code> and the character-by-character approach mentioned earlier.</p>
 
           
@@ -1027,7 +1027,7 @@ search[$regex]=^SecretProduct$
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
         
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/ble/feature.png);"></div>
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/ble/feature.jpeg);"></div>
         
       
 
