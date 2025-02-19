@@ -60,7 +60,8 @@ I build innovative security tools and explore new approaches in cybersecurity re
               <span class="flex" style="cursor:pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Active</span></span>
             </td>
             <td>A 3D Car simulator controlled via an XBox controller and CAN messages for our real life car demonstrator project</td>
-        </tr>
+            <td><a href="#">TBD</a></td>
+    </tr>
          <tr class="space-x-4">
             <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/yekcar.png"/></td>
             <td>
@@ -68,6 +69,15 @@ I build innovative security tools and explore new approaches in cybersecurity re
               <span class="flex" style="cursor:pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Active</span></span>
             </td>
             <td>Different PySide6 QML dashboards (Attacker, Defender, Car-Dashboard) using real CAN communication for our real life car demonstrator project</td>
+        </tr>
+        <tr class="space-x-4">
+            <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/anomalyml.png"/></td>
+            <td>
+                <span class="font-bold">AnomalyML<br></span>
+                <span style="border: 1px solid #4ade80; color: #4ade80;" class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal">Done</span>
+            </td>
+            <td>A small ML project which could be deployed to our demonstrator project to detect and alert speed injections.</td>
+            <td><a href="#">TBD</a></td>
         </tr>
         <tr class="space-x-4">
             <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/ytrain.png"/></td>
