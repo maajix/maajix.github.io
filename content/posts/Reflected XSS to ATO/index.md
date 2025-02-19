@@ -1,6 +1,6 @@
 ---
 title: "Reflected XSS to Account Takeover"
-date: 2025-02-17
+date: 2025-02-19
 draft: false
 description: "A reflected XSS bug turns into an ATO due to low security messures"
 ---
