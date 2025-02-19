@@ -8,6 +8,10 @@ description: "Test XSS description"
 # H1 Test
 asdsa `code`
 
+<span class="text-primary-400">
+X
+</span>
+
 ```python
 print("test")
 ```

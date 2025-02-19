@@ -6,10 +6,10 @@ description: "Introduction into NoSQL Injection Attacks"
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-## <i class="fa-solid fa-syringe"></i> Overview
+## <i class="fa-solid fa-syringe text-primary-400"></i> Overview
 <span class="text-primary-400">NoSQL</span> databases like MongoDB, Couchbase, and Cassandra have gained immense popularity due to their flexibility, scalability, and performance benefits over traditional relational databases. However, with this rise in adoption comes an increase in security vulnerabilities. NoSQL injection attacks occur when <span class="text-primary-400">untrusted user input is improperly handled and executed</span> within a NoSQL query, allowing an attacker to manipulate database operations. These vulnerabilities are <span class="text-primary-400">as dangerous as traditional SQL injections</span> but are often overlooked due to the misconception that NoSQL databases are inherently secure.
 
-## <i class="fa-solid fa-compass"></i> Types of NoSQL Injection
+## <i class="fa-solid fa-compass text-primary-400"></i> Types of NoSQL Injection
 NoSQL injection attacks can be categorized based on how the attacker interacts with the database and the feedback received. Understanding these types is crucial for both developers and security professionals to identify and mitigate potential threats.
 
 ### In-Band Injection

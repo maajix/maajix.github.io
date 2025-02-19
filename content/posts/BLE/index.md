@@ -7,7 +7,7 @@ description: "Learn how to hack Bluetooth Low Energy devices: from protocol basi
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
-## <i class="fa-brands fa-bluetooth"></i> Overview
+## <i class="fa-brands fa-bluetooth text-primary-400"></i> Overview
 > Feel free to skip to the hacking part directly if you don't care about the basics of BLE
 
 ### Bluetooth Low Energy (<span class="text-primary-400">BLE</span>)
@@ -27,7 +27,7 @@ For our example, the application on our phone will scan for the specific MAC add
 
 Regarding the advertising data, different things such as the device name, TX Powerlevel, ID, or services are included.
 
-## <i class="fa-solid fa-bars"></i> How BLE works
+## <i class="fa-solid fa-bars text-primary-400"></i> How BLE works
 Let us now investigate how the BLE Protocol operates, by taking a look at the different layers it consists of. As a whole, the protocol can be broken down into the following layers and sub-protocols:
 
 {{< figure
@@ -51,7 +51,7 @@ Mostly, if we see such a UUID we can assume that this is a custom-created charac
 #### Services
 A service is simply a bundle of different characteristics. In the example of our "API endpoint", it could be the `/tracker/` path that bundles different functionality such as `/heart_rate`. Commonly, bundling characteristics is done in a logical way, such as we did with the tracker and the corresponding heart rate function.
 
-## <i class="fa-solid fa-user-ninja"></i> Hacking BLE
+## <i class="fa-solid fa-user-ninja text-primary-400"></i> Hacking BLE
 
 ### Prerequisites
 Hacking protocols like Bluetooth, WiFi, Zigbee, etc. mostly require external hardware to do so. For BLE my recommendation is to get an [nRF52840 Dongle](https://www.nordicsemi.com/Products/Development-hardware/nRF52840-Dongle) for the beginning. It costs around 10-20$ and features multiple protocols, already compiled programs such as a BLE sniffer, and other super useful stuff.
@@ -239,7 +239,7 @@ Writing and notifying is also just as easy as clicking a button or inputting the
 │ 0039 │ 5b833c146bc748028e9a723ceca4bd8f │ READ │ WH-1000XM3 │
 ```
 
-## <i class="fa-solid fa-list"></i> Summary
+## <i class="fa-solid fa-list text-primary-400"></i> Summary
 In this article, we delved into the essentials BLE and its inner workings. We began by exploring the fundamental differences between BLE and classic Bluetooth, emphasizing BLE's low-power communication and its unique advertising mechanism. Key BLE components such as GAP and GATT were discussed, highlighting how they define device roles, advertising, and data exchange through services and characteristics.
 
 We then transitioned into the practical side of BLE hacking. Using tools like bettercap and gatttool, we demonstrated how to enumerate nearby BLE devices, inspect their available services, and interact with their characteristics -- whether it’s reading, writing, or enabling notifications. The article also covered common challenges such as handling hidden services as well as a brief overview of how modern tools like the nRF Connect suite can simplify these tasks.

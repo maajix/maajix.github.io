@@ -9,6 +9,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/posts/intro-to-cache-poisoning/</loc>
+    <lastmod>2025-02-19T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-02-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -17,12 +23,6 @@
   <url>
     <loc>http://localhost:1313/posts/reflected-xss-to-ato/</loc>
     <lastmod>2025-02-19T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/posts/intro-to-cache-poisoning/</loc>
-    <lastmod>2025-02-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

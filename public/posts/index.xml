@@ -12,6 +12,16 @@
     <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Introduction to Cache Poisoning Attacks</title>
+      <link>http://localhost:1313/posts/intro-to-cache-poisoning/</link>
+      <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/posts/intro-to-cache-poisoning/</guid>
+      <description>Terminology #Keyed Parameters #Keyed parameters are parameters that the cache system considers when storing and retrieving cached content.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/intro-to-cache-poisoning/feature.png" />
+    </item>
+    
+    <item>
       <title>Reflected XSS to Account Takeover</title>
       <link>http://localhost:1313/posts/reflected-xss-to-ato/</link>
       <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
@@ -19,16 +29,6 @@
       <guid>http://localhost:1313/posts/reflected-xss-to-ato/</guid>
       <description>The Vulnerabillity #When researching an application, I noticed that there was a feature for resetting the email address of our user.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/reflected-xss-to-ato/feature.png" />
-    </item>
-    
-    <item>
-      <title>Introduction to Cache Poisoning Attacks</title>
-      <link>http://localhost:1313/posts/intro-to-cache-poisoning/</link>
-      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
-      <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:1313/posts/intro-to-cache-poisoning/</guid>
-      <description>Introduction During a recent penetration test of a web application, we discovered a Cross-Site Scripting (XSS) via caching vunlerabillity.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/intro-to-cache-poisoning/feature.webp" />
     </item>
     
     <item>
