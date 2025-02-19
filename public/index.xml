@@ -52,13 +52,23 @@
     </item>
     
     <item>
+      <title>Reflected XSS to Account Takeover</title>
+      <link>http://localhost:1313/posts/reflected-xss-to-ato/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/posts/reflected-xss-to-ato/</guid>
+      <description>The Vulnerabillity #When researching an application, I noticed that there was a feature for resetting the email address of our user.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/reflected-xss-to-ato/feature.png" />
+    </item>
+    
+    <item>
       <title>Template</title>
       <link>http://localhost:1313/posts/template/</link>
       <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
       <author>max.randhahn@yahoo.de (Max)</author>
       <guid>http://localhost:1313/posts/template/</guid>
       <description>H1 Test #asdsa code</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/template/featured.png" />
+      
     </item>
     
     <item>
