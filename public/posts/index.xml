@@ -17,7 +17,7 @@
       <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
       <author>max.randhahn@yahoo.de (Max)</author>
       <guid>http://localhost:1313/posts/intro-to-cache-poisoning/</guid>
-      <description>Terminology #Keyed Parameters #Keyed parameters are parameters that the cache system considers when storing and retrieving cached content.</description>
+      <description>Introduction to Cache Poisoning Attacks Terminology #Keyed Parameters #Keyed parameters are parameters that the cache system considers when storing and retrieving cached content.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/intro-to-cache-poisoning/feature.png" />
     </item>
     
