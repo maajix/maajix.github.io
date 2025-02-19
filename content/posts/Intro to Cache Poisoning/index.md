@@ -3,10 +3,9 @@ title: "Introduction to Cache Poisoning Attacks"
 date: 2025-02-19
 draft: false
 description: "Introduction into Cache Poisoning Attacks"
-cover: "/posts/intro-to-cache-poisoning/feature.png"
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+<meta name="image" property="og:image" content="/posts/Intro to Cache Poisoning/feature.png">
 
 ## <i class="fa-solid fa-worm text-primary-400"></i> Terminology
 
