@@ -3,94 +3,94 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:38287/</loc>
+    <loc>http://localhost:37337/</loc>
     <lastmod>2025-02-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/posts/intro-to-cache-poisoning/</loc>
+    <loc>http://localhost:37337/posts/intro-to-cache-poisoning/</loc>
     <lastmod>2025-02-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/posts/</loc>
+    <loc>http://localhost:37337/posts/</loc>
     <lastmod>2025-02-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/posts/reflected-xss-to-ato/</loc>
+    <loc>http://localhost:37337/posts/reflected-xss-to-ato/</loc>
     <lastmod>2025-02-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/posts/intro-to-nosql/</loc>
+    <loc>http://localhost:37337/posts/intro-to-nosql/</loc>
     <lastmod>2025-02-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/ctfs/1337up-2024/</loc>
+    <loc>http://localhost:37337/ctfs/1337up-2024/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/posts/ble/</loc>
+    <loc>http://localhost:37337/posts/ble/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/ctfs/</loc>
+    <loc>http://localhost:37337/ctfs/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/ctfs/glacier-2024/</loc>
+    <loc>http://localhost:37337/ctfs/glacier-2024/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/posts/template/</loc>
+    <loc>http://localhost:37337/posts/template/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/resume/</loc>
+    <loc>http://localhost:37337/resume/</loc>
     <lastmod>2022-06-13T21:28:51+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/projects/</loc>
+    <loc>http://localhost:37337/projects/</loc>
     <lastmod>2022-06-13T20:55:37+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/authors/</loc>
+    <loc>http://localhost:37337/authors/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/categories/</loc>
+    <loc>http://localhost:37337/categories/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/series/</loc>
+    <loc>http://localhost:37337/series/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:38287/tags/</loc>
+    <loc>http://localhost:37337/tags/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

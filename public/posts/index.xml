@@ -2,61 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on &gt;_ majix.site</title>
-    <link>http://localhost:38287/posts/</link>
+    <link>http://localhost:37337/posts/</link>
     <description>Recent content in Posts on &gt;_ majix.site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>max.randhahn@yahoo.de (Max)</managingEditor>
     <webMaster>max.randhahn@yahoo.de (Max)</webMaster>
     <copyright>© 2025 Max</copyright>
-    <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:38287/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:37337/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Introduction to Cache Poisoning Attacks</title>
-      <link>http://localhost:38287/posts/intro-to-cache-poisoning/</link>
+      <link>http://localhost:37337/posts/intro-to-cache-poisoning/</link>
       <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
       <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:38287/posts/intro-to-cache-poisoning/</guid>
+      <guid>http://localhost:37337/posts/intro-to-cache-poisoning/</guid>
       <description>Terminology #Keyed Parameters #Keyed parameters are parameters that the cache system considers when storing and retrieving cached content.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:38287/posts/intro-to-cache-poisoning/feature.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:37337/posts/intro-to-cache-poisoning/feature.png" />
     </item>
     
     <item>
       <title>Reflected XSS to Account Takeover</title>
-      <link>http://localhost:38287/posts/reflected-xss-to-ato/</link>
+      <link>http://localhost:37337/posts/reflected-xss-to-ato/</link>
       <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
       <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:38287/posts/reflected-xss-to-ato/</guid>
+      <guid>http://localhost:37337/posts/reflected-xss-to-ato/</guid>
       <description>The Vulnerabillity #When researching an application, I noticed that there was a feature for resetting the email address of our user.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:38287/posts/reflected-xss-to-ato/feature.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:37337/posts/reflected-xss-to-ato/feature.png" />
     </item>
     
     <item>
       <title>Introduction to NoSQL Injection Attacks</title>
-      <link>http://localhost:38287/posts/intro-to-nosql/</link>
+      <link>http://localhost:37337/posts/intro-to-nosql/</link>
       <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
       <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:38287/posts/intro-to-nosql/</guid>
+      <guid>http://localhost:37337/posts/intro-to-nosql/</guid>
       <description>Overview #NoSQL databases like MongoDB, Couchbase, and Cassandra have gained immense popularity due to their flexibility, scalability, and performance benefits over traditional relational databases.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:38287/posts/intro-to-nosql/feature.webp" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:37337/posts/intro-to-nosql/feature.webp" />
     </item>
     
     <item>
       <title>Bluetooth Low Energy Hacking 101</title>
-      <link>http://localhost:38287/posts/ble/</link>
+      <link>http://localhost:37337/posts/ble/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
       <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:38287/posts/ble/</guid>
+      <guid>http://localhost:37337/posts/ble/</guid>
       <description>Overview #Feel free to skip to the hacking part directly if you don&amp;rsquo;t care about the basics of BLE</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:38287/posts/ble/feature.webp" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:37337/posts/ble/feature.webp" />
     </item>
     
     <item>
       <title>Template</title>
-      <link>http://localhost:38287/posts/template/</link>
+      <link>http://localhost:37337/posts/template/</link>
       <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
       <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:38287/posts/template/</guid>
+      <guid>http://localhost:37337/posts/template/</guid>
       <description>H1 Test #asdsa code</description>
       
     </item>
