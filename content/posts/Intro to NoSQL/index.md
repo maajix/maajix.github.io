@@ -1,5 +1,5 @@
 ---
-title: "NoSQL Injection Attacks"
+title: "Introduction to NoSQL Injection Attacks"
 date: 2025-02-18
 draft: false
 description: "Introduction into NoSQL Injection Attacks"
