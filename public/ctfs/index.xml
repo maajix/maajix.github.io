@@ -2,33 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ctfs on &gt;_ majix.site</title>
-    <link>http://localhost:36607/ctfs/</link>
+    <link>http://localhost:1313/ctfs/</link>
     <description>Recent content in Ctfs on &gt;_ majix.site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>max.randhahn@yahoo.de (Max)</managingEditor>
     <webMaster>max.randhahn@yahoo.de (Max)</webMaster>
     <copyright>© 2025 Max</copyright>
-    <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:36607/ctfs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/ctfs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>1337UP (2024)</title>
-      <link>http://localhost:36607/ctfs/1337up-2024/</link>
+      <link>http://localhost:1313/ctfs/1337up-2024/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
       <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:36607/ctfs/1337up-2024/</guid>
+      <guid>http://localhost:1313/ctfs/1337up-2024/</guid>
       <description>🏆 318/1061 -- 700 Points Challange Type Points Finished Secure Bank Rev 100 November 16th, 11:55:09 PM BabyFlow Warmup 50 November 16th, 8:29:59 PM Rigged Slot Machine 1 Warmup 50 November 16th, 8:21:55 PM Trackdown 2 OSINT 100 November 15th, 8:09:06 PM Trackdown OSINT 100 November 15th, 7:49:05 PM Cold Storage Mobile 100 November 15th, 5:05:44 PM BioCorp Web 100 November 15th, 3:16:32 PM Pizza Paradise Web 100 November 15th, 2:46:25 PM Writeups #Cold Storage 🐈 #The Initial Roadblock: APK Installation Blues Like any eager hacker starting a mobile challenge, I dove straight in trying to install the APK.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:36607/ctfs/1337up-2024/feature.webp" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctfs/1337up-2024/feature.webp" />
     </item>
     
     <item>
       <title>Glacier (2024)</title>
-      <link>http://localhost:36607/ctfs/glacier-2024/</link>
+      <link>http://localhost:1313/ctfs/glacier-2024/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
       <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:36607/ctfs/glacier-2024/</guid>
+      <guid>http://localhost:1313/ctfs/glacier-2024/</guid>
       <description>🏆 123/798 -- 200 points Challange Type Points Finished Fuzzybytes web 50 November 23rd, 6:56:11 PM typstastic misc 50 November 23rd, 5:19:06 AM Rivest–Shamir–Adleman-Germain crypto 50 November 22nd, 9:04:34 PM Welcome welcome 50 November 22nd, 7:02:16 PM Learnings #Embedded PNG files inside PDF stream #peepdf can help to analyze PDF streams</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:36607/ctfs/glacier-2024/featured.svg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctfs/glacier-2024/featured.svg" />
     </item>
     
   </channel>
