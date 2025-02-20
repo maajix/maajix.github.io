@@ -7,7 +7,7 @@ description: "Chaining a CORS Misconfiguration with XPath-Injectino to take over
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-Recently, during a penetration testing engagement, I uncovered a chain of exploits that began with a <span class="text-primary-400">CORS misconfiguration</span> and culminated in an account takeover / <span class="text-primary-400">authentication bypass via XPath injection in an API endpoint</span>. This article will describe the essentials of CORS, XPATH injections, and the way I was able to exploit the chain.
+During an assesment, I uncovered a chain of exploits that began with a <span class="text-primary-400">CORS misconfiguration</span> and culminated in an account takeover / <span class="text-primary-400">authentication bypass via XPath injection in an API endpoint</span>. This article will describe the essentials of CORS, XPATH injections, and the way I was able to exploit the chain.
 
 ---
 
