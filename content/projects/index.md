@@ -69,6 +69,7 @@ I build innovative security tools and explore new approaches in cybersecurity re
               <span class="flex" style="cursor:pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Active</span></span>
             </td>
             <td>Different PySide6 QML dashboards (Attacker, Defender, Car-Dashboard) using real CAN communication for our real life car demonstrator project</td>
+            <td><a href="/posts/demonstrator-v1/">Article</a></td>
         </tr>
         <tr class="space-x-4">
             <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/anomalyml.png"/></td>
@@ -86,6 +87,7 @@ I build innovative security tools and explore new approaches in cybersecurity re
                 <span style="border: 1px solid #4ade80; color: #4ade80;" class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal">Done</span>
             </td>
             <td>A Pyside6 QML dashboard for simulating a 2D train via real protocols for a planned real life project in the future</td>
+            <td><a href="#">TBD</a></td>
         </tr>
         <tr class="space-x-4">
             <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/ydashboard.png"/></td>
@@ -94,6 +96,7 @@ I build innovative security tools and explore new approaches in cybersecurity re
                 <span style="border: 1px solid #4ade80; color: #4ade80;" class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal">Done</span>
             </td>
             <td>Moder SOC dashboards written using Python flask for OT-, Train- and Car asset monitoring and alerting</td>
+            <td><a href="#">TBD</a></td>
         </tr>
         <tr class="space-x-4">
             <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/yfuzz.png"/></td>
