@@ -1,6 +1,6 @@
 ---
-title: "1337UP (2024)"
-date: 2025-02-17
+title: "1337UP"
+date: 2024-11-16
 draft: false
 description: "1337UP CTF 2024 - Majix"
 toc: false

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ATO on &gt;_ majix.site</title>
+    <link>http://localhost:1313/tags/ato/</link>
+    <description>Recent content in ATO on &gt;_ majix.site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>max.randhahn@yahoo.de (Max)</managingEditor>
+    <webMaster>max.randhahn@yahoo.de (Max)</webMaster>
+    <copyright>© 2025 Max</copyright>
+    <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ato/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CORS Misconfiguration to Account Takeover</title>
+      <link>http://localhost:1313/posts/cors-to-ato/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/posts/cors-to-ato/</guid>
+      <description>During an assesment, I uncovered a chain of exploits that began with a CORS misconfiguration and culminated in an account takeover / authentication bypass via XPath injection in an API endpoint.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/cors-to-ato/feature.webp" />
+    </item>
+    
+    <item>
+      <title>Reflected XSS to Account Takeover</title>
+      <link>http://localhost:1313/posts/reflected-xss-to-ato/</link>
+      <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/posts/reflected-xss-to-ato/</guid>
+      <description>The Vulnerabillity #When researching an application, I noticed that there was a feature for resetting the email address of our user.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/reflected-xss-to-ato/feature.png" />
+    </item>
+    
+  </channel>
+</rss>

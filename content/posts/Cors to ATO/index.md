@@ -3,6 +3,7 @@ title: "CORS Misconfiguration to Account Takeover"
 date: 2025-02-20
 draft: false
 description: "Chaining a CORS Misconfiguration with XPath-Injectino to take over arbitrary Accounts of the application"
+tags: ["CORS", "ATO", "SOP", "XPath"]
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

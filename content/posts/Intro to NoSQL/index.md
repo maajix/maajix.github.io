@@ -3,6 +3,7 @@ title: "Introduction to NoSQL Injection Attacks"
 date: 2025-02-18
 draft: false
 description: "Introduction into NoSQL Injection Attacks"
+tags: ["NoSQL", "Guide"]
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 

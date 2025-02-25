@@ -3,6 +3,7 @@ title: "Template"
 date: 2025-01-29
 draft: true
 description: "Test XSS description"
+tags: ["hugo", "blowfish", "webdev", "tutorial"]
 ---
 
 # H1 Test

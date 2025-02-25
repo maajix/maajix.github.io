@@ -1,6 +1,6 @@
 ---
-title: "Glacier (2024)"
-date: 2025-02-17
+title: "Glacier"
+date: 2024-10-23
 draft: false
 description: "Glacier CTF 2024 - Majix"
 toc: false

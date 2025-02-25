@@ -3,6 +3,7 @@ title: "Reflected XSS to Account Takeover"
 date: 2025-02-19
 draft: false
 description: "A reflected XSS bug turns into an ATO due to low security messures"
+tags: ["XSS", "ATO", "Wordpress"]
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
