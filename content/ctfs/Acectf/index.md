@@ -27,7 +27,7 @@ description: "Acectf"
 
 ---
 
-### Web (<span class="text-primary-400">3</span>/<span class="text-primary-400">3</span>)
+### Web 
 
 #### Webcrypto
 
