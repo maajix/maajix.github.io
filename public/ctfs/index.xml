@@ -9,7 +9,17 @@
     <managingEditor>max.randhahn@yahoo.de (Max)</managingEditor>
     <webMaster>max.randhahn@yahoo.de (Max)</webMaster>
     <copyright>© 2025 Max</copyright>
-    <lastBuildDate>Sat, 16 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/ctfs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/ctfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ACECTF</title>
+      <link>http://localhost:1313/ctfs/acectf/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/ctfs/acectf/</guid>
+      <description>🏆 X/X -- 2200 points Challenge Category Value Time The Chemistry Of Code Reverse 200 February 27th, 7:37:22 PM Flag-Fetcher Web Exploitation 200 February 27th, 7:13:35 PM Buried Deep Web Exploitation 100 February 27th, 7:09:12 PM Custom Encoding Scheme Cryptography 200 February 27th, 5:46:28 PM Super Secure Encryption Cryptography 100 February 27th, 3:38:49 PM The Mysterious Building OSINT 300 February 27th, 12:33:52 PM Fall of 2022 OSINT 100 February 27th, 11:45:02 AM Significance of Reversing Reverse 200 February 27th, 11:35:15 AM Bucket List Web Exploitation 300 February 27th, 11:06:05 AM Token of Trust Web Exploitation 200 February 27th, 10:47:37 AM Webrypto Web Exploitation 200 February 27th, 10:10:24 AM Writeup / Notes #Web (3/3) #Webcrypto #&amp;lt;?</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctfs/acectf/feature.png" />
+    </item>
     
     <item>
       <title>1337UP</title>

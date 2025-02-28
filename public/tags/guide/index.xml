@@ -31,5 +31,15 @@
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/intro-to-nosql/feature.webp" />
     </item>
     
+    <item>
+      <title>Bluetooth Low Energy Hacking 101</title>
+      <link>http://localhost:1313/posts/ble/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/posts/ble/</guid>
+      <description>Overview #Feel free to skip to the hacking part directly if you don&amp;rsquo;t care about the basics of BLE</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ble/feature.webp" />
+    </item>
+    
   </channel>
 </rss>

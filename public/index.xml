@@ -9,7 +9,17 @@
     <managingEditor>max.randhahn@yahoo.de (Max)</managingEditor>
     <webMaster>max.randhahn@yahoo.de (Max)</webMaster>
     <copyright>© 2025 Max</copyright>
-    <lastBuildDate>Fri, 21 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ACECTF</title>
+      <link>http://localhost:1313/ctfs/acectf/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/ctfs/acectf/</guid>
+      <description>🏆 X/X -- X points Challenge Category Value Time The Chemistry Of Code Reverse 200 February 27th, 7:37:22 PM Flag-Fetcher Web Exploitation 200 February 27th, 7:13:35 PM Buried Deep Web Exploitation 100 February 27th, 7:09:12 PM Custom Encoding Scheme Cryptography 200 February 27th, 5:46:28 PM Super Secure Encryption Cryptography 100 February 27th, 3:38:49 PM The Mysterious Building OSINT 300 February 27th, 12:33:52 PM Fall of 2022 OSINT 100 February 27th, 11:45:02 AM Significance of Reversing Reverse 200 February 27th, 11:35:15 AM Bucket List Web Exploitation 300 February 27th, 11:06:05 AM Token of Trust Web Exploitation 200 February 27th, 10:47:37 AM Webrypto Web Exploitation 200 February 27th, 10:10:24 AM Writeup / Notes #Web (3/3) #Webcrypto #&amp;lt;?</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctfs/acectf/feature.png" />
+    </item>
     
     <item>
       <title>Inside Our Car Hacking Demonstrator</title>
@@ -62,16 +72,6 @@
     </item>
     
     <item>
-      <title>1337UP (2024)</title>
-      <link>http://localhost:1313/ctfs/1337up-2024/</link>
-      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
-      <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:1313/ctfs/1337up-2024/</guid>
-      <description>🏆 318/1061 -- 700 Points Challange Type Points Finished Secure Bank Rev 100 November 16th, 11:55:09 PM BabyFlow Warmup 50 November 16th, 8:29:59 PM Rigged Slot Machine 1 Warmup 50 November 16th, 8:21:55 PM Trackdown 2 OSINT 100 November 15th, 8:09:06 PM Trackdown OSINT 100 November 15th, 7:49:05 PM Cold Storage Mobile 100 November 15th, 5:05:44 PM BioCorp Web 100 November 15th, 3:16:32 PM Pizza Paradise Web 100 November 15th, 2:46:25 PM Writeups #Cold Storage 🐈 #The Initial Roadblock: APK Installation Blues Like any eager hacker starting a mobile challenge, I dove straight in trying to install the APK.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctfs/1337up-2024/feature.webp" />
-    </item>
-    
-    <item>
       <title>Bluetooth Low Energy Hacking 101</title>
       <link>http://localhost:1313/posts/ble/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
@@ -82,16 +82,6 @@
     </item>
     
     <item>
-      <title>Glacier (2024)</title>
-      <link>http://localhost:1313/ctfs/glacier-2024/</link>
-      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
-      <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:1313/ctfs/glacier-2024/</guid>
-      <description>🏆 123/798 -- 200 points Challange Type Points Finished Fuzzybytes web 50 November 23rd, 6:56:11 PM typstastic misc 50 November 23rd, 5:19:06 AM Rivest–Shamir–Adleman-Germain crypto 50 November 22nd, 9:04:34 PM Welcome welcome 50 November 22nd, 7:02:16 PM Learnings #Embedded PNG files inside PDF stream #peepdf can help to analyze PDF streams</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctfs/glacier-2024/featured.svg" />
-    </item>
-    
-    <item>
       <title>Template</title>
       <link>http://localhost:1313/posts/template/</link>
       <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
@@ -99,6 +89,26 @@
       <guid>http://localhost:1313/posts/template/</guid>
       <description>H1 Test #asdsa code</description>
       
+    </item>
+    
+    <item>
+      <title>1337UP</title>
+      <link>http://localhost:1313/ctfs/1337up-2024/</link>
+      <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/ctfs/1337up-2024/</guid>
+      <description>🏆 318/1061 -- 700 Points Challange Type Points Finished Secure Bank Rev 100 November 16th, 11:55:09 PM BabyFlow Warmup 50 November 16th, 8:29:59 PM Rigged Slot Machine 1 Warmup 50 November 16th, 8:21:55 PM Trackdown 2 OSINT 100 November 15th, 8:09:06 PM Trackdown OSINT 100 November 15th, 7:49:05 PM Cold Storage Mobile 100 November 15th, 5:05:44 PM BioCorp Web 100 November 15th, 3:16:32 PM Pizza Paradise Web 100 November 15th, 2:46:25 PM Writeups #Cold Storage 🐈 #The Initial Roadblock: APK Installation Blues Like any eager hacker starting a mobile challenge, I dove straight in trying to install the APK.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctfs/1337up-2024/feature.webp" />
+    </item>
+    
+    <item>
+      <title>Glacier</title>
+      <link>http://localhost:1313/ctfs/glacier-2024/</link>
+      <pubDate>Wed, 23 Oct 2024 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/ctfs/glacier-2024/</guid>
+      <description>🏆 123/798 -- 200 points Challange Type Points Finished Fuzzybytes web 50 November 23rd, 6:56:11 PM typstastic misc 50 November 23rd, 5:19:06 AM Rivest–Shamir–Adleman-Germain crypto 50 November 22nd, 9:04:34 PM Welcome welcome 50 November 22nd, 7:02:16 PM Learnings #Embedded PNG files inside PDF stream #peepdf can help to analyze PDF streams</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctfs/glacier-2024/featured.svg" />
     </item>
     
     <item>

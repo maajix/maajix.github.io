@@ -4,7 +4,19 @@
 
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-02-21T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/ctfs/acectf/</loc>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/ctfs/</loc>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -129,7 +141,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/ctfs/1337up-2024/</loc>
+    <loc>http://localhost:1313/tags/ble/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -141,13 +153,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/ctfs/</loc>
-    <lastmod>2025-02-17T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/ctfs/glacier-2024/</loc>
+    <loc>http://localhost:1313/tags/hardware/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -179,6 +185,18 @@
   <url>
     <loc>http://localhost:1313/tags/webdev/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/ctfs/1337up-2024/</loc>
+    <lastmod>2024-11-16T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/ctfs/glacier-2024/</loc>
+    <lastmod>2024-10-23T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
