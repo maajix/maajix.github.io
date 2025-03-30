@@ -139,10 +139,6 @@ Dump of assembler code for function decrypt_message:
 ## OSINT
 
 ### Echoes in Stone
-```
-https://www.google.com/search?gsessionid=NrUMQ9N027OYXjdehy05mddDYG34RmGZADdQ91SG1qAT54FExyRCrA&lsessionid=G7LDQdzyBWIaHdEC_ncknuXO9jHH--kIksLYxi64lTuGNpg6QRejAQ&vsdim=888,806&source=lns.web.gsbubb&lns_surface=26&biw=1920&bih=925&hl=en-DE&vsrid=CKaSiZa60_LwnwEQBBgBIiQ4OEUxMzdDOS0yQTAxLTQzNDMtODI0Mi04OUQ5QzlBNkZENkU&udm=24&q=maps&vsint=CAQqCgoCCAcSAggSIAE6IwoWDSbk8z4VBK0QPx1LyOc-JdobXD8wARD4BhimBiUAAIA_&lns_mode=mu&qsubts=1742604765128&lns_fp=1&stq=1&cs=1&lei=gwneZ7frHPGgwPAP0-vM2QQ#vhid=vdr0wgqeVz8UuM&vssid=mosaic
-```
-
 `HTB{Muiredach_High_Cross}`
 
 ## GDB learnings
