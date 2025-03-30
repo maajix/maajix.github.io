@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <script data-goatcounter="https://majix.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>HTB Cyber Apocalypse &middot; &gt;_ majix.site</title>
+  <meta name="title" content="HTB Cyber Apocalypse &middot; &gt;_ majix.site" />
+  
+  <meta name="description" content="Cyber Apocalypse CTF - Majix" />
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/ctfs/cyber-apocalypse/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.29ebf16999b6d6d882a62cd75fec0cc08e8b5b240bded50f7caf79f331eeca56ec49b0c0c35fe1dd91ceab18e68940e78f9160f0674d23910187ff0e4743bf67.css"
+    integrity="sha512-KevxaZm21tiCpizXX&#43;wMwI6LWyQL3tUPfK958zHuylbsSbDAw1/h3ZHOqxjmiUDnj5Fg8GdNI5EBh/8OR0O/Zw==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.0c424ab1c6aafe2039f09c49da59e609e9c3639b293d752971a3f96bb967114eb9719493d28e382b62527c185812ddc2c5a3664a3a21d0cbab06dafccbf685e4.js"
+    integrity="sha512-DEJKscaq/iA58JxJ2lnmCenDY5spPXUpcaP5a7lnEU65cZST0o44K2JSfBhYEt3CxaNmSjoh0MurBtr8y/aF5A==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/lib/zoom/zoom.min.fcbc7f7b3dcea96e3b5570cd322c5d7a12d5351c87f9889b1c31745a2cc711df58f6b70795a86d50e63813b236ade916668332c10a70a4ce26f7c0878f525fce.js" integrity="sha512-/Lx/ez3OqW47VXDNMixdehLVNRyH&#43;YibHDF0WizHEd9Y9rcHlahtUOY4E7I2rekWZoMywQpwpM4m98CHj1Jfzg=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/ctfs/cyber-apocalypse/">
+  <meta property="og:site_name" content="&gt;_ majix.site">
+  <meta property="og:title" content="HTB Cyber Apocalypse">
+  <meta property="og:description" content="Cyber Apocalypse CTF - Majix">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="ctfs">
+    <meta property="article:published_time" content="2025-03-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-20T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/ctfs/cyber-apocalypse/feature.webp">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/ctfs/cyber-apocalypse/feature.webp">
+  <meta name="twitter:title" content="HTB Cyber Apocalypse">
+  <meta name="twitter:description" content="Cyber Apocalypse CTF - Majix">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Ctfs",
+    "name": "HTB Cyber Apocalypse",
+    "headline": "HTB Cyber Apocalypse",
+    "description": "Cyber Apocalypse CTF - Majix",
+    "abstract": "Only participated partially on Friday 21.",
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/ctfs\/cyber-apocalypse\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Max"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-03-20T00:00:00\u002b00:00",
+    "datePublished": "2025-03-20T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-03-20T00:00:00\u002b00:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "747"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Max" />
+  
+  
+  
+  <link href="https://github.com/maajix" rel="me" />
+  
+  
+  <link href="https://linkedin.com/in/max-randhahn" rel="me" />
+  
+  
+  <link href="https://twitter.com/majix_de" rel="me" />
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
+  </div>
+  
+  
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Home
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Blog
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/ctfs/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        CTFs
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/projects/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Projects
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/resume/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Resume
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Home
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Blog
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/ctfs/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            CTFs
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/projects/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Projects
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/resume/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Resume
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/ctfs/cyber-apocalypse/feature.webp);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/"
+      ></a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline ">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/ctfs/"
+      >Ctfs</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/ctfs/cyber-apocalypse/"
+      >HTB Cyber Apocalypse</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      HTB Cyber Apocalypse
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-03-20T00:00:00&#43;00:00">20 March 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+
+      
+
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#web">Web</a>
+      <ul>
+        <li><a href="#trial-by-fire">Trial by Fire</a></li>
+        <li><a href="#whispers-of-the-moonbeam">Whispers of the Moonbeam</a></li>
+      </ul>
+    </li>
+    <li><a href="#reverse">Reverse</a>
+      <ul>
+        <li><a href="#sealedrune">SealedRune</a></li>
+        <li><a href="#encryptedscroll">EncryptedScroll</a></li>
+      </ul>
+    </li>
+    <li><a href="#osint">OSINT</a>
+      <ul>
+        <li><a href="#echoes-in-stone">Echoes in Stone</a></li>
+      </ul>
+    </li>
+    <li><a href="#gdb-learnings">GDB learnings</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#web">Web</a>
+      <ul>
+        <li><a href="#trial-by-fire">Trial by Fire</a></li>
+        <li><a href="#whispers-of-the-moonbeam">Whispers of the Moonbeam</a></li>
+      </ul>
+    </li>
+    <li><a href="#reverse">Reverse</a>
+      <ul>
+        <li><a href="#sealedrune">SealedRune</a></li>
+        <li><a href="#encryptedscroll">EncryptedScroll</a></li>
+      </ul>
+    </li>
+    <li><a href="#osint">OSINT</a>
+      <ul>
+        <li><a href="#echoes-in-stone">Echoes in Stone</a></li>
+      </ul>
+    </li>
+    <li><a href="#gdb-learnings">GDB learnings</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+
+
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<blockquote>
+<p>Only participated partially on Friday 21.</p>
+</blockquote>
+
+<figure>
+      <img class="my-0 rounded-md" src="/images/ctfs/cyber-apocalypse/cert.png" alt="Description of the image" />
+  
+  
+  </figure>
+
+
+<h2 class="relative group">Web 
+    <div id="web" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#web" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">Trial by Fire 
+    <div id="trial-by-fire" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#trial-by-fire" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="line"><span class="cl"><span class="nf">POST</span> <span class="nn">/begin</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="o">:</span> <span class="l">94.237.63.32:39173</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="g">warrior_name={{get_flashed_messages.__globals__.__builtins__.open(&#34;/challange/flag.txt&#34;).read()}}
+</span></span></span></code></pre></div><p><code>HTB{Fl4m3_P34ks_Tr14l_Burn5_Br1ght_0add34e4d584b80183e824730c679e75}</code></p>
+
+
+<h3 class="relative group">Whispers of the Moonbeam 
+    <div id="whispers-of-the-moonbeam" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#whispers-of-the-moonbeam" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt; observe<span class="p">;</span> cat flag.txt
+</span></span><span class="line"><span class="cl">🥃 A grizzled warrior sips from his tankard, his eyes weary with unseen battles.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">PID   USER     TIME  COMMAND
+</span></span><span class="line"><span class="cl">    <span class="m">1</span> root      0:00 <span class="o">{</span>supervisord<span class="o">}</span> /usr/bin/python3 /usr/bin/supervisord -c /etc/supervisord.conf
+</span></span><span class="line"><span class="cl">    <span class="m">7</span> root      0:00 node /opt/yarn-v1.22.22/bin/yarn.js dev:backend
+</span></span><span class="line"><span class="cl">    <span class="m">8</span> root      0:00 node /opt/yarn-v1.22.22/bin/yarn.js dev:frontend
+</span></span><span class="line"><span class="cl">    <span class="m">9</span> root      0:00 nginx: master process nginx -g daemon off<span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="m">40</span> nginx     0:00 nginx: worker process
+</span></span><span class="line"><span class="cl">   <span class="m">51</span> root      0:00 /usr/local/bin/node server/index.js
+</span></span><span class="line"><span class="cl">   <span class="m">58</span> root      0:04 /usr/local/bin/node /app/node_modules/.bin/vite
+</span></span><span class="line"><span class="cl">   <span class="m">73</span> root      0:02 /app/node_modules/@esbuild/linux-x64/bin/esbuild --service<span class="o">=</span>0.21.5 --ping
+</span></span><span class="line"><span class="cl">   <span class="m">95</span> root      0:00 /bin/sh -c ps aux <span class="p">;</span> cat flag.txt
+</span></span><span class="line"><span class="cl">   <span class="m">96</span> root      0:00 ps aux
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">HTB<span class="o">{</span>Sh4d0w_3x3cut10n_1n_Th3_M00nb34m_T4v3rn_1115e16780cdbb3bd2a32ea21b1a5374<span class="o">}</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group">Reverse 
+    <div id="reverse" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#reverse" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<blockquote>
+<p>I did not do a lot of reversing beside using ghidra before, so it was the perfect situation to get started with gdb. In addition I checked the source code via ghidra first, and after used GDB to set breakpoints and navigate trough the code to trigger the correct functions.</p>
+</blockquote>
+
+
+<h3 class="relative group">SealedRune 
+    <div id="sealedrune" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#sealedrune" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SH" data-lang="SH"><span class="line"><span class="cl">gef➤  disas anti_debug
+</span></span><span class="line"><span class="cl">Dump of assembler code <span class="k">for</span> <span class="k">function</span> anti_debug:
+</span></span><span class="line"><span class="cl">   0x00005555555551d9 &lt;+0&gt;:     push   rbp
+</span></span><span class="line"><span class="cl">   0x00005555555551da &lt;+1&gt;:     mov    rbp,rsp
+</span></span><span class="line"><span class="cl">   0x00005555555551dd &lt;+4&gt;:     mov    ecx,0x0
+</span></span><span class="line"><span class="cl">   0x00005555555551e2 &lt;+9&gt;:     mov    edx,0x1
+</span></span><span class="line"><span class="cl">   0x00005555555551e7 &lt;+14&gt;:    mov    esi,0x0
+</span></span><span class="line"><span class="cl">   0x00005555555551ec &lt;+19&gt;:    mov    edi,0x0
+</span></span><span class="line"><span class="cl">   0x00005555555551f1 &lt;+24&gt;:	mov    eax,0x0
+</span></span><span class="line"><span class="cl">   0x00005555555551f6 &lt;+29&gt;:	call   0x5555555550b0 &lt;ptrace@plt&gt;
+</span></span><span class="line"><span class="cl"><span class="o">=</span>&gt; 0x00005555555551fb &lt;+34&gt;:	cmp    rax,0xffffffffffffffff
+</span></span><span class="line"><span class="cl">   0x00005555555551ff &lt;+38&gt;:	jne    0x55555555521a &lt;anti_debug+65&gt;
+</span></span><span class="line"><span class="cl">   0x0000555555555201 &lt;+40&gt;:	lea    rax,<span class="o">[</span>rip+0xe00<span class="o">]</span>        <span class="c1"># 0x555555556008</span>
+</span></span><span class="line"><span class="cl">   0x0000555555555208 &lt;+47&gt;:	mov    rdi,rax
+</span></span><span class="line"><span class="cl">   0x000055555555520b &lt;+50&gt;:	call   0x555555555040 &lt;puts@plt&gt;
+</span></span><span class="line"><span class="cl">   0x0000555555555210 &lt;+55&gt;:	mov    edi,0x1
+</span></span><span class="line"><span class="cl">   0x0000555555555215 &lt;+60&gt;:	call   0x5555555550d0 &lt;exit@plt&gt;
+</span></span><span class="line"><span class="cl">   0x000055555555521a &lt;+65&gt;:	nop
+</span></span><span class="line"><span class="cl">   0x000055555555521b &lt;+66&gt;:	pop    rbp
+</span></span><span class="line"><span class="cl">   0x000055555555521c &lt;+67&gt;:	ret
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">gef➤  <span class="nb">set</span> <span class="nv">$rax</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">gef➤  <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">gef➤  disas check_input
+</span></span><span class="line"><span class="cl">Dump of assembler code <span class="k">for</span> <span class="k">function</span> check_input:
+</span></span><span class="line"><span class="cl">   0x0000555555555487 &lt;+0&gt;:     push   rbp
+</span></span><span class="line"><span class="cl">   0x0000555555555488 &lt;+1&gt;:     mov    rbp,rsp
+</span></span><span class="line"><span class="cl">   0x000055555555548b &lt;+4&gt;:     sub    rsp,0x20
+</span></span><span class="line"><span class="cl">   0x000055555555548f &lt;+8&gt;:     mov    QWORD PTR <span class="o">[</span>rbp-0x18<span class="o">]</span>,rdi
+</span></span><span class="line"><span class="cl">   0x0000555555555493 &lt;+12&gt;:	mov    eax,0x0
+</span></span><span class="line"><span class="cl">   0x0000555555555498 &lt;+17&gt;:	call   0x55555555542d &lt;decode_secret&gt;
+</span></span><span class="line"><span class="cl">   0x000055555555549d &lt;+22&gt;:	mov    QWORD PTR <span class="o">[</span>rbp-0x8<span class="o">]</span>,rax
+</span></span><span class="line"><span class="cl">   0x00005555555554a1 &lt;+26&gt;:	mov    rdx,QWORD PTR <span class="o">[</span>rbp-0x8<span class="o">]</span>
+</span></span><span class="line"><span class="cl">   0x00005555555554a5 &lt;+30&gt;:	mov    rax,QWORD PTR <span class="o">[</span>rbp-0x18<span class="o">]</span>
+</span></span><span class="line"><span class="cl">   0x00005555555554a9 &lt;+34&gt;:	mov    rsi,rdx
+</span></span><span class="line"><span class="cl">   0x00005555555554ac &lt;+37&gt;:	mov    rdi,rax
+</span></span><span class="line"><span class="cl">   0x00005555555554af &lt;+40&gt;:	call   0x5555555550a0 &lt;strcmp@plt&gt;
+</span></span><span class="line"><span class="cl"><span class="o">=</span>&gt; 0x00005555555554b4 &lt;+45&gt;:	<span class="nb">test</span>   eax,eax
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">gef➤  <span class="nb">set</span> <span class="nv">$eax</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">gef➤  <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The secret spell is <span class="sb">`</span>HTB<span class="o">{</span>run3_m4g1c_r3v34l3d<span class="o">}</span><span class="sb">`</span>.
+</span></span></code></pre></div>
+
+<h3 class="relative group">EncryptedScroll 
+    <div id="encryptedscroll" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#encryptedscroll" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">decrypt_message</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">param_1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">iVar1</span> <span class="o">=</span> <span class="nf">strcmp</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="n">flag</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">iVar1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;The Dragon</span><span class="se">\&#39;</span><span class="s">s Heart is hidden beneath the Eternal Flame in Eldoria.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">...</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SH" data-lang="SH"><span class="line"><span class="cl">gef➤  disas decrypt_message
+</span></span><span class="line"><span class="cl">Dump of assembler code <span class="k">for</span> <span class="k">function</span> decrypt_message:
+</span></span><span class="line"><span class="cl">   ...
+</span></span><span class="line"><span class="cl">   0x0000555555555313 &lt;+132&gt;:	jne    0x5555555552eb &lt;decrypt_message+92&gt;
+</span></span><span class="line"><span class="cl">   0x0000555555555315 &lt;+134&gt;:	lea    rdx,<span class="o">[</span>rbp-0x30<span class="o">]</span>
+</span></span><span class="line"><span class="cl">   0x0000555555555319 &lt;+138&gt;:	mov    rax,QWORD PTR <span class="o">[</span>rbp-0x48<span class="o">]</span>
+</span></span><span class="line"><span class="cl">   0x000055555555531d &lt;+142&gt;:	mov    rsi,rdx
+</span></span><span class="line"><span class="cl">   0x0000555555555320 &lt;+145&gt;:	mov    rdi,rax
+</span></span><span class="line"><span class="cl"><span class="o">=</span>&gt; 0x0000555555555323 &lt;+148&gt;:	call   0x555555555070 &lt;strcmp@plt&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SH" data-lang="SH"><span class="line"><span class="cl">0x00007fffffffe290│+0x0000: 0x00007fffffffe2d0  →  0x00007fffffffe458  →  0x00007fffffffe7b7  →  <span class="s2">&#34;/home/majix/Downloads/rev_encryptedscroll/challeng[...]&#34;</span>	 ← <span class="nv">$rsp</span>
+</span></span><span class="line"><span class="cl">0x00007fffffffe298│+0x0008: 0x00007fffffffe2f0  →  0x0000000000666473 <span class="o">(</span><span class="s2">&#34;sdf&#34;</span>?<span class="o">)</span>
+</span></span><span class="line"><span class="cl">0x00007fffffffe2a0│+0x0010: 0x0000000004800000
+</span></span><span class="line"><span class="cl">0x00007fffffffe2a8│+0x0018: 0x0000001bffffe458
+</span></span><span class="line"><span class="cl">0x00007fffffffe2b0│+0x0020: <span class="s2">&#34;HTB{s1mpl3_fl4g_4r1thm3t1c}&#34;</span>	 ← <span class="nv">$rdx</span>, <span class="nv">$rsi</span>
+</span></span><span class="line"><span class="cl">0x00007fffffffe2b8│+0x0028: <span class="s2">&#34;l3_fl4g_4r1thm3t1c}&#34;</span>
+</span></span><span class="line"><span class="cl">0x00007fffffffe2c0│+0x0030: <span class="s2">&#34;4r1thm3t1c}&#34;</span>
+</span></span><span class="line"><span class="cl">0x00007fffffffe2c8│+0x0038: 0x00007fff007d6331 <span class="o">(</span><span class="s2">&#34;1c}&#34;</span>?<span class="o">)</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group">OSINT 
+    <div id="osint" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#osint" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">Echoes in Stone 
+    <div id="echoes-in-stone" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#echoes-in-stone" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<pre tabindex="0"><code>https://www.google.com/search?gsessionid=NrUMQ9N027OYXjdehy05mddDYG34RmGZADdQ91SG1qAT54FExyRCrA&amp;lsessionid=G7LDQdzyBWIaHdEC_ncknuXO9jHH--kIksLYxi64lTuGNpg6QRejAQ&amp;vsdim=888,806&amp;source=lns.web.gsbubb&amp;lns_surface=26&amp;biw=1920&amp;bih=925&amp;hl=en-DE&amp;vsrid=CKaSiZa60_LwnwEQBBgBIiQ4OEUxMzdDOS0yQTAxLTQzNDMtODI0Mi04OUQ5QzlBNkZENkU&amp;udm=24&amp;q=maps&amp;vsint=CAQqCgoCCAcSAggSIAE6IwoWDSbk8z4VBK0QPx1LyOc-JdobXD8wARD4BhimBiUAAIA_&amp;lns_mode=mu&amp;qsubts=1742604765128&amp;lns_fp=1&amp;stq=1&amp;cs=1&amp;lei=gwneZ7frHPGgwPAP0-vM2QQ#vhid=vdr0wgqeVz8UuM&amp;vssid=mosaic
+</code></pre><p><code>HTB{Muiredach_High_Cross}</code></p>
+
+
+<h2 class="relative group">GDB learnings 
+    <div id="gdb-learnings" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#gdb-learnings" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>We can use <code>disas &lt;func&gt;</code> to get the assambler code for that function</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SH" data-lang="SH"><span class="line"><span class="cl">gef➤  disas anti_debug
+</span></span><span class="line"><span class="cl">Dump of assembler code <span class="k">for</span> <span class="k">function</span> anti_debug:
+</span></span><span class="line"><span class="cl">   0x00000000000011d9 &lt;+0&gt;:	push   rbp
+</span></span><span class="line"><span class="cl">   0x00000000000011da &lt;+1&gt;:	mov    rbp,rsp
+</span></span><span class="line"><span class="cl">   ...
+</span></span><span class="line"><span class="cl">End of assembler dump.
+</span></span></code></pre></div><ul>
+<li>Set breakpoints via <code>b &lt;func&gt;</code></li>
+<li>We can create little scripts that automate stuff but did not work well</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SH" data-lang="SH"><span class="line"><span class="cl">gef➤  commands
+</span></span><span class="line"><span class="cl">&gt;tbreak *0x11fb <span class="c1"># Temp breakpoint</span>
+</span></span><span class="line"><span class="cl">&gt;set <span class="nv">$rax</span> <span class="o">=</span> <span class="m">0</span> <span class="c1"># Modify register</span>
+</span></span><span class="line"><span class="cl">&gt;continue
+</span></span><span class="line"><span class="cl">&gt;end
+</span></span></code></pre></div><ul>
+<li>Find functions defined in the programm <code>info functions -q</code></li>
+<li>To find the main function of a library we have to find <code>entry</code> or <code>start</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SH" data-lang="SH"><span class="line"><span class="cl">void processEntry entry<span class="o">(</span>undefined8 param_1,undefined8 param_2
+</span></span></code></pre></div><ul>
+<li>We can use <code>objdump</code> do find symbols of a shared library</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ objdump -T challenge
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">challenge:     file format elf64-x86-64
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DYNAMIC SYMBOL TABLE:
+</span></span><span class="line"><span class="cl"><span class="m">0000000000000000</span>      DF *UND*	<span class="m">0000000000000000</span> <span class="o">(</span>GLIBC_2.34<span class="o">)</span> __libc_start_main
+</span></span><span class="line"><span class="cl"><span class="m">0000000000000000</span>  w   D  *UND*	<span class="m">0000000000000000</span>  Base        _ITM_deregisterTMCloneTable
+</span></span><span class="line"><span class="cl"><span class="m">0000000000000000</span>      DF *UND*	<span class="m">0000000000000000</span> <span class="o">(</span>GLIBC_2.2.5<span class="o">)</span> puts
+</span></span><span class="line"><span class="cl"><span class="m">0000000000000000</span>      DF *UND*	<span class="m">0000000000000000</span> <span class="o">(</span>GLIBC_2.2.5<span class="o">)</span> mmap
+</span></span><span class="line"><span class="cl"><span class="m">0000000000000000</span>      DF *UND*	<span class="m">0000000000000000</span> <span class="o">(</span>GLIBC_2.2.5<span class="o">)</span> srand
+</span></span><span class="line"><span class="cl"><span class="m">0000000000000000</span>  w   D  *UND*	<span class="m">0000000000000000</span>  Base        __gmon_start__
+</span></span><span class="line"><span class="cl"><span class="m">0000000000000000</span>  w   D  *UND*	<span class="m">0000000000000000</span>  Base        _ITM_registerTMCloneTable
+</span></span><span class="line"><span class="cl"><span class="m">0000000000000000</span>  w   DF *UND*	<span class="m">0000000000000000</span> <span class="o">(</span>GLIBC_2.2.5<span class="o">)</span> __cxa_finalize
+</span></span><span class="line"><span class="cl"><span class="m">0000000000000000</span>      DF *UND*	<span class="m">0000000000000000</span> <span class="o">(</span>GLIBC_2.2.5<span class="o">)</span> rand
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SH" data-lang="SH"><span class="line"><span class="cl">readelf -Ws challenge <span class="p">|</span> awk <span class="s1">&#39;{print $8}&#39;</span> <span class="p">|</span> c++filt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Name
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">__libc_start_main@GLIBC_2.34
+</span></span><span class="line"><span class="cl">_ITM_deregisterTMCloneTable
+</span></span><span class="line"><span class="cl">puts@GLIBC_2.2.5
+</span></span><span class="line"><span class="cl">mmap@GLIBC_2.2.5
+</span></span><span class="line"><span class="cl">srand@GLIBC_2.2.5
+</span></span><span class="line"><span class="cl">__gmon_start__
+</span></span><span class="line"><span class="cl">_ITM_registerTMCloneTable
+</span></span><span class="line"><span class="cl">__cxa_finalize@GLIBC_2.2.5
+</span></span><span class="line"><span class="cl">rand@GLIBC_2.2.5
+</span></span></code></pre></div><ul>
+<li>We can start the programm without any breakpoints via <code>start</code></li>
+<li>We can let the programm run and once promted e.g &ldquo;What is the flag?&rdquo; we can hit <code>CTR+C</code> and gdb will break there</li>
+<li>We can then grep for strings</li>
+</ul>
+<pre tabindex="0"><code>gef➤  grep &#34;What is the flag&#34;
+[+] Searching &#39;What is the flag&#39; in memory
+[+] In &#39;[stack]&#39;(0x7ffffffdd000-0x7ffffffff000), permission=rw-
+  0x7fffffffd7f8 - 0x7fffffffd80a  →   &#34;What is the flag? &#34;
+</code></pre><ul>
+<li>We can watch this address <code>watch *0x7fffffffd7f8</code></li>
+<li>We can backtrace</li>
+</ul>
+<pre tabindex="0"><code>gef➤  backtrace
+#0  0x00007ffff7e0aaae in __GI__IO_puts (str=0x555555556060 &#34;The mysteries of the universe remain closed to you...&#34;) at ioputs.c:35
+...
+</code></pre>
+          
+          
+          
+        </div>
+        
+        
+
+        
+        
+
+        
+
+
+<h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
+<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  
+  
+
+  <a href="/ctfs/acectf/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/ctfs/acectf/feature.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/ctfs/acectf/">ACECTF</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-02-27T00:00:00&#43;00:00">27 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">11 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+  
+
+  <a href="/posts/ato-via-flawed-password-reset/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/ato-via-flawed-password-reset/feature.webp);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/ato-via-flawed-password-reset/">Account Takeover via flawed reset mechanism</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-03-09T00:00:00&#43;00:00">9 March 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ato/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    ATO
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/password-reset/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Password Reset
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/token-entropy/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Token Entropy
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+  
+
+  <a href="/posts/demonstrator/v1/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/demonstrator/v1/feature.webp);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/demonstrator/v1/">Inside Our Car Hacking Demonstrator</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-02-21T00:00:00&#43;00:00">21 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ids/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    IDS
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/car-hacking/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Car Hacking
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ot/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    OT
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/can/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    CAN
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+</section>
+
+  
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_ctfs\/Cyber-Apocalypse\/index.md"
+        var oid_likes = "likes_ctfs\/Cyber-Apocalypse\/index.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/ctfs/acectf/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >ACECTF</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-02-27T00:00:00&#43;00:00">27 February 2025</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2025
+      Max
+    </p>
+    
+
+    
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+
+<script data-goatcounter="https://majix.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</html>
