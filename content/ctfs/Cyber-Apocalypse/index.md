@@ -170,7 +170,7 @@ gef➤  commands
 ```SH
 void processEntry entry(undefined8 param_1,undefined8 param_2
 ```
-- We can use `objdump` do find symbols of a shared library
+- We can use `objdump` to find symbols of a shared library
 
 ```sh
 $ objdump -T challenge
