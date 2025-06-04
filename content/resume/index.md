@@ -69,7 +69,7 @@ showRelatedContent: false
        <tr>
            <td><img class="customEntitityLogo" src="/images/resume/rub.svg"/></td>
            <td><a href="https://www.ruhr-uni-bochum.de/de" target="_blank">Ruhr-Universität-Bochum</a></td>
-           <td>B.Sc. Ing. - Computer Science</td>
+           <td>B.Sc. Ing. - Cybersecurity</td>
            <td>2023</td>
        </tr>
    </tbody>

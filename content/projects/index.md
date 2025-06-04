@@ -44,29 +44,28 @@ I build innovative security tools and explore new approaches in cybersecurity re
         </tr>
     </thead>
     <tbody class="space-x-4">
-        <tr class="space-x-4">
-            <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/hacktopus.png"/></td>
+         <tr>
+            <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/report.png"/></td>
             <td>
-              <span class="font-bold">Hacktopus</span>
+              <span class="font-bold">YReporting<br></span>
               <span class="flex" style="cursor:pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Active</span></span>
             </td>
-            <td>A Powerful CLI pentest orchestration and managment tool</td>
-            <td><a href="#">TBD</a></td>
+            <td>A PDF reporting engine that can dynamically generate beautifull modern secuirty reports and statistics</td>
         </tr>
          <tr>
             <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/ycarla.png"/></td>
             <td>
-              <span class="font-bold">YCarla</span>
-              <span class="flex" style="cursor:pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Active</span></span>
+              <span class="font-bold">YCarla<br></span>
+              <span style="border: 1px solid #4ade80; color: #4ade80;" class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal">Done</span>
             </td>
             <td>A 3D Car simulator controlled via an XBox controller and CAN messages for our real life car demonstrator project</td>
             <td><a href="#">TBD</a></td>
-    </tr>
+        </tr>
          <tr class="space-x-4">
             <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/yekcar.png"/></td>
             <td>
-              <span class="font-bold">YekCar</span>
-              <span class="flex" style="cursor:pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Active</span></span>
+              <span class="font-bold">YekCar<br></span>
+                <span style="border: 1px solid #4ade80; color: #4ade80;" class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal">Done</span>
             </td>
             <td>Different PySide6 QML dashboards (Attacker, Defender, Car-Dashboard) using real CAN communication for our real life car demonstrator project</td>
             <td><a href="/posts/demonstrator/v1/">Article</a></td>
@@ -87,7 +86,6 @@ I build innovative security tools and explore new approaches in cybersecurity re
                 <span style="border: 1px solid #4ade80; color: #4ade80;" class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal">Done</span>
             </td>
             <td>A Pyside6 QML dashboard for simulating a 2D train via real protocols for a planned real life project in the future</td>
-            <td><a href="#">TBD</a></td>
         </tr>
         <tr class="space-x-4">
             <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/ydashboard.png"/></td>
@@ -96,7 +94,14 @@ I build innovative security tools and explore new approaches in cybersecurity re
                 <span style="border: 1px solid #4ade80; color: #4ade80;" class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal">Done</span>
             </td>
             <td>Moder SOC dashboards written using Python flask for OT-, Train- and Car asset monitoring and alerting</td>
-            <td><a href="#">TBD</a></td>
+        </tr>
+        <tr class="space-x-4">
+            <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/hacktopus.png"/></td>
+            <td>
+              <span class="font-bold">Hacktopus</span>
+              <span class="flex" style="cursor:pointer"><span class="rounded-md border border-gray-400 px-1 py-[1px] text-xs font-normal text-gray-700 dark:border-gray-600 dark:text-gray-400">Paused</span></span>
+            </td>
+            <td>A Powerful CLI pentest orchestration and managment tool</td>
         </tr>
         <tr class="space-x-4">
             <td><img class="customEntitityAlbum" style="background-color:transparent" src="/images/projects/yfuzz.png"/></td>
