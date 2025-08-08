@@ -9,7 +9,17 @@
     <managingEditor>max.randhahn@yahoo.de (Max)</managingEditor>
     <webMaster>max.randhahn@yahoo.de (Max)</webMaster>
     <copyright>© 2025 Max</copyright>
-    <lastBuildDate>Sun, 09 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ca(t)ching the users session</title>
+      <link>http://localhost:1313/posts/catching-the-user-session/</link>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/posts/catching-the-user-session/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/catching-the-user-session/feature.png" />
+    </item>
     
     <item>
       <title>Account Takeover via flawed reset mechanism</title>
