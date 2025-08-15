@@ -112,16 +112,6 @@
     </item>
     
     <item>
-      <title>Template</title>
-      <link>http://localhost:1313/posts/template/</link>
-      <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
-      <author>max.randhahn@yahoo.de (Max)</author>
-      <guid>http://localhost:1313/posts/template/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>1337UP</title>
       <link>http://localhost:1313/ctfs/1337up-2024/</link>
       <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
