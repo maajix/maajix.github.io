@@ -9,7 +9,17 @@
     <managingEditor>max.randhahn@yahoo.de (Max)</managingEditor>
     <webMaster>max.randhahn@yahoo.de (Max)</webMaster>
     <copyright>© 2025 Max</copyright>
-    <lastBuildDate>Tue, 05 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TFCCTF</title>
+      <link>http://localhost:1313/ctfs/tfcctf-2025/</link>
+      <pubDate>Sun, 31 Aug 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/ctfs/tfcctf-2025/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctfs/tfcctf-2025/feature.png" />
+    </item>
     
     <item>
       <title>Catching the users session</title>
@@ -109,6 +119,16 @@
       <guid>http://localhost:1313/posts/ble/</guid>
       <description></description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ble/feature.webp" />
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>http://localhost:1313/posts/template/</link>
+      <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
+      <author>max.randhahn@yahoo.de (Max)</author>
+      <guid>http://localhost:1313/posts/template/</guid>
+      <description></description>
+      
     </item>
     
     <item>
