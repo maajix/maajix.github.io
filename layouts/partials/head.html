@@ -1,5 +1,4 @@
 <head>
-  <script data-goatcounter="https://majix.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <meta charset="utf-8" />
   {{ with .Site.Language.Params.htmlCode | default .Site.LanguageCode }}
   <meta http-equiv="content-language" content="{{ . }}" />
@@ -153,4 +152,34 @@
   </script>
   {{ end }}
   {{ end }}
+
+  {{/* Databuddy Analytics */}}
+  <script>
+    // Only load Databuddy analytics in production environment
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' && window.location.protocol !== 'file:') {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.databuddy.cc/databuddy.js';
+      script.async = true;
+      script.crossOrigin = 'anonymous';
+      script.dataset.clientId = '1DL7tse_ZTnMsjrVbv_Bp';
+      script.dataset.trackHashChanges = 'true';
+      script.dataset.trackAttributes = 'true';
+      script.dataset.trackOutgoingLinks = 'true';
+      script.dataset.trackInteractions = 'true';
+      script.dataset.trackEngagement = 'true';
+      script.dataset.trackScrollDepth = 'true';
+      script.dataset.trackExitIntent = 'true';
+      script.dataset.trackBounceRate = 'true';
+      script.dataset.trackWebVitals = 'true';
+      script.dataset.trackErrors = 'true';
+      script.dataset.enableBatching = 'true';
+
+      // Add error handling
+      script.onerror = function() {
+        console.warn('Failed to load Databuddy analytics script');
+      };
+
+      document.head.appendChild(script);
+    }
+  </script>
 </head>
