@@ -158,7 +158,25 @@
   
 
   
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/cookie-banner.css" />
+  
+  
+  
   <script>
+    
+    function getCookie(name) {
+      const nameEQ = name + '=';
+      const ca = document.cookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+    
     
     if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' && window.location.protocol !== 'file:') {
       var script = document.createElement('script');
@@ -166,23 +184,29 @@
       script.async = true;
       script.crossOrigin = 'anonymous';
       script.dataset.clientId = '1DL7tse_ZTnMsjrVbv_Bp';
-      script.dataset.trackHashChanges = 'true';
-      script.dataset.trackAttributes = 'true';
-      script.dataset.trackOutgoingLinks = 'true';
-      script.dataset.trackInteractions = 'true';
-      script.dataset.trackEngagement = 'true';
-      script.dataset.trackScrollDepth = 'true';
-      script.dataset.trackExitIntent = 'true';
-      script.dataset.trackBounceRate = 'true';
-      script.dataset.trackWebVitals = 'true';
-      script.dataset.trackErrors = 'true';
       script.dataset.enableBatching = 'true';
-
+      
+      
+      const analyticsCookies = getCookie('analytics-cookies');
+      const enableTracking = analyticsCookies === 'accepted';
+      
+      
+      if (enableTracking) {
+        
+        script.dataset.trackOutgoingLinks = 'true';
+        script.dataset.trackInteractions = 'true';
+        script.dataset.trackEngagement = 'true';
+        script.dataset.trackScrollDepth = 'true';
+        script.dataset.trackWebVitals = 'true';
+        script.dataset.trackErrors = 'true';
+      }
+      
+      
       
       script.onerror = function() {
         console.warn('Failed to load Databuddy analytics script');
       };
-
+      
       document.head.appendChild(script);
     }
   </script>
@@ -1436,7 +1460,18 @@
   </div>
 </div>
 
+  </div><div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-content">
+    <p>This website uses DataBuddy, a privacy-first analytics service. DataBuddy does not use cookies, does not collect personal data, and anonymizes all information. Analytics are aggregated and cannot be linked to individual visitors. Legal basis: Art. 6(1)(f) GDPR (legitimate interest in website optimization).</p>
+    <div class="cookie-buttons">
+      <button id="accept-cookies" class="btn-accept">Accept</button>
+      <button id="reject-cookies" class="btn-reject">Reject</button>
+    </div>
   </div>
-</body>
+</div></body>
+
+
+
+<script src="/js/cookie-banner.js"></script>
 
 </html>
