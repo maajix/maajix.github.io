@@ -56,23 +56,13 @@
   transform: scale(0.98);
 }
 
-.btn-accept {
+.btn-dismiss {
   background-color: #8dc63f;
   color: #000;
 }
 
-.btn-accept:hover {
+.btn-dismiss:hover {
   background-color: #9ad14b;
-  transform: translateY(-1px);
-}
-
-.btn-reject {
-  background-color: #6c757d;
-  color: white;
-}
-
-.btn-reject:hover {
-  background-color: #5a6268;
   transform: translateY(-1px);
 }
 
