@@ -160,50 +160,17 @@
   {{ end }}
   
   {{/* Databuddy Analytics */}}
-  <script>
-    // Check cookie consent before loading Databuddy
-    function getCookie(name) {
-      const nameEQ = name + '=';
-      const ca = document.cookie.split(';');
-      for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-      }
-      return null;
-    }
-    
-    // Only load Databuddy analytics in production environment
-    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' && window.location.protocol !== 'file:') {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.databuddy.cc/databuddy.js';
-      script.async = true;
-      script.crossOrigin = 'anonymous';
-      script.dataset.clientId = '1DL7tse_ZTnMsjrVbv_Bp';
-      script.dataset.enableBatching = 'true';
-      
-      // Check user consent for tracking
-      const analyticsCookies = getCookie('analytics-cookies');
-      const enableTracking = analyticsCookies === 'accepted';
-      
-      // Set tracking options based on user preference
-      if (enableTracking) {
-        // When accepted, enable all tracking features
-        script.dataset.trackOutgoingLinks = 'true';
-        script.dataset.trackInteractions = 'true';
-        script.dataset.trackEngagement = 'true';
-        script.dataset.trackScrollDepth = 'true';
-        script.dataset.trackWebVitals = 'true';
-        script.dataset.trackErrors = 'true';
-      }
-      // When denied, only the common attributes remain (no additional tracking)
-      
-      // Add error handling
-      script.onerror = function() {
-        console.warn('Failed to load Databuddy analytics script');
-      };
-      
-      document.head.appendChild(script);
-    }
-  </script>
+  <script
+    src="https://cdn.databuddy.cc/databuddy.js"
+    data-client-id="1DL7tse_ZTnMsjrVbv_Bp"
+    data-track-outgoing-links="true"
+    data-track-interactions="true"
+    data-track-engagement="true"
+    data-track-scroll-depth="true"
+    data-track-web-vitals="true"
+    data-track-errors="true"
+    data-enable-batching="true"
+    crossorigin="anonymous"
+    async
+  ></script>
 </head>
