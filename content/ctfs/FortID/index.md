@@ -9,6 +9,8 @@ toc: false
 
 <h2>🏆 203/553</h2>
 
+[Team](https://ctftime.org/team/364029):
+- [SPBMctf](https://x.com/SPBM_Cyberthrt)
 
 ### Web
 #### Upload docs
@@ -63,7 +65,7 @@ That means when setting the name to `static/js/effect.js`, the app creates a scr
 ---
 
 ### Rev
-#### Intro - Rev
+#### Rev
 
 <details>
 
@@ -101,4 +103,15 @@ print('flag', bytes(res).decode('utf-8', errors='replace'))
 ```
 
 </details>
+
+---
+
+### Misc
+
+| Challenge | Category | Value | Time                       |
+|-----------|----------|-------|----------------------------|
+| Crypto    | Intro    | 100   | September 12th, 3:58:20 PM |
+| Web       | Intro    | 100   | September 12th, 2:38:37 PM |
+| Info      | Intro    | 100   | September 12th, 2:07:42 PM |
+| Discord   | Intro    | 100   | September 12th, 2:04:53 PM |
 
