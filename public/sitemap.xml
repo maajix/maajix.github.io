@@ -4,13 +4,19 @@
 
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-09-14T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-19T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/ctfs/crewctf-2025/</loc>
+    <lastmod>2025-09-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/ctfs/</loc>
-    <lastmod>2025-09-14T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
