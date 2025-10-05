@@ -6,7 +6,7 @@ description: "Securinets"
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<h2>🏆 X/506</h2>
+<h2>🏆 253/558</h2>
 
 ---
 
