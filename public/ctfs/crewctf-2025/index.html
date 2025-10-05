@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
   data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
+  <meta name="google-adsense-account" content="ca-pub-7245310751285004" />
   
   <meta http-equiv="content-language" content="en" />
   
@@ -111,7 +112,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "467"
+    "wordCount": "469"
   }]
   </script>
 
@@ -658,7 +659,11 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#love-notes">Love Notes</a></li>
+        <li><a href="#web">Web</a>
+          <ul>
+            <li><a href="#love-notes">Love Notes</a></li>
+          </ul>
+        </li>
         <li><a href="#poc">Poc</a></li>
         <li><a href="#collaborator-callback">Collaborator Callback</a></li>
       </ul>
@@ -678,7 +683,11 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#love-notes">Love Notes</a></li>
+        <li><a href="#web">Web</a>
+          <ul>
+            <li><a href="#love-notes">Love Notes</a></li>
+          </ul>
+        </li>
         <li><a href="#poc">Poc</a></li>
         <li><a href="#collaborator-callback">Collaborator Callback</a></li>
       </ul>
@@ -767,7 +776,19 @@
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
-<h3 class="relative group">Love Notes 
+<h3 class="relative group">Web 
+    <div id="web" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#web" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+
+
+<h4 class="relative group">Love Notes 
     <div id="love-notes" class="anchor"></div>
     
     <span
@@ -776,7 +797,7 @@
             style="text-decoration-line: none !important;" href="#love-notes" aria-label="Anchor">#</a>
     </span>        
     
-</h3>
+</h4>
 <p>The strict CSP is blocking almost everything:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Content</span><span class="o">-</span><span class="nx">Security</span><span class="o">-</span><span class="nx">Policy</span><span class="o">:</span> <span class="sb">`script-src </span><span class="si">${</span><span class="nx">HOSTNAME</span><span class="si">}</span><span class="sb">/static/dashboard.js https://js.hcaptcha.com/1/api.js; style-src </span><span class="si">${</span><span class="nx">HOSTNAME</span><span class="si">}</span><span class="sb">/static/; img-src &#39;none&#39;; connect-src &#39;self&#39;; media-src &#39;none&#39;; object-src &#39;none&#39;; prefetch-src &#39;none&#39;; frame-ancestors &#39;none&#39;; form-action &#39;self&#39;; frame-src &#39;none&#39;;`</span><span class="p">);</span>
 </span></span></code></pre></div><p>After checking the code and playing around with notes, we can see that there is XSS on the <code>/api/notes/&lt;note-id&gt;</code> endpoint:</p>
@@ -1221,6 +1242,28 @@
           
         </span>
         <span>
+          
+            <a class="flex text-right group ml-3" href="/ctfs/securinets/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Securinets</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-10-05T00:00:00&#43;00:00">5 October 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>
