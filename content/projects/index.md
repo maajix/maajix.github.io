@@ -50,7 +50,7 @@ I build innovative security tools and explore new approaches in cybersecurity re
               <span class="font-bold">YReporting<br></span>
               <span style="border: 1px solid #4ade80; color: #4ade80;" class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal">Done</span>
             </td>
-            <td>A PDF reporting engine that can dynamically generate beautifull modern secuirty reports and statistics by using connections like Splunk</td>
+            <td>A PDF reporting engine that can dynamically generate beautifull modern security reports and statistics by using connections like Splunk</td>
             <td>Internal</td>
         </tr>
          <tr class="space-x-4">
