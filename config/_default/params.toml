@@ -71,7 +71,8 @@ smartTOCHideUnfocusedChildren = false
   showAuthorsBadges = false
   showWordCount = false
   showSummary = true
-  # sharingLinks = [ "linkedin", "twitter", "whatsapp", "telegram", "pinterest", "reddit", "facebook", "email"]
+  sharingLinks = [ "linkedin", "twitter", "whatsapp", "telegram", "pinterest", "reddit", "facebook", "email"]
+  showZenMode = false # enabled only for blog posts via cascade in hugo.toml
 
 [list]
   showHero = true

@@ -127,3 +127,47 @@
 td {
     vertical-align: middle !important;
 }
+
+/* --- Table of Contents (right sidebar) --- */
+/* Compact type so headings sit on one line. */
+.toc {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+
+/* Widen the column (theme caps it at 18rem / max-w-2xs) and stop flex from
+   squeezing it below its natural width. The section is a flex row and the
+   article content (long code lines) otherwise compresses the TOC until the
+   headings wrap. flex-shrink:0 lets the TOC keep its single-line width while
+   the content (min-w-0) yields instead. */
+@media (min-width: 1024px) {
+    section > div:has(> .toc) {
+        flex-shrink: 0;
+        max-width: 24rem;
+    }
+}
+
+/* More breathing room between the dotted rail and the icons. */
+.toc #TableOfContents {
+    padding-inline-start: 0.75rem;
+}
+
+/* Hanging indent so any heading long enough to still wrap aligns its second
+   line under the title text, not under the leading emoji icon. */
+.toc a {
+    display: inline-block;
+    text-indent: -1.25em;
+    padding-left: 1.25em;
+}
+
+/* Active section: highlight the text itself instead of a bar next to the icon.
+   No layout shift, reads cleanly across one or more lines. */
+.toc a.active {
+    text-decoration-line: none;
+    font-weight: 500;
+    color: rgb(var(--color-primary-600));
+}
+
+.dark .toc a.active {
+    color: rgb(var(--color-primary-400));
+}

@@ -18,6 +18,12 @@ enableEmoji = true
 
 # googleAnalytics = "G-XXXXXXXXX"
 
+# Zen mode button only on blog posts, not CTFs/resume/other pages
+[[cascade]]
+  showZenMode = true
+  [cascade._target]
+    path = "/posts/**"
+
 [pagination]
   pagerSize = 100
 
