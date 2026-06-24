@@ -1,0 +1,4 @@
+# Hugo build output (rebuilt fresh by CI, deployed as artifact — not served from repo)
+/public/
+/resources/_gen/
+.hugo_build.lock
