@@ -2,7 +2,7 @@
 title: "Inside Our Car Hacking Demonstrator"
 date: 2025-02-21
 draft: false
-description: "Introduction into Cache Poisoning Attacks"
+description: "A look inside our car hacking demonstrator: emulating real CAN bus communication to train automotive attack and defense hands-on."
 tags: ["IDS", "Car Hacking", "OT Security", "CAN"]
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
