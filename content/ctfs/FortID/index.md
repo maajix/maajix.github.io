@@ -6,7 +6,6 @@ description: "FortID CTF 2025 writeup: abusing the target_user parameter on the 
 tags: ["CTF", "Web", "IDOR", "File Upload", "Reverse Engineering"]
 toc: false
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <h2>🏆 203/553</h2>
 

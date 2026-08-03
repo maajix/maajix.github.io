@@ -6,7 +6,6 @@ description: "HackTheBox Cyber Apocalypse 2025 writeup: the Trial by Fire and Wh
 tags: ["CTF", "Web", "Reverse Engineering", "OSINT", "GDB", "HackTheBox"]
 toc: false
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
 > Only participated partially on Friday 21.

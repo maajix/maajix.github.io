@@ -5,7 +5,6 @@ draft: false
 description: "A look inside our car hacking demonstrator: emulating real CAN bus communication to train automotive attack and defense hands-on."
 tags: ["IDS", "Car Hacking", "OT Security", "CAN"]
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
 ## <i class="fa-solid fa-house text-primary-400"></i> Introduction

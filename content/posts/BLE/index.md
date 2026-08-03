@@ -5,7 +5,6 @@ draft: false
 description: "Learn how to hack Bluetooth Low Energy devices: from protocol basics to practical exploitation using common security tools."
 tags: ["BLE", "Hardware", "Guide"]
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
 ## <i class="fa-brands fa-bluetooth text-primary-400"></i> Overview

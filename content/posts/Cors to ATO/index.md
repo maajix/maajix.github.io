@@ -6,7 +6,6 @@ description: "Chaining a CORS misconfiguration with an XPath injection to read a
 tags: ["CORS", "ATO", "SOP", "XPath"]
 ---
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 During an assesment, I uncovered a chain of exploits that began with a <span class="text-primary-400">CORS misconfiguration</span> and culminated in an account takeover / <span class="text-primary-400">authentication bypass via XPath injection in an API endpoint</span>. This article will describe the essentials of CORS, XPATH injections, and the way I was able to exploit the chain.
 

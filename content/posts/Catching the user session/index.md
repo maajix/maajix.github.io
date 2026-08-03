@@ -5,7 +5,6 @@ draft: false
 description: "Hijacking another user's session through a custom-built cache: mapping the attack surface with an ACL matrix and Auth Analyzer, then serving one user's authenticated response to everyone else."
 tags: ["Cache Poisoning", "ACL"]
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 ## <i class="fa-solid fa-bars text-primary-400"></i> Overview
 In this article, I will describe a vulnerability that I identified during a recent penetration test. The focus is on a cache poisoning attack that resulted from a <span class="text-primary-400">custom caching implementation</span>, combined with additional issues such as <span class="text-primary-400">misconfigured Access Control Lists</span> (ACLs).

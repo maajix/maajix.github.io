@@ -5,7 +5,6 @@ draft: false
 description: "A physical OT security demonstrator that makes cyberattacks visible — when the city goes dark."
 tags: ["OT Security", "ICS", "IEC 61850", "SOC"]
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 At some point during the demo, the city goes dark.
 

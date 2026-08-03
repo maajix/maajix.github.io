@@ -6,7 +6,6 @@ description: "Nullcon CTF 2025 writeup: grandmas_notes leaks how many password c
 tags: ["CTF", "Web", "PHP", "Brute Force", "Information Disclosure"]
 toc: false
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <h2>🏆 128/776</h2>
 

@@ -5,7 +5,6 @@ draft: false
 description: "TFCCTF 2025 web writeups: SLIPPY abuses a symlink inside an uploaded ZIP archive for arbitrary file read, and DOM NOTIFY uses DOM clobbering against a Puppeteer admin bot."
 tags: ["CTF", "Web", "File Upload", "DOM Clobbering", "XSS"]
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <h2>🏆 458/1794</h2>
 

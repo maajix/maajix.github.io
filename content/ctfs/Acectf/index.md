@@ -5,7 +5,6 @@ draft: false
 description: "ACECTF 2025 writeup covering the web challenges (WebCrypto, Token of Trust JWT forgery, Bucket List S3 misconfiguration, Buried Deep, Flag Fetcher) plus reverse engineering, XOR keystream reuse crypto and OSINT."
 tags: ["CTF", "Web", "JWT", "S3", "Crypto", "OSINT", "Reverse Engineering"]
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <h2>🏆 185/661 -- 2200 points</h2>
 

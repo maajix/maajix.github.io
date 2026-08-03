@@ -5,7 +5,6 @@ draft: false
 description: "Web cache poisoning explained: keyed vs unkeyed parameters, how to find unkeyed inputs, how to turn one into a stored payload, plus fat GET and a real-life proof of concept."
 tags: ["Cache Poisoning", "Guide"]
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
 ## <i class="fa-solid fa-worm text-primary-400"></i> Terminology

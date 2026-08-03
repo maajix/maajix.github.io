@@ -6,7 +6,6 @@ description: "1337UP CTF 2024 writeup: solving Cold Storage by unwinding the XOR
 tags: ["CTF", "Crypto", "RSA", "XOR", "OSINT"]
 toc: false
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <h2>🏆  318/1061 -- 700 Points</h2>
 

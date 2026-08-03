@@ -6,7 +6,6 @@ description: "Glacier CTF 2024 writeup: using peepdf to inspect PDF object strea
 tags: ["CTF", "Forensics", "PDF", "peepdf"]
 toc: false
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <h2>🏆  123/798 -- 200 points</h2>
 

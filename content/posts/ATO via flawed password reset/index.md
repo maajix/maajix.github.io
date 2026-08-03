@@ -6,7 +6,6 @@ description: "A password reset flow with low-entropy tokens: measuring the real 
 tags: ["ATO", "Password Reset", "Token Entropy"]
 ---
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 ## <i class="fa-solid fa-bars text-primary-400"></i> Overview
 In this article, we explore a critical security vulnerability discovered during a penetration test. The flaw involves a <span class="text-primary-400">weak 6-digit code used for password resets</span>, which is not tied to individual user sessions or accounts but rather <span class="text-primary-400">added to a pool of active tokens</span>. This design flaw makes it easy for attackers to take over user accounts via a brute-force attack on the low entropy reset token.

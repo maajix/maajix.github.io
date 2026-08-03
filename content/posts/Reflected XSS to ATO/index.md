@@ -5,7 +5,6 @@ draft: false
 description: "How a reflected XSS escalates into a full account takeover when the application ships no HttpOnly cookies, no CSP and no session binding."
 tags: ["XSS", "ATO", "Wordpress"]
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 ## <i class="fa-solid fa-bullseye"></i>  The Vulnerabillity
 When researching an application, I noticed that there was a <span class="text-primary-400">feature for resetting the email address</span> of our user. Interestingly, when trying to change it, there was <span class="text-primary-400">no security mechanism verifying that the change was actually initiated by the user</span> of that account. Normally, there’s an extra step where the user must input their password or any other identification method.
