@@ -1,6 +1,6 @@
 disabled = false
-languageCode = "en"
-languageName = "English"
+locale = "en"
+label = "English"
 weight = 1
 title = ">_ majix.site"
 
@@ -11,13 +11,15 @@ title = ">_ majix.site"
   dateFormat = "2 January 2006"
   # logo = "profile.png"
   # secondaryLogo = "img/secondary-logo.png"
-  description = "My personal blog, project tracker and portfolio"
+  # Used for the home page meta description, og:description and WebSite JSON-LD.
+  # Names the topics the site should be retrievable for instead of describing the format.
+  description = "Web application penetration testing notes, vulnerability research and CTF writeups by Max Randhahn: XSS, SSRF, cache poisoning, SQL injection and access-control bugs, explained end to end."
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
   name = "Max"
   email = "max.randhahn@yahoo.de"
-  image = "profile.png"
+  image = "profile.webp"
   #   imageQuality = 96
   headline = "Web pentester and security researcher"
   bio = "I'm a penetration tester and sometimes security researcher with focus on web applications"
@@ -46,7 +48,7 @@ title = ">_ majix.site"
 #     { lastfm = "https://lastfm.com/user/username" },
     { linkedin = "https://linkedin.com/in/max-randhahn" },
 #     { mastodon = "https://mastodon.instance/@username" },
-# { medium = "https://medium.com/@majix_de" },
+    { medium = "https://medium.com/@maajix" },
 #     { microsoft = "https://www.microsoft.com/" },
 #     { orcid = "https://orcid.org/userid" },
 #     { patreon = "https://www.patreon.com/username" },
