@@ -1,0 +1,67 @@
+{{- $llms := "" -}}
+{{- with .OutputFormats.Get "llms" }}{{ $llms = .Permalink }}{{ end -}}
+# {{ site.Title }} — https://maajix.github.io/
+
+User-agent: *
+{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
+Allow: /
+{{- else }}
+Disallow: /
+{{- end }}
+
+# ---------------------------------------------------------------------------
+# AI assistants / answer engines are explicitly welcome.
+# The wildcard above already allows them; these blocks make the intent explicit
+# so a future restrictive rule cannot silently de-list this site from AI search.
+# Search/retrieval bots (cited answers) and training bots are listed separately
+# on purpose - flip a Disallow below if that policy ever changes.
+# ---------------------------------------------------------------------------
+
+# OpenAI - https://platform.openai.com/docs/bots
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+# Anthropic - https://support.anthropic.com/en/articles/8896518
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Google / Microsoft / Apple AI surfaces
+User-agent: Google-Extended
+Allow: /
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Others
+User-agent: meta-externalagent
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: CCBot
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}
+{{- with $llms }}
+# Site index for LLMs: {{ . }}
+{{- end }}

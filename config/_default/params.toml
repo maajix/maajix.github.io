@@ -14,11 +14,19 @@ enableCodeCopy = true
 mainSections = ["posts"]#, "suggestions"]
 # robots = ""
 
-disableImageOptimization = true
+disableImageOptimization = false
 disableTextInHeader = true
 
 # defaultFeaturedImage = "background.jpg"
-defaultBackgroundImage = "background.png"
+defaultBackgroundImage = "background.webp"
+
+# og:image / twitter:image fallback for pages without a feature.* bundle image
+# (the home page, list pages, taxonomy pages). Without this they are shared as
+# a bare link with no card.
+defaultSocialImage = "background.webp"
+
+# Search-engine keyword hint reused in WebSite JSON-LD.
+keywords = ["web security", "penetration testing", "security research", "CTF writeups", "application security"]
 
 highlightCurrentMenuArea = true
 smartTOC = true
@@ -35,7 +43,7 @@ smartTOCHideUnfocusedChildren = false
 
 [homepage]
   layout = "background" # valid options: page, profile, custom
-  homepageImage = "background.png"
+  homepageImage = "background.webp"
   showRecent = true
   showRecentItems = 6
   showMoreLink = true

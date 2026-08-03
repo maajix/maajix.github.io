@@ -21,7 +21,7 @@ enableEmoji = true
 # Zen mode button only on blog posts, not CTFs/resume/other pages
 [[cascade]]
   showZenMode = true
-  [cascade._target]
+  [cascade.target]
     path = "/posts/**"
 
 [pagination]
@@ -37,12 +37,23 @@ enableEmoji = true
   series = "series"
 
 [sitemap]
-  changefreq = 'daily'
+  # Writeups are not edited daily; 'weekly' stops crawlers from treating every
+  # lastmod as stale noise. Per-page priority is set in params.toml/front matter.
+  changefreq = 'weekly'
   filename = 'sitemap.xml'
   priority = 0.5
 
+# Plain-text site index for LLM crawlers (Blowfish ships layouts/_default/llms.txt).
+# Note: as of 2026 no major AI vendor has committed to reading /llms.txt, and
+# server-log studies show it is rarely fetched. Kept because it costs nothing.
+[outputFormats.llms]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  rel = "alternate"
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "LLMS"]
 
 [related]
   threshold = 0

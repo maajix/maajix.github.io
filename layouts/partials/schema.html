@@ -1,0 +1,114 @@
+{{- /*
+  JSON-LD override for Blowfish.
+
+  Differences vs. the stock theme partial:
+    - author/publisher are a single shared Person node referenced by @id, with
+      sameAs pointing at the profiles listed in params.author.links. This is the
+      entity signal search + answer engines use to tie the site to a real person.
+    - mainEntityOfPage is a real WebPage object (the theme emits the string
+      "true", which is invalid and is dropped by validators).
+    - image is emitted from the page-bundle feature image, absolute URL.
+    - wordCount is a number, not a string.
+    - BreadcrumbList is always emitted on non-home pages.
+    - The home page additionally emits the Person node so it can be resolved.
+*/ -}}
+
+{{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+{{- $authorID := printf "%s#person" site.Home.Permalink -}}
+{{- $siteID := printf "%s#website" site.Home.Permalink -}}
+
+{{- /* sameAs: every author link that is not a mailto: address */ -}}
+{{- $sameAs := slice -}}
+{{- range $links := site.Params.author.links -}}
+  {{- range $name, $url := $links -}}
+    {{- if not (strings.HasPrefix $url "mailto:") -}}
+      {{- $sameAs = $sameAs | append $url -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Author image, absolute */ -}}
+{{- $authorImage := "" -}}
+{{- with site.Params.author.image -}}
+  {{- with resources.Get . -}}
+    {{- $authorImage = .Permalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $person := dict
+  "@type" "Person"
+  "@id" $authorID
+  "name" site.Params.author.name
+  "url" site.Home.Permalink
+-}}
+{{- with site.Params.author.headline }}{{ $person = merge $person (dict "jobTitle" .) }}{{ end -}}
+{{- with site.Params.author.bio }}{{ $person = merge $person (dict "description" .) }}{{ end -}}
+{{- with $authorImage }}{{ $person = merge $person (dict "image" .) }}{{ end -}}
+{{- if $sameAs }}{{ $person = merge $person (dict "sameAs" $sameAs) }}{{ end -}}
+
+{{- if .IsHome -}}
+  {{- $website := dict
+    "@type" "WebSite"
+    "@id" $siteID
+    "name" site.Title
+    "url" site.Home.Permalink
+    "publisher" (dict "@id" $authorID)
+    "author" (dict "@id" $authorID)
+  -}}
+  {{- with site.Params.description }}{{ $website = merge $website (dict "description" .) }}{{ end -}}
+  {{- with site.Language.Locale }}{{ $website = merge $website (dict "inLanguage" .) }}{{ end -}}
+  {{- with site.Params.keywords }}{{ $website = merge $website (dict "keywords" .) }}{{ end -}}
+  {{- $graph := dict "@context" "https://schema.org" "@graph" (slice $website $person) -}}
+  <script type="application/ld+json">{{ $graph | jsonify | safeJS }}</script>
+{{- else -}}
+  {{- /* Feature image of the page bundle, absolute URL */ -}}
+  {{- $image := "" -}}
+  {{- with (.Resources.ByType "image").GetMatch "*feature*" -}}
+    {{- $image = .Permalink -}}
+  {{- end -}}
+
+  {{- /* TechArticle for hands-on security writeups, Article otherwise */ -}}
+  {{- $type := "Article" -}}
+  {{- if or (eq .Section "posts") (eq .Section "ctfs") -}}
+    {{- $type = "TechArticle" -}}
+  {{- end -}}
+
+  {{- $article := dict
+    "@type" $type
+    "@id" (printf "%s#article" .Permalink)
+    "headline" (.Title | plainify)
+    "name" (.Title | plainify)
+    "url" .Permalink
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+    "author" (dict "@id" $authorID)
+    "publisher" (dict "@id" $authorID)
+    "wordCount" .WordCount
+    "isAccessibleForFree" true
+  -}}
+  {{- with (site.GetPage .Section) }}{{ $article = merge $article (dict "articleSection" (.Title | plainify)) }}{{ end -}}
+  {{- with .Description }}{{ $article = merge $article (dict "description" (. | plainify)) }}{{ end -}}
+  {{- with site.Language.Locale }}{{ $article = merge $article (dict "inLanguage" .) }}{{ end -}}
+  {{- with $image }}{{ $article = merge $article (dict "image" .) }}{{ end -}}
+  {{- with .Date }}{{ $article = merge $article (dict "datePublished" (.Format $iso8601)) }}{{ end -}}
+  {{- with .Lastmod }}{{ $article = merge $article (dict "dateModified" (.Format $iso8601)) }}{{ end -}}
+  {{- $kw := .Keywords | default .Params.tags -}}
+  {{- with $kw }}{{ $article = merge $article (dict "keywords" .) }}{{ end -}}
+  {{- with .Params.proficiency }}{{ $article = merge $article (dict "proficiencyLevel" .) }}{{ end -}}
+
+  {{- /* Breadcrumbs: Home > Section > ... > Page */ -}}
+  {{- $items := slice -}}
+  {{- $pos := 1 -}}
+  {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "name" "Home" "item" site.Home.Permalink) -}}
+  {{- range .Ancestors.Reverse -}}
+    {{- if not .IsHome -}}
+      {{- $pos = add $pos 1 -}}
+      {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "name" (.Title | plainify) "item" .Permalink) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $pos = add $pos 1 -}}
+  {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "name" (.Title | plainify) "item" .Permalink) -}}
+  {{- $crumbs := dict "@type" "BreadcrumbList" "@id" (printf "%s#breadcrumb" .Permalink) "itemListElement" $items -}}
+
+  {{- $graph := dict "@context" "https://schema.org" "@graph" (slice $article $crumbs $person) -}}
+  <script type="application/ld+json">{{ $graph | jsonify | safeJS }}</script>
+{{- end -}}
