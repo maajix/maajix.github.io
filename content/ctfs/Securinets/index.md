@@ -1,8 +1,9 @@
 ---
-title: "Securinets"
+title: "Securinets CTF 2025 Writeup: SQL Injection, SSRF and IDOR Chain"
 date: 2025-10-05
 draft: false
-description: "Securinets"
+description: "Securinets CTF 2025 writeup: chaining a username SQL injection, an SSRF and a broken collaboration-request check into admin access, plus the MD7 misc challenge."
+tags: ["CTF", "SQL Injection", "SSRF", "IDOR", "Web"]
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -39,7 +40,7 @@ def list_db_files():
 
 {{< figure src="/images/ctfs/Securinets/db_listing.png" alt="DB">}}
 
-{{< figure src="/images/ctfs/Securinets/hashes.png" alt="DB">}}
+{{< figure src="/images/ctfs/Securinets/hashes.webp" alt="DB">}}
 
 Cracking the hash for the account `admin` revealed the password of `pizzaguy`
 

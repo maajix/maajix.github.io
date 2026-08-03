@@ -1,8 +1,9 @@
 ---
-title: "HTB Cyber Apocalypse"
+title: "HTB Cyber Apocalypse 2025 Writeup: Web, Reversing and OSINT"
 date: 2025-03-20
 draft: false
-description: "Cyber Apocalypse CTF - Majix"
+description: "HackTheBox Cyber Apocalypse 2025 writeup: the Trial by Fire and Whispers of the Moonbeam web challenges, SealedRune and EncryptedScroll reversing, Echoes in Stone OSINT, plus notes on driving GDB."
+tags: ["CTF", "Web", "Reverse Engineering", "OSINT", "GDB", "HackTheBox"]
 toc: false
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -11,7 +12,7 @@ toc: false
 > Only participated partially on Friday 21.
 
 {{< figure
-    src="/images/ctfs/cyber-apocalypse/cert.png"
+    src="/images/ctfs/cyber-apocalypse/cert.webp"
     alt="Description of the image"
 >}}
 

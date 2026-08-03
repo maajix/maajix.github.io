@@ -1,8 +1,9 @@
 ---
-title: "CrewCTF"
+title: "CrewCTF 2025 Writeup: Bypassing a Strict CSP in Love Notes"
 date: 2025-09-19
 draft: false
-description: "CrewCTF - Majix"
+description: "CrewCTF 2025 writeup for Love Notes: getting XSS past a strict Content Security Policy and exfiltrating the result to a Burp Collaborator callback."
+tags: ["CTF", "Web", "XSS", "CSP"]
 toc: false
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

@@ -2,7 +2,7 @@
 title: "Reflected XSS to Account Takeover"
 date: 2025-02-19
 draft: false
-description: "A reflected XSS bug turns into an ATO due to low security messures"
+description: "How a reflected XSS escalates into a full account takeover when the application ships no HttpOnly cookies, no CSP and no session binding."
 tags: ["XSS", "ATO", "Wordpress"]
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

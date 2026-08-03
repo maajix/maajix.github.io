@@ -1,8 +1,9 @@
 ---
-title: "Glacier"
+title: "Glacier CTF 2024 Writeup: Extracting a Hidden PNG from a PDF Stream"
 date: 2024-10-23
 draft: false
-description: "Glacier CTF 2024 - Majix"
+description: "Glacier CTF 2024 writeup: using peepdf to inspect PDF object streams and recover a PNG image embedded inside the document."
+tags: ["CTF", "Forensics", "PDF", "peepdf"]
 toc: false
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

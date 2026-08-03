@@ -1,8 +1,9 @@
 ---
-title: "ACECTF"
+title: "ACECTF 2025 Writeup: JWT, S3 Buckets, WebCrypto and XOR Keystream Reuse"
 date: 2025-02-27
 draft: false
-description: "Acectf"
+description: "ACECTF 2025 writeup covering the web challenges (WebCrypto, Token of Trust JWT forgery, Bucket List S3 misconfiguration, Buried Deep, Flag Fetcher) plus reverse engineering, XOR keystream reuse crypto and OSINT."
+tags: ["CTF", "Web", "JWT", "S3", "Crypto", "OSINT", "Reverse Engineering"]
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -675,13 +676,13 @@ When inserting the image in Google reverse image search we can find that the tow
 
 When checking the possible locations on the map, we can see that only 2 the left and bottom locations are possible standingpoints.
 
-{{< figure src="/images/ctfs/ACECTF/map.png" alt="Map">}}
+{{< figure src="/images/ctfs/ACECTF/map.webp" alt="Map">}}
 
 After checking both the bottom one seemed promissing and I just jumped into streetview where I was placed directly at the location from the Image.
 
-{{< figure src="/images/ctfs/ACECTF/mistery_building.png" alt="Location">}}
+{{< figure src="/images/ctfs/ACECTF/mistery_building.webp" alt="Location">}}
 
-{{< figure src="/images/ctfs/ACECTF/pp_trade.png" alt="Solution">}}
+{{< figure src="/images/ctfs/ACECTF/pp_trade.webp" alt="Solution">}}
 
 `ACECTF{pp_trade_center}`
 

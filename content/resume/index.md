@@ -1,7 +1,8 @@
 ---
-title: "Resume"
+title: "Resume - Max Randhahn, Web Penetration Tester"
 date: 2022-06-13T21:28:51+01:00
 draft: false
+description: "Resume of Max Randhahn, penetration tester and security researcher focused on web application security: experience, certifications and areas of work."
 
 showDate : false
 showDateOnlyInArticle : false

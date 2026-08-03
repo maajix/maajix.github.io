@@ -1,8 +1,9 @@
 ---
-title: "1337UP"
+title: "1337UP CTF 2024 Writeup: Cold Storage Crypto and OSINT"
 date: 2024-11-16
 draft: false
-description: "1337UP CTF 2024 - Majix"
+description: "1337UP CTF 2024 writeup: solving Cold Storage by unwinding the XOR and RSA layers protecting the key, plus the OSINT challenges."
+tags: ["CTF", "Crypto", "RSA", "XOR", "OSINT"]
 toc: false
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

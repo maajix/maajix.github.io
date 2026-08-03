@@ -22,7 +22,7 @@ This post gives a more technical look at why the demonstrator is useful. The red
 > **OT security becomes much easier to understand when the impact is visible.**
 
 {{< figure
-    src="/images/posts/yekcity/yekcity_its_2025.jpeg"
+    src="/images/posts/yekcity/yekcity_its_2025.webp"
     alt="YekCity demonstrator"
 >}}
 
@@ -70,7 +70,7 @@ The interesting part is the connection between both. A change in communication a
 That connection is what makes YekCity useful.
 
 {{< figure
-    src="/images/posts/yekcity/yekcity_view_1.jpg"
+    src="/images/posts/yekcity/yekcity_view_1.webp"
     alt="YekCity model: power plant, substation, and consumers"
 >}}
 
@@ -121,7 +121,7 @@ The full loop is what matters:
 Many demos focus mainly on the attack. YekCity gets interesting as a full system: not only that something can be disrupted, but how the impact becomes visible, how defenders observe it, and how the system recovers.
 
 {{< figure
-    src="/images/posts/yekcity/yekcity_view_2.jpg"
+    src="/images/posts/yekcity/yekcity_view_2.webp"
     alt="YekCity model with status LEDs showing the affected city"
 >}}
 

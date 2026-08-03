@@ -1,8 +1,9 @@
 ---
-title: "Nullcon"
+title: "Nullcon CTF 2025 Writeup: Password Oracle Brute Force and Source Disclosure"
 date: 2025-09-06
 draft: false
-description: "Nullcon CTF 2024 - Majix"
+description: "Nullcon CTF 2025 writeup: grandmas_notes leaks how many password characters are correct and is brute forced character by character, pwgen exposes its source via ?source=1, plus webby and slasher."
+tags: ["CTF", "Web", "PHP", "Brute Force", "Information Disclosure"]
 toc: false
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

@@ -2,7 +2,7 @@
 title: "Account Takeover via flawed reset mechanism"
 date: 2025-03-09
 draft: false
-description: "See how a simple reset mechanism can lead to account takeover when configured wrong"
+description: "A password reset flow with low-entropy tokens: measuring the real entropy of the reset token, then brute forcing it into an account takeover."
 tags: ["ATO", "Password Reset", "Token Entropy"]
 ---
 

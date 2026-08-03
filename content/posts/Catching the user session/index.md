@@ -2,7 +2,7 @@
 title: "Catching the users session"
 date: 2025-08-05
 draft: false
-description: "Hijacking a users session by exploiting a custom build cache system."
+description: "Hijacking another user's session through a custom-built cache: mapping the attack surface with an ACL matrix and Auth Analyzer, then serving one user's authenticated response to everyone else."
 tags: ["Cache Poisoning", "ACL"]
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

@@ -2,7 +2,7 @@
 title: "CORS Misconfiguration to Account Takeover"
 date: 2025-02-20
 draft: false
-description: "Chaining a CORS Misconfiguration with XPath-Injectino to take over arbitrary Accounts of the application"
+description: "Chaining a CORS misconfiguration with an XPath injection to read any user's data cross-origin and take over arbitrary accounts."
 tags: ["CORS", "ATO", "SOP", "XPath"]
 ---
 
