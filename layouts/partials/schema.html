@@ -11,11 +11,20 @@
     - wordCount is a number, not a string.
     - BreadcrumbList is always emitted on non-home pages.
     - The home page additionally emits the Person node so it can be resolved.
+    - The resume page is typed ProfilePage with the Person as its mainEntity,
+      and Person.url points at it rather than at the home page, because Google's
+      Article guidance asks author.url to resolve to a page that identifies the
+      author, not to the site root.
 */ -}}
 
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
 {{- $authorID := printf "%s#person" site.Home.Permalink -}}
 {{- $siteID := printf "%s#website" site.Home.Permalink -}}
+
+{{- /* The page that identifies the author. Falls back to the home page. */ -}}
+{{- $authorPage := site.GetPage "/resume" -}}
+{{- $authorURL := site.Home.Permalink -}}
+{{- with $authorPage }}{{ $authorURL = .Permalink }}{{ end -}}
 
 {{- /* sameAs: every author link that is not a mailto: address */ -}}
 {{- $sameAs := slice -}}
@@ -39,7 +48,8 @@
   "@type" "Person"
   "@id" $authorID
   "name" site.Params.author.name
-  "url" site.Home.Permalink
+  "url" $authorURL
+  "mainEntityOfPage" (dict "@type" "ProfilePage" "@id" (printf "%s#profile" $authorURL))
 -}}
 {{- with site.Params.author.headline }}{{ $person = merge $person (dict "jobTitle" .) }}{{ end -}}
 {{- with site.Params.author.bio }}{{ $person = merge $person (dict "description" .) }}{{ end -}}
@@ -67,9 +77,14 @@
     {{- $image = .Permalink -}}
   {{- end -}}
 
+  {{- /* The author page is a ProfilePage about the Person, not an Article. */ -}}
+  {{- $isAuthorPage := and $authorPage (eq .Permalink $authorURL) -}}
+
   {{- /* TechArticle for hands-on security writeups, Article otherwise */ -}}
   {{- $type := "Article" -}}
-  {{- if or (eq .Section "posts") (eq .Section "ctfs") -}}
+  {{- if $isAuthorPage -}}
+    {{- $type = "ProfilePage" -}}
+  {{- else if or (eq .Section "posts") (eq .Section "ctfs") -}}
     {{- $type = "TechArticle" -}}
   {{- end -}}
 
@@ -85,7 +100,18 @@
     "wordCount" .WordCount
     "isAccessibleForFree" true
   -}}
-  {{- with (site.GetPage .Section) }}{{ $article = merge $article (dict "articleSection" (.Title | plainify)) }}{{ end -}}
+  {{- if $isAuthorPage -}}
+    {{- $article = dict
+      "@type" "ProfilePage"
+      "@id" (printf "%s#profile" .Permalink)
+      "name" (.Title | plainify)
+      "url" .Permalink
+      "mainEntity" (dict "@id" $authorID)
+    -}}
+  {{- end -}}
+  {{- if not $isAuthorPage -}}
+    {{- with (site.GetPage .Section) }}{{ $article = merge $article (dict "articleSection" (.Title | plainify)) }}{{ end -}}
+  {{- end -}}
   {{- with .Description }}{{ $article = merge $article (dict "description" (. | plainify)) }}{{ end -}}
   {{- with site.Language.Locale }}{{ $article = merge $article (dict "inLanguage" .) }}{{ end -}}
   {{- with $image }}{{ $article = merge $article (dict "image" .) }}{{ end -}}
