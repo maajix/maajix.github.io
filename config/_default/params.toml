@@ -119,3 +119,10 @@ smartTOCHideUnfocusedChildren = false
   groupByYear = true
   cardViewScreenWidth = false
   cardView = false
+
+[verification]
+  # Search Console cannot verify a *.github.io host by DNS TXT, because the
+  # github.io zone belongs to GitHub. This is a URL prefix property verified
+  # with the HTML tag method; the theme renders it in head.html. Google
+  # re-checks it periodically, so removing it drops the verification.
+  google = "MOaUOufl_ctsgCe9aeaxioIhvTHWTMPsWiiY5d_RyAg"
