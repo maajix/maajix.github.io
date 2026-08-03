@@ -24,6 +24,16 @@ enableEmoji = true
   [cascade.target]
     path = "/posts/**"
 
+# Keep taxonomy pages out of the sitemap. 45 of the 70 entries were tag pages
+# and 34 of those list a single post, so they are duplicates of that post's
+# title and summary with no content of their own. They stay crawlable and
+# linked from every article; they are just not advertised as important URLs.
+[[cascade]]
+  [cascade.sitemap]
+    disable = true
+  [cascade.target]
+    kind = "{taxonomy,term}"
+
 [pagination]
   pagerSize = 100
 
