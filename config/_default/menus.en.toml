@@ -27,6 +27,11 @@ pageRef = "ctfs"
 weight = 25
 
 [[main]]
+name = "News"
+pageRef = "news"
+weight = 15
+
+[[main]]
 name = "Resume"
 pageRef = "resume"
 weight = 40

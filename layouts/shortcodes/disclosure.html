@@ -1,0 +1,64 @@
+{{- /* Renders data/timeline.yaml as a vertical disclosure log. Entries are
+       sorted newest first; a year label is emitted whenever the year changes. */ -}}
+{{- $entries := hugo.Data.timeline | default slice -}}
+
+{{- /* CTF writeups are already pages, so they are pulled from the section
+       instead of being copied into the data file. A new writeup shows up in
+       the log on its own. */ -}}
+{{- with site.GetPage "/ctfs" -}}
+  {{- range .RegularPages -}}
+    {{- $entries = $entries | append (dict
+      "date" (.Date.Format "2006-01-02")
+      "kind" "ctf"
+      "title" (replaceRE `\s*Writeup$` "" (index (split .Title ": ") 0))
+      "summary" (strings.FirstUpper (replaceRE `^.*?[Ww]riteups?\b[^:]*:\s*` "" .Description))
+      "url" .RelPermalink
+      "links" (slice (dict "text" "Writeup" "url" .RelPermalink))) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $all := sort $entries "date" "desc" -}}
+{{- $cves := len (where $all "kind" "cve") -}}
+{{- $paid := 0 -}}
+{{- range $all }}{{ with .payout }}{{ $paid = add $paid . }}{{ end }}{{ end -}}
+{{- /* ponytail: one currency for the total. Split per currency if a second one shows up. */ -}}
+
+<div class="tl">
+  <div class="tl-head">
+    <span>Log</span>
+    <span>{{ len $all }} entries</span>
+    {{ with $cves }}<span>{{ . }} CVE</span>{{ end }}
+    {{ with $paid }}<span>{{ lang.FormatCurrency 0 "USD" . }} paid</span>{{ end }}
+  </div>
+
+  <div class="tl-track">
+    {{- $year := "" -}}
+    {{- range $e := $all -}}
+      {{- $date := substr (printf "%v" $e.date) 0 10 -}}
+      {{- $y := substr $date 0 4 -}}
+      {{- if ne $y $year }}
+        <div class="tl-year"><span class="tl-century">{{ substr $y 0 2 }}</span>{{ substr $y 2 }}</div>
+        {{- $year = $y -}}
+      {{- end }}
+      <article class="tl-item" data-kind="{{ $e.kind }}" {{ with $e.severity }}data-severity="{{ . }}"{{ end }}>
+        <span class="tl-node" aria-hidden="true"></span>
+        <div class="tl-meta">
+          <time datetime="{{ $date }}">{{ (time.AsTime $date).Format "2 Jan" }}</time>
+          <span class="tl-tag">{{ $e.id | default $e.kind }}</span>
+          {{- with $e.vendor }}<span class="tl-vendor">{{ . }}</span>{{ end }}
+          {{- with $e.severity }}<span class="tl-sev">{{ . }}{{ with $e.cvss }} {{ . }}{{ end }}</span>{{ end }}
+          {{- with $e.payout }}<span class="tl-payout">{{ lang.FormatCurrency 0 ($e.currency | default "USD") . }}</span>{{ end }}
+        </div>
+        <h3 class="tl-title">
+          {{- with $e.url }}<a href="{{ . }}">{{ $e.title }}</a>{{ else }}{{ $e.title }}{{ end -}}
+        </h3>
+        {{- with $e.summary }}<p class="tl-summary">{{ . }}</p>{{ end }}
+        {{- with $e.links }}
+          <p class="tl-links">
+            {{- range . }}<a href="{{ .url }}">{{ .text }}</a>{{ end -}}
+          </p>
+        {{- end }}
+      </article>
+    {{- end }}
+  </div>
+</div>

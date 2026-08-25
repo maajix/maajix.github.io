@@ -1,0 +1,74 @@
+# Timeline entries rendered by layouts/shortcodes/timeline.html on /news/.
+#
+# Required: date (QUOTED "YYYY-MM-DD"), kind, title
+# Optional: id, url, vendor, summary, severity, cvss, payout, currency, links[]
+#
+# id:       the identifier the entry is known by (CVE-..., report number). Shown
+#           in place of the kind tag, so the tag itself carries the reference.
+#
+# kind:     cve | bounty | project | ctf | post | talk | news  (tag colour)
+# severity: critical | high | medium | low            (overrides the colour)
+# payout:   plain number, no separators. currency defaults to USD.
+#
+# Order does not matter, the shortcode sorts by date descending.
+#
+# CTF writeups are not listed here: the shortcode reads them from content/ctfs/.
+
+- date: "2026-07-12"
+  kind: cve
+  id: "CVE-2026-77386"
+  severity: "medium"
+  cvss: "6.5"
+  title: "OIDC login token can be redirected to an attacker-controlled URL"
+  vendor: "Kyoo"
+  url: "https://github.com/zoriya/Kyoo/security/advisories/GHSA-xhg6-v78p-xf44"
+  summary: "The OIDC login flow accepted an attacker-supplied redirect target, handing the issued token to a URL outside the application."
+  links:
+    - text: "Advisory"
+      url: "https://github.com/zoriya/Kyoo/security/advisories/GHSA-xhg6-v78p-xf44"
+
+- date: "2026-07-12"
+  kind: cve
+  id: "CVE-2026-77385"
+  severity: "medium"
+  cvss: "4.3"
+  title: "Transcoder serves uncataloged files from the media directory"
+  vendor: "Kyoo"
+  url: "https://github.com/zoriya/Kyoo/security/advisories/GHSA-fc8v-vr3q-hc46"
+  summary: "The transcoder streamed any file under the media directory, including files never added to the library."
+  links:
+    - text: "Advisory"
+      url: "https://github.com/zoriya/Kyoo/security/advisories/GHSA-fc8v-vr3q-hc46"
+
+- date: "2026-06-24"
+  kind: project
+  title: "YekCity"
+  vendor: "Yekta IT"
+  url: "/posts/yekcity/"
+  summary: "A physical OT security demonstrator that makes cyberattacks visible when the city goes dark."
+  links:
+    - text: "Post"
+      url: "/posts/yekcity/"
+
+- date: "2025-02-21"
+  kind: project
+  title: "Car hacking demonstrator"
+  vendor: "Yekta IT"
+  url: "/posts/demonstrator/v1/"
+  summary: "Emulating real CAN bus communication to train automotive attack and defense hands-on."
+  links:
+    - text: "Post"
+      url: "/posts/demonstrator/v1/"
+
+# Bounty entries carry a payout, which is summed into the header strip:
+#
+# - date: "2026-06-18"
+#   kind: bounty
+#   title: "Reflected XSS to account takeover"
+#   vendor: "Private program"
+#   summary: "Triaged and paid within a week."
+#   payout: 900
+#   currency: "USD"
+#   links:
+#     - text: "Report"
+#       url: "https://hackerone.com/reports/000000"

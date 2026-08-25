@@ -225,3 +225,343 @@ td {
 .fa-table-list{--fa-svg:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zm64 0v64h64V96H64zm384 0H192v64H448V96zM64 224v64h64V224H64zm384 0H192v64H448V224zM64 352v64h64V352H64zm384 0H192v64H448V352z'/></svg>")}
 .fa-user-ninja{--fa-svg:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M224 256c-57.2 0-105.6-37.5-122-89.3c-1.1 1.3-2.2 2.6-3.5 3.8c-15.8 15.8-38.8 20.7-53.6 22.1c-8.1 .8-14.6-5.7-13.8-13.8c1.4-14.7 6.3-37.8 22.1-53.6c5.8-5.8 12.6-10.1 19.6-13.4c-7-3.2-13.8-7.6-19.6-13.4C37.4 82.7 32.6 59.7 31.1 44.9c-.8-8.1 5.7-14.6 13.8-13.8c14.7 1.4 37.8 6.3 53.6 22.1c4.8 4.8 8.7 10.4 11.7 16.1C131.4 28.2 174.4 0 224 0c70.7 0 128 57.3 128 128s-57.3 128-128 128zM0 482.3C0 399.5 56.4 330 132.8 309.9c6-1.6 12.2 .9 15.9 5.8l62.5 83.3c6.4 8.5 19.2 8.5 25.6 0l62.5-83.3c3.7-4.9 9.9-7.4 15.9-5.8C391.6 330 448 399.5 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM160 96c-8.8 0-16 7.2-16 16s7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H160z'/></svg>")}
 .fa-worm{--fa-svg:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M256 96c0-53 43-96 96-96h38.4C439.9 0 480 40.1 480 89.6V176v16V376c0 75.1-60.9 136-136 136s-136-60.9-136-136V296c0-22.1-17.9-40-40-40s-40 17.9-40 40V464c0 26.5-21.5 48-48 48s-48-21.5-48-48V296c0-75.1 60.9-136 136-136s136 60.9 136 136v80c0 22.1 17.9 40 40 40s40-17.9 40-40V192H352c-53 0-96-43-96-96zm144-8a24 24 0 1 0 -48 0 24 24 0 1 0 48 0z'/></svg>")}
+
+/* -- Timeline (/news/) ---------------------------------------------------
+   A disclosure log, not a decorative timeline. Everything a machine issued
+   (dates, CVE ids, tags, amounts) is set in the system monospace stack;
+   everything a human wrote stays in the body face. No webfont is added.
+   Colour is spent on one axis only: the kind/severity of an entry. */
+
+.tl {
+  --tl-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+  --tl-rail: 0.4375rem; /* centre of the rail, measured from .tl-track's edge */
+  margin-block: 2rem;
+}
+
+/* Header strip: reads like the head of a record file, not a stats dashboard. */
+.tl-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  padding-block: 0.5rem;
+  border-block: 1px solid rgb(var(--color-neutral-200));
+  font-family: var(--tl-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(var(--color-neutral-500));
+}
+
+.dark .tl-head {
+  border-color: rgb(var(--color-neutral-700));
+  color: rgb(var(--color-neutral-400));
+}
+
+.tl-head span + span::before {
+  content: "/";
+  margin-inline-end: 1rem;
+  color: rgb(var(--color-primary-500));
+}
+
+/* The rail. One continuous hairline, drawn behind the nodes. */
+.tl-track {
+  position: relative;
+  padding-block: 1.5rem 0.5rem;
+}
+
+.tl-track::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: var(--tl-rail);
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--color-neutral-300)) 2rem,
+    rgb(var(--color-neutral-300)) calc(100% - 4rem),
+    transparent
+  );
+}
+
+.dark .tl-track::before {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--color-neutral-700)) 2rem,
+    rgb(var(--color-neutral-700)) calc(100% - 4rem),
+    transparent
+  );
+}
+
+/* Year label sits in the body column so the rail never runs through the text. */
+.tl-year {
+  margin-block: 2.75rem 1.25rem;
+  padding-inline-start: 2rem;
+  font-family: var(--tl-mono);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: rgb(var(--color-neutral-700));
+}
+
+/* The century is the same on every row, so it is dimmed out of the way and the
+   two digits that actually change carry the weight. */
+.tl-century {
+  opacity: 0.3;
+}
+
+.tl-year:first-child {
+  margin-block-start: 0;
+}
+
+.dark .tl-year {
+  color: rgb(var(--color-neutral-200));
+}
+
+.tl-item {
+  --tl-accent: var(--color-neutral-500);
+  position: relative;
+  padding: 0 0 1.75rem 2rem;
+}
+
+.tl-item[data-kind="cve"] {
+  --tl-accent: 225, 29, 72;
+}
+.tl-item[data-kind="bounty"] {
+  --tl-accent: var(--color-primary-600);
+}
+.tl-item[data-kind="ctf"] {
+  --tl-accent: var(--color-secondary-600);
+}
+.tl-item[data-kind="project"] {
+  --tl-accent: 2, 132, 199;
+}
+.dark .tl-item[data-kind="cve"] {
+  --tl-accent: 251, 113, 133;
+}
+.dark .tl-item[data-kind="bounty"] {
+  --tl-accent: var(--color-primary-400);
+}
+.dark .tl-item[data-kind="ctf"] {
+  --tl-accent: var(--color-secondary-400);
+}
+.dark .tl-item[data-kind="project"] {
+  --tl-accent: 56, 189, 248;
+}
+
+/* Severity, where it is known, outranks the kind colour. */
+.tl-item[data-severity="critical"] {
+  --tl-accent: 190, 18, 60;
+}
+.tl-item[data-severity="high"] {
+  --tl-accent: 234, 88, 12;
+}
+.tl-item[data-severity="medium"] {
+  --tl-accent: 202, 138, 4;
+}
+.tl-item[data-severity="low"] {
+  --tl-accent: var(--color-neutral-500);
+}
+.dark .tl-item[data-severity="critical"] {
+  --tl-accent: 244, 63, 94;
+}
+.dark .tl-item[data-severity="high"] {
+  --tl-accent: 251, 146, 60;
+}
+.dark .tl-item[data-severity="medium"] {
+  --tl-accent: 250, 204, 21;
+}
+.dark .tl-item[data-severity="low"] {
+  --tl-accent: var(--color-neutral-400);
+}
+
+/* The node is the signature: a small rotated square, unfilled, that fills in
+   on hover. Reads as a marker on a track rather than a bullet point. */
+.tl-node {
+  position: absolute;
+  inset-block-start: 0.375rem;
+  inset-inline-start: 0;
+  width: 0.875rem;
+  height: 0.875rem;
+  box-sizing: border-box;
+  border: 2px solid rgb(var(--tl-accent));
+  background: rgb(var(--color-neutral));
+  transform: rotate(45deg);
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+.dark .tl-node {
+  background: rgb(var(--color-neutral-800));
+}
+
+.tl-item:hover .tl-node,
+.tl-item:focus-within .tl-node {
+  background: rgb(var(--tl-accent));
+  transform: rotate(45deg) scale(1.15);
+}
+
+.tl-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.375rem 0.625rem;
+  font-family: var(--tl-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgb(var(--color-neutral-500));
+}
+
+.dark .tl-meta {
+  color: rgb(var(--color-neutral-400));
+}
+
+.tl-meta time {
+  font-variant-numeric: tabular-nums;
+}
+
+.tl-tag {
+  padding: 0.0625rem 0.375rem;
+  border: 1px solid rgba(var(--tl-accent), 0.5);
+  border-radius: 2px;
+  color: rgb(var(--tl-accent));
+  font-weight: 600;
+}
+
+.tl-sev::before,
+.tl-vendor::before {
+  content: "\00b7";
+  margin-inline-end: 0.5rem;
+}
+
+.tl-sev {
+  color: rgb(var(--tl-accent));
+}
+
+/* Payouts are the ledger column: pushed to the trailing edge, tabular. */
+.tl-payout {
+  margin-inline-start: auto;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+  color: rgb(var(--color-primary-600));
+}
+
+.dark .tl-payout {
+  color: rgb(var(--color-primary-400));
+}
+
+.tl .tl-title {
+  margin: 0.5rem 0 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  color: rgb(var(--color-neutral-800));
+}
+
+.dark .tl .tl-title {
+  color: rgb(var(--color-neutral-100));
+}
+
+.tl .tl-title a {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(rgb(var(--tl-accent)), rgb(var(--tl-accent)));
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s ease;
+}
+
+.tl .tl-title a:hover,
+.tl .tl-title a:focus-visible {
+  background-size: 100% 1px;
+}
+
+.tl .tl-summary {
+  margin: 0.375rem 0 0;
+  max-width: 60ch;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgb(var(--color-neutral-600));
+}
+
+.dark .tl .tl-summary {
+  color: rgb(var(--color-neutral-300));
+}
+
+.tl .tl-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 1rem;
+  margin: 0.625rem 0 0;
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+}
+
+.tl .tl-links a {
+  color: rgb(var(--color-neutral-500));
+  text-decoration: underline;
+  text-decoration-color: rgb(var(--color-neutral-300));
+  text-underline-offset: 3px;
+}
+
+.tl .tl-links a::before {
+  content: "\2197";
+  margin-inline-end: 0.25rem;
+  text-decoration: none;
+}
+
+.tl .tl-links a:hover {
+  color: rgb(var(--tl-accent));
+  text-decoration-color: rgb(var(--tl-accent));
+}
+
+.dark .tl .tl-links a {
+  color: rgb(var(--color-neutral-400));
+  text-decoration-color: rgb(var(--color-neutral-600));
+}
+
+.tl a:focus-visible {
+  outline: 2px solid rgb(var(--color-primary-500));
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (max-width: 480px) {
+  .tl-payout {
+    margin-inline-start: 0;
+  }
+}
+
+/* Scroll-linked reveal, no JS. Browsers without scroll-driven animations
+   simply render the list statically, which is the correct fallback. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .tl-item {
+      animation: tl-enter linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+
+    @keyframes tl-enter {
+      from {
+        opacity: 0;
+        transform: translateY(0.75rem);
+      }
+    }
+  }
+}
+
+/* The log needs a wider measure than an article: the payout column sits at the
+   trailing edge, and CVE titles are long. Scoped to pages that render one. */
+.article-content:has(.tl) {
+  max-width: 46rem;
+}
