@@ -2,7 +2,7 @@
 title: "ACECTF 2025 Writeup: JWT, S3 Buckets, WebCrypto and XOR Keystream Reuse"
 date: 2025-02-27
 draft: false
-description: "ACECTF 2025 writeup covering the web challenges (WebCrypto, Token of Trust JWT forgery, Bucket List S3 misconfiguration, Buried Deep, Flag Fetcher) plus reverse engineering, XOR keystream reuse crypto and OSINT."
+description: "ACECTF 2025 writeup: WebCrypto, JWT forgery in Token of Trust, an S3 bucket misconfiguration, plus reversing and XOR keystream reuse crypto."
 tags: ["CTF", "Web", "JWT", "S3", "Crypto", "OSINT", "Reverse Engineering"]
 ---
 

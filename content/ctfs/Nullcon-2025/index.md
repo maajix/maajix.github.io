@@ -2,7 +2,7 @@
 title: "Nullcon CTF 2025 Writeup: Password Oracle Brute Force and Source Disclosure"
 date: 2025-09-06
 draft: false
-description: "Nullcon CTF 2025 writeup: grandmas_notes leaks how many password characters are correct and is brute forced character by character, pwgen exposes its source via ?source=1, plus webby and slasher."
+description: "Nullcon CTF 2025 writeup: brute forcing grandmas_notes character by character through a password oracle, and pwgen leaking its source via ?source=1."
 tags: ["CTF", "Web", "PHP", "Brute Force", "Information Disclosure"]
 toc: false
 ---

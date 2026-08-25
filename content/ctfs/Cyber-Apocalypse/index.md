@@ -2,7 +2,7 @@
 title: "HTB Cyber Apocalypse 2025 Writeup: Web, Reversing and OSINT"
 date: 2025-03-20
 draft: false
-description: "HackTheBox Cyber Apocalypse 2025 writeup: the Trial by Fire and Whispers of the Moonbeam web challenges, SealedRune and EncryptedScroll reversing, Echoes in Stone OSINT, plus notes on driving GDB."
+description: "HackTheBox Cyber Apocalypse 2025 writeup: the Trial by Fire and Whispers of the Moonbeam web challenges, SealedRune reversing and Echoes in Stone OSINT."
 tags: ["CTF", "Web", "Reverse Engineering", "OSINT", "GDB", "HackTheBox"]
 toc: false
 ---

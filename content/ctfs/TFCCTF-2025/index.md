@@ -2,7 +2,7 @@
 title: "TFCCTF 2025 Writeup: ZIP Symlink File Read and DOM Clobbering"
 date: 2025-08-31
 draft: false
-description: "TFCCTF 2025 web writeups: SLIPPY abuses a symlink inside an uploaded ZIP archive for arbitrary file read, and DOM NOTIFY uses DOM clobbering against a Puppeteer admin bot."
+description: "TFCCTF 2025 web writeups: SLIPPY abuses a ZIP symlink for arbitrary file read, DOM NOTIFY uses DOM clobbering against a Puppeteer admin bot."
 tags: ["CTF", "Web", "File Upload", "DOM Clobbering", "XSS"]
 ---
 

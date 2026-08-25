@@ -2,7 +2,7 @@
 title: "FortID CTF 2025 Writeup: Document Upload IDOR via target_user"
 date: 2025-09-14
 draft: false
-description: "FortID CTF 2025 writeup: abusing the target_user parameter on the admin document upload endpoint to plant files as another user, plus the reversing and misc challenges."
+description: "FortID CTF 2025 writeup: abusing the target_user parameter on the admin upload endpoint to plant files as another user, plus reversing and misc."
 tags: ["CTF", "Web", "IDOR", "File Upload", "Reverse Engineering"]
 toc: false
 ---

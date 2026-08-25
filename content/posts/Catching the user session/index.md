@@ -2,7 +2,7 @@
 title: "Catching the users session"
 date: 2025-08-05
 draft: false
-description: "Hijacking another user's session through a custom-built cache: mapping the attack surface with an ACL matrix and Auth Analyzer, then serving one user's authenticated response to everyone else."
+description: "Hijacking another user's session through a custom-built cache: mapping the attack surface with an ACL matrix, then serving one user's response to all."
 tags: ["Cache Poisoning", "ACL"]
 ---
 

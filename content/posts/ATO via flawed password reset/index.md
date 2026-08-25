@@ -27,12 +27,12 @@ Entropy, in the context of security, refers to the <span class="text-primary-400
 Each digit ranges from 0 to 9, resulting in a total of <span class="text-primary-400">1 million possible combinations</span>:
 
 {{< katex >}}
-<span class="text-primary-400">\\(10^6 = 1.000.000\\)
+<span class="text-primary-400">\\(10^6 = 1.000.000\\)</span>
 
 For our 6-digit token, the entropy calculation is:
 
 {{< katex >}}
-<span class="text-primary-400">\\(log_2(1.000.000) = 19.93\\)
+<span class="text-primary-400">\\(log_2(1.000.000) = 19.93\\)</span>
 
 This translates to roughly 19 bits (2^19) of entropy, which is significantly lower than the recommended minimum of 80 bits. Such low entropy makes the token susceptible to brute-force attacks.
 
