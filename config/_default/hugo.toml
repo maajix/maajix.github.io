@@ -9,6 +9,12 @@ defaultContentLanguage = "en"
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
 enableRobotsTXT = true
+
+# Sitemap lastmod should be the last real change to a page, which is what Google
+# and Bing actually read. Without this it is the front matter date, so an edited
+# page keeps advertising its original publication date. The Pages workflow
+# checks out with fetch-depth: 0, so the history is there to read.
+enableGitInfo = true
 summaryLength = 0
 
 buildDrafts = false
@@ -47,11 +53,10 @@ enableEmoji = true
   series = "series"
 
 [sitemap]
-  # Writeups are not edited daily; 'weekly' stops crawlers from treating every
-  # lastmod as stale noise. Per-page priority is set in params.toml/front matter.
-  changefreq = 'weekly'
+  # No changefreq or priority: Google ignores both outright, Bing ignores them
+  # too, and a constant value on every URL carries no information anyway.
+  # https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
   filename = 'sitemap.xml'
-  priority = 0.5
 
 # Plain-text site index for LLM crawlers (Blowfish ships layouts/_default/llms.txt).
 # Note: as of 2026 no major AI vendor has committed to reading /llms.txt, and

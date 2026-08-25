@@ -1,0 +1,40 @@
+{{/* Copy of the Blowfish sitemap template with one change: a page may set
+     `timelineLastmod` in its front matter to take its lastmod from the newest
+     disclosure log entry instead of its own git/front matter date. /news/ is
+     rendered from data/timeline.yaml and the ctfs section, so its own file does
+     not change when the log does. Re-check this file against the theme after a
+     Blowfish update. */ -}}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{{ range .Data.Pages }}{{ if and (not .Sitemap.Disable) (not (in .Site.Params.sitemap.excludedKinds .Kind)) }}{{ if and (.Param "xml" | default true) (or (not .Params.externalUrl) (and (.Params.externalUrl) (and (not (hasPrefix .Params.externalUrl "http://")) (not (hasPrefix .Params.externalUrl "https://"))))) (not .Params.excludeFromSearch) }}
+{{- if .Permalink -}}{{ $link := .Permalink }}{{ if .Params.externalUrl }}{{ $link = printf "%s%s" .Site.BaseURL (substr .Params.externalUrl 1) }}{{ end }}
+{{- $lastmod := .Lastmod -}}
+{{- /* A list page is as fresh as its newest entry. With enableGitInfo the home
+       and section pages otherwise report the commit that happened to touch
+       them, which is older than the content they list. */ -}}
+{{- if or .IsHome (eq .Kind "section") -}}
+  {{- with .RegularPagesRecursive.ByLastmod.Reverse -}}
+    {{- $newest := (index . 0).Lastmod -}}
+    {{- if $newest.After $lastmod }}{{ $lastmod = $newest }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- if .Params.timelineLastmod }}{{ with index (partial "timeline-entries.html" .) 0 }}{{ $lastmod = time.AsTime .date }}{{ end }}{{ end -}}
+  <url>
+    <loc>{{ $link }}</loc>{{ if not $lastmod.IsZero }}
+    <lastmod>{{ safeHTML ( $lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>{{ end }}{{ with .Sitemap.ChangeFreq }}
+    <changefreq>{{ . }}</changefreq>{{ end }}{{ if ge .Sitemap.Priority 0.0 }}
+    <priority>{{ .Sitemap.Priority }}</priority>{{ end }}{{ if .IsTranslated }}{{ range .Translations }}
+    <xhtml:link
+      rel="alternate"
+      hreflang="{{ .Language.Locale }}"
+      href="{{ .Permalink }}"
+    />{{ end }}
+    <xhtml:link
+      rel="alternate"
+      hreflang="{{ .Language.Locale }}"
+      href="{{ $link }}"
+    />{{ end }}
+  </url>
+{{- end -}}{{ end }}{{ end }}{{ end }}
+</urlset>

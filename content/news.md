@@ -1,6 +1,7 @@
 ---
 title: "News"
 outputs: ["HTML", "RSS"]
+timelineLastmod: true
 description: "Disclosure log: CVEs, bug bounty reports and payouts, CTF results and other things as they happen."
 showDate: false
 showDateOnlyInArticle: false
