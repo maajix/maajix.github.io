@@ -1,0 +1,32 @@
+{{- /* Returns the disclosure log entries, newest first. Used by the disclosure
+       shortcode and by the RSS feed, so both stay in sync.
+
+       Each returned entry has its date normalised to YYYY-MM-DD and carries a
+       stable `slug`, which is the anchor id on /news/ and the RSS guid. */ -}}
+
+{{- $raw := hugo.Data.timeline | default slice -}}
+
+{{- /* CTF writeups are already pages, so they are pulled from the section
+       instead of being copied into the data file. A new writeup shows up in
+       the log on its own. */ -}}
+{{- with site.GetPage "/ctfs" -}}
+  {{- range .RegularPages -}}
+    {{- $raw = $raw | append (dict
+      "date" (.Date.Format "2006-01-02")
+      "kind" "ctf"
+      "title" (replaceRE `\s*Writeup$` "" (index (split .Title ": ") 0))
+      "summary" (strings.FirstUpper (replaceRE `^.*?[Ww]riteups?\b[^:]*:\s*` "" .Description))
+      "url" .RelPermalink
+      "links" (slice (dict "text" "Writeup" "url" .RelPermalink))) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $entries := slice -}}
+{{- range $raw -}}
+  {{- $date := substr (printf "%v" .date) 0 10 -}}
+  {{- $entries = $entries | append (merge . (dict
+    "date" $date
+    "slug" (urlize (printf "%s-%s" $date (or .id .title))))) -}}
+{{- end -}}
+
+{{- return (sort $entries "date" "desc") -}}

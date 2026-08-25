@@ -1,23 +1,6 @@
-{{- /* Renders data/timeline.yaml as a vertical disclosure log. Entries are
-       sorted newest first; a year label is emitted whenever the year changes. */ -}}
-{{- $entries := hugo.Data.timeline | default slice -}}
-
-{{- /* CTF writeups are already pages, so they are pulled from the section
-       instead of being copied into the data file. A new writeup shows up in
-       the log on its own. */ -}}
-{{- with site.GetPage "/ctfs" -}}
-  {{- range .RegularPages -}}
-    {{- $entries = $entries | append (dict
-      "date" (.Date.Format "2006-01-02")
-      "kind" "ctf"
-      "title" (replaceRE `\s*Writeup$` "" (index (split .Title ": ") 0))
-      "summary" (strings.FirstUpper (replaceRE `^.*?[Ww]riteups?\b[^:]*:\s*` "" .Description))
-      "url" .RelPermalink
-      "links" (slice (dict "text" "Writeup" "url" .RelPermalink))) -}}
-  {{- end -}}
-{{- end -}}
-
-{{- $all := sort $entries "date" "desc" -}}
+{{- /* Renders the disclosure log as a vertical timeline. A year label is
+       emitted whenever the year changes. */ -}}
+{{- $all := partial "timeline-entries.html" . -}}
 {{- $cves := len (where $all "kind" "cve") -}}
 {{- $paid := 0 -}}
 {{- range $all }}{{ with .payout }}{{ $paid = add $paid . }}{{ end }}{{ end -}}
@@ -29,21 +12,21 @@
     <span>{{ len $all }} entries</span>
     {{ with $cves }}<span>{{ . }} CVE</span>{{ end }}
     {{ with $paid }}<span>{{ lang.FormatCurrency 0 "USD" . }} paid</span>{{ end }}
+    {{ with $.Page.OutputFormats.Get "RSS" }}<span><a href="{{ .RelPermalink }}">Feed</a></span>{{ end }}
   </div>
 
   <div class="tl-track">
     {{- $year := "" -}}
     {{- range $e := $all -}}
-      {{- $date := substr (printf "%v" $e.date) 0 10 -}}
-      {{- $y := substr $date 0 4 -}}
+      {{- $y := substr $e.date 0 4 -}}
       {{- if ne $y $year }}
         <div class="tl-year"><span class="tl-century">{{ substr $y 0 2 }}</span>{{ substr $y 2 }}</div>
         {{- $year = $y -}}
       {{- end }}
-      <article class="tl-item" data-kind="{{ $e.kind }}" {{ with $e.severity }}data-severity="{{ . }}"{{ end }}>
+      <article class="tl-item" id="{{ $e.slug }}" data-kind="{{ $e.kind }}" {{ with $e.severity }}data-severity="{{ . }}"{{ end }}>
         <span class="tl-node" aria-hidden="true"></span>
         <div class="tl-meta">
-          <time datetime="{{ $date }}">{{ (time.AsTime $date).Format "2 Jan" }}</time>
+          <time datetime="{{ $e.date }}">{{ (time.AsTime $e.date).Format "2 Jan" }}</time>
           <span class="tl-tag">{{ $e.id | default $e.kind }}</span>
           {{- with $e.vendor }}<span class="tl-vendor">{{ . }}</span>{{ end }}
           {{- with $e.severity }}<span class="tl-sev">{{ . }}{{ with $e.cvss }} {{ . }}{{ end }}</span>{{ end }}

@@ -1,0 +1,38 @@
+{{- /* Feed for the disclosure log. Only pages that ask for RSS in their
+       `outputs` reach this template, which today is /news/ alone.
+
+       Items link to the advisory or writeup where there is one, and fall back
+       to their anchor on the log page. The guid is the anchor either way, so a
+       reader does not re-announce an entry whose link later changes. */ -}}
+{{- $entries := partial "timeline-entries.html" . -}}
+{{- $limit := site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 }}{{ $entries = $entries | first $limit }}{{ end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ .Title }} on {{ site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ .Description }}</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>{{ site.Language.Locale }}</language>
+    {{- with site.Params.Author.email }}
+    <managingEditor>{{ . }}{{ with site.Params.Author.name }} ({{ . }}){{ end }}</managingEditor>
+    {{- end }}
+    {{- with index $entries 0 }}
+    <lastBuildDate>{{ (time.AsTime .date).Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- end }}
+    {{- with .OutputFormats.Get "RSS" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- range $e := $entries }}
+    <item>
+      <title>{{ with $e.id }}{{ . }}: {{ end }}{{ $e.title }}</title>
+      <link>{{ with $e.url }}{{ . | absURL }}{{ else }}{{ printf "%s#%s" $.Permalink $e.slug }}{{ end }}</link>
+      <pubDate>{{ (time.AsTime $e.date).Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <category>{{ $e.kind }}</category>
+      <guid isPermaLink="false">{{ printf "%s#%s" $.Permalink $e.slug }}</guid>
+      <description>{{ $e.summary | transform.XMLEscape | safeHTML }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>

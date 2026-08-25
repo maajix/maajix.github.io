@@ -565,3 +565,17 @@ td {
 .article-content:has(.tl) {
   max-width: 46rem;
 }
+
+.tl-head a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tl-head a:hover {
+  color: rgb(var(--color-primary-600));
+}
+
+.dark .tl-head a:hover {
+  color: rgb(var(--color-primary-400));
+}
