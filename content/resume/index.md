@@ -37,6 +37,13 @@ showRelatedContent: false
    </thead>
    <tbody>
        <tr>
+           <td><img class="customEntitityLogo" src="/images/resume/self-employed.webp" alt=""/></td>
+           <td>Self-employed</td>
+           <td>BugBounty Hunter</td>
+           <td>Aug 2026 - Today</td>
+           <td>Remote</td>
+       </tr>
+       <tr>
            <td><img class="customEntitityLogo" src="/images/resume/yekta.jpg"/></td>
            <td><a href="https://yekta-it.de/" target="_blank">Yekta IT</a></td>
            <td>Penetration tester</td>
