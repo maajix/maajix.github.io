@@ -11,6 +11,8 @@
     - wordCount is a number, not a string.
     - BreadcrumbList is always emitted on non-home pages.
     - The home page additionally emits the Person node so it can be resolved.
+    - A page with `faq` front matter adds a FAQPage node, mirroring exactly what
+      the faq shortcode renders on the page itself.
     - The resume page is typed ProfilePage with the Person as its mainEntity,
       and Person.url points at it rather than at the home page, because Google's
       Article guidance asks author.url to resolve to a page that identifies the
@@ -135,6 +137,25 @@
   {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "name" (.Title | plainify) "item" .Permalink) -}}
   {{- $crumbs := dict "@type" "BreadcrumbList" "@id" (printf "%s#breadcrumb" .Permalink) "itemListElement" $items -}}
 
-  {{- $graph := dict "@context" "https://schema.org" "@graph" (slice $article $crumbs $person) -}}
+  {{- $nodes := slice $article $crumbs $person -}}
+
+  {{- /* FAQPage, from the page's `faq` front matter. The faq shortcode renders
+         the same entries as visible text, which is what Google requires. */ -}}
+  {{- with .Params.faq -}}
+    {{- $questions := slice -}}
+    {{- range . -}}
+      {{- $questions = $questions | append (dict
+        "@type" "Question"
+        "name" .q
+        "acceptedAnswer" (dict "@type" "Answer" "text" .a)) -}}
+    {{- end -}}
+    {{- $nodes = $nodes | append (dict
+      "@type" "FAQPage"
+      "@id" (printf "%s#faq" $.Permalink)
+      "url" $.Permalink
+      "mainEntity" $questions) -}}
+  {{- end -}}
+
+  {{- $graph := dict "@context" "https://schema.org" "@graph" $nodes -}}
   <script type="application/ld+json">{{ $graph | jsonify | safeJS }}</script>
 {{- end -}}

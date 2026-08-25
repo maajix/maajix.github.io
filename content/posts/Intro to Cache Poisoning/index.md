@@ -4,6 +4,15 @@ date: 2025-02-19
 draft: false
 description: "Web cache poisoning explained: keyed vs unkeyed parameters, how to find unkeyed inputs, how to turn one into a stored payload, plus fat GET and a real-life proof of concept."
 tags: ["Cache Poisoning", "Guide"]
+faq:
+  - q: "What is the difference between a keyed and an unkeyed parameter?"
+    a: "Keyed parameters are the ones the cache takes into account when it stores and retrieves an entry, so changing one produces a different cached entry and a cache miss. Unkeyed parameters are ignored by the cache, so changing one still returns the stored response and a cache hit. Cache poisoning depends on finding an input that the application reflects but the cache does not key on."
+  - q: "How do you identify unkeyed parameters?"
+    a: "Send the request once so the response gets cached, then resend it while changing one parameter at a time and watch the X-Cache header. A MISS after the change means the cache treated the request as new, so that parameter is keyed. A HIT means the cache ignored the change, so the parameter is unkeyed. The same test sometimes applies to header values as well."
+  - q: "How is cache poisoning turned into XSS?"
+    a: "You need an injection point that is reachable through an unkeyed parameter, for example a value reflected into a meta tag. Sending a payload such as a broken out attribute followed by an image tag with an onerror handler makes the poisoned response the one that gets stored. Everyone who later requests that cached URL is then served the injected markup."
+  - q: "What is a fat GET request?"
+    a: "A fat GET keeps the GET verb but carries the parameters in the request body. A misconfigured server may parse those body parameters, which creates a discrepancy between the web server and the cache. That also lets you supply values for keyed parameters, because they are no longer directly present in the URL."
 ---
 
 
@@ -234,3 +243,7 @@ CACHE: HIT
 ```
 
 In this example, an image tag with an `onerror` event is injected into the URL parameter. When the server processes this request, the parameter is reflected in the HTML response and cached. Consequently, subsequent users requesting the cached page will execute the malicious JavaScript.
+
+## <i class="fa-solid fa-list-ul text-primary-400"></i> FAQ
+
+{{< faq >}}

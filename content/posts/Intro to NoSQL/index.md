@@ -4,6 +4,15 @@ date: 2025-02-18
 draft: false
 description: "NoSQL injection explained: in-band injection, blind injection and server-side JavaScript injection (SSJI), with the operator payloads each one needs."
 tags: ["NoSQL", "Guide"]
+faq:
+  - q: "What is a NoSQL injection?"
+    a: "It occurs when untrusted user input is handled improperly and executed inside a NoSQL query, which lets an attacker manipulate database operations. Databases such as MongoDB, Couchbase and Cassandra are affected. These flaws are as dangerous as traditional SQL injection, but they are often overlooked because NoSQL databases are assumed to be secure by default."
+  - q: "How does a login bypass using the $ne operator work?"
+    a: "In PHP, bracket syntax in a request body becomes an associative array, so password[$ne]=null is sent as the MongoDB operator $ne with the value null. The resulting query asks for a user whose password is not null instead of one whose password matches. Since that condition is true, the attacker is authenticated as the account named in the username field."
+  - q: "What is the difference between boolean-based and time-based blind NoSQL injection?"
+    a: "Both are used when the result of the injected query is not returned directly. Boolean-based injection sends conditions such as a $regex anchored with a caret and infers each character from whether the application reports a match. Time-based injection sends a $where function that calls sleep when a condition holds, so the delay in the response reveals the answer."
+  - q: "What is server-side JavaScript injection in MongoDB?"
+    a: "MongoDB can evaluate JavaScript expressions inside a query through the $where operator. If user input is concatenated into that expression, an attacker can close the string and append their own logic, for example admin' || true // which comments out the rest of the condition. The whole expression then evaluates to true and the authentication check is bypassed."
 ---
 
 ## <i class="fa-solid fa-syringe text-primary-400"></i> Overview
@@ -181,3 +190,7 @@ db.users.findOne({
 <b class="text-primary-400">Effect</b>: The condition `this.username == 'admin' || true` always evaluates to true, allowing the attacker to bypass authentication.
 
 <b class="text-primary-400">Further Exploitation</b>: Attackers can use injections like `" || ""=="` or `" || true || ""=="` to evaluate the entire query to true. They can also enumerate fields using functions like `match($regex)` and the character-by-character approach mentioned earlier.
+
+## <i class="fa-solid fa-list-ul text-primary-400"></i> FAQ
+
+{{< faq >}}

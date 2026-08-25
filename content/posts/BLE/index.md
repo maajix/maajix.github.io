@@ -4,6 +4,17 @@ date: 2025-02-17
 draft: false
 description: "Learn how to hack Bluetooth Low Energy devices: from protocol basics to practical exploitation using common security tools."
 tags: ["BLE", "Hardware", "Guide"]
+faq:
+  - q: "How does Bluetooth Low Energy differ from classic Bluetooth?"
+    a: "BLE is built to consume less power than classic Bluetooth while keeping a similar communication range. It achieves this by staying off most of the time and transmitting only short amounts of data when they are actually required. It uses the 2.4 GHz band with 40 channels, three of which are used for advertising."
+  - q: "What are GAP and GATT?"
+    a: "GAP implements the advertising process and defines the roles of devices, broadcaster and observer for broadcast connections, peripheral and central for unicast ones. GATT defines how two devices exchange data once advertising has completed. Its core concepts are characteristics, which behave like basic API endpoints for read, write or notify, and services, which bundle related characteristics."
+  - q: "Which tools enumerate BLE services and characteristics?"
+    a: "hciconfig shows whether the interface is up, and hcitool lescan lists nearby devices with their MAC addresses. bettercap with ble.recon and ble.enum connects to a device and prints its services, characteristics, properties, handles and any data it can read. gatttool reads and writes individual handles, and nRF Connect for Desktop offers the same enumeration through a graphical interface."
+  - q: "What do gaps between BLE handles mean?"
+    a: "Handles are the memory locations where the data behind a characteristic is stored, and in a normal listing the ranges follow each other without a break. A gap between one range and the next can mean there are hidden services that the enumeration did not show. Characteristics marked insufficient encryption require pairing or bonding before they can be accessed."
+  - q: "Why does listening to a notify characteristic sometimes return nothing?"
+    a: "A characteristic can carry the notify property and still send nothing until the client subscribes. Subscribing means configuring the Client Characteristic Configuration Descriptor, which is done by writing 0100 to its handle. Without that write the server has no reason to send notifications, so the listening session stays silent."
 ---
 
 
@@ -245,3 +256,7 @@ In this article, we delved into the essentials BLE and its inner workings. We be
 We then transitioned into the practical side of BLE hacking. Using tools like bettercap and gatttool, we demonstrated how to enumerate nearby BLE devices, inspect their available services, and interact with their characteristics -- whether it’s reading, writing, or enabling notifications. The article also covered common challenges such as handling hidden services as well as a brief overview of how modern tools like the nRF Connect suite can simplify these tasks.
 
 Overall, this guide provides a solid foundation for understanding BLE technology and its vulnerabilities, paving the way for further exploration and security testing in the ever-evolving landscape of IoT and wireless communications.
+
+## <i class="fa-solid fa-list-ul text-primary-400"></i> FAQ
+
+{{< faq >}}

@@ -579,3 +579,54 @@ td {
 .dark .tl-head a:hover {
   color: rgb(var(--color-primary-400));
 }
+
+/* -- FAQ (post front matter -> faq shortcode) -----------------------------
+   Native <details>, so the answers are keyboard reachable and stay in the DOM
+   when collapsed. Scoped to .faq because the post body sits inside .prose. */
+
+.faq {
+  margin-block: 1rem 2rem;
+  border-bottom: 1px solid rgb(var(--color-neutral-200));
+}
+
+.faq details {
+  border-top: 1px solid rgb(var(--color-neutral-200));
+}
+
+.dark .faq,
+.dark .faq details {
+  border-color: rgb(var(--color-neutral-700));
+}
+
+.faq summary {
+  cursor: pointer;
+  padding-block: 0.75rem;
+  font-weight: 600;
+  color: rgb(var(--color-neutral-800));
+}
+
+.dark .faq summary {
+  color: rgb(var(--color-neutral-100));
+}
+
+.faq summary::marker {
+  color: rgb(var(--color-primary-500));
+}
+
+.faq summary:focus-visible {
+  outline: 2px solid rgb(var(--color-primary-500));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.faq p {
+  margin: 0 0 0.875rem;
+  max-width: 65ch;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: rgb(var(--color-neutral-600));
+}
+
+.dark .faq p {
+  color: rgb(var(--color-neutral-300));
+}

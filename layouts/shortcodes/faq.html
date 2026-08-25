@@ -1,0 +1,14 @@
+{{- /* Renders the page's `faq` front matter. schema.html emits the same
+       questions and answers as a FAQPage node, so the visible text and the
+       markup can never drift apart. Native <details>, no JS: the answers stay
+       in the DOM while collapsed. */ -}}
+{{- with .Page.Params.faq }}
+  <div class="faq">
+    {{- range . }}
+      <details>
+        <summary>{{ .q }}</summary>
+        <p>{{ .a }}</p>
+      </details>
+    {{- end }}
+  </div>
+{{- end -}}
